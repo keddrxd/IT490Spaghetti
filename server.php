@@ -38,9 +38,6 @@ function authentication($username,$password)
 	}
 	
 	
-	
-	
-	
 }
 function requestProcessor($request)
 {
