@@ -4,10 +4,10 @@ require_once('path.inc');
 require_once('get_host_info.inc');
 require_once('rabbitMQLib.inc');
 
-include ("account.php");
+#include ("account.php");
 
 
-	$database = mysqli_connect($hostname, $username, $password, $database);
+	#$database = mysqli_connect($hostname, $username, $password, $database);
 
 global $database;
 if (mysqli_connect_errno())
@@ -22,30 +22,39 @@ if (mysqli_connect_errno())
 
 function login($userN, $pass)
 {
-	$host = '192.168.1.6';
+	$host = '127.0.0.1';
 	$user = 'admin';
 	$pw = 'adminPwd';
 	$db = 'usersDB';
 	$mysqli = new mysqli($host, $user, $pw, $db);
 	
-	$data = array();
+	$userData = array();
 	$userName = $mysqli->escape_string($userN);
 	$password = $mysqli->escape_string($pass);
-	$password = hash('sha356', $password);
+	$password = hash('sha256', $password);
 	
 	$query = "select * from users where username = '$userName' and password = '$password'";
 	$reply = $mysqli->query($query);
 	
 	while ($row = $reply->fetch_assoc())
 	{
-		echo "Passwords match!".PHP.EOL;
+		echo "checking password now";
+		if($row['password'] == $password)
+		{
+			echo "Passwords match!".PHP_EOL;
+			#dont return true, return userData values username and sessionID as generated in new function updateSession
+			return true;
+		}
 	}
+	echo "passswords dont match";
+	return false;
+	
 	
 }
 
 function auth($userN, $session)
 {
-	$host = '192.168.1.6';
+	$host = '127.0.0.1';
 	$user = 'admin';
 	$pw = 'adminPwd';
 	$db = 'usersDB';
@@ -62,7 +71,7 @@ function auth($userN, $session)
 	
 	$query = "select * from session where username = '$userN'";
 	$reply = $mysqli->query($query);
-	while($row = $response->fetch_assoc())
+	while($row = $reply->fetch_assoc())
 	{
 		if($row["sessionKey"] == $session)
 		{
@@ -75,42 +84,15 @@ function auth($userN, $session)
 
 
 
-
-
-
-/*function authentication($username,$password)
-{
-	$host = '192.168.1.6';
-	$user = 'admin';
-	$pw = 'adminPwd';
-	$db = 'usersDB';
-	$mysqli = new mysqli($host, $user, $pw, $db);
-	$s = "SELECT * from Users where username =\"$username\" && password = \"$password\"";
-	$t = mysqli_query($mysqli,$s);
-	
-	if (mysqli_num_rows($t) == 0)
-	{
-		echo "Username and password is not correct.".PHP_EOL;
-		return false;
-	}
-	else
-	{
-		echo "Success.".PHP_EOL;
-		return true;
-	}
-	
-	
-}*/
-
 function register($firstName, $lastName, $userName, $pass, $email)
 {
-	$host = '192.168.1.6';
+	$host = '127.0.0.1';
 	$user = 'admin';
 	$pw = 'adminPwd';
 	$db = 'usersDB';
 	$mysqli = new mysqli($host, $user, $pw, $db);
 	
-	$data = array();
+	$userData = array();
 	$firstN = $mysqli->escape_string($firstName);
 	$lastN = $mysqli->escape_string($lastName);
 	$userN = $mysqli->escape_string($userName);
@@ -119,19 +101,19 @@ function register($firstName, $lastName, $userName, $pass, $email)
 	$email = $mysqli->escape_string($email);
 	$query = "select * from users where username = '$userN'";
 	$reply = $mysqli->query($query);
-	if($response->num_rows == 0)
+	if($reply->num_rows == 0)
 	{
-		$query = "INSERT INTO users values('$firstN', '$lastN', '$userN', '$password', '$email');
+		$query = "INSERT INTO users values('$firstN', '$lastN', '$userN', '$password', '$email')";
 		$mysqli->query($query) or die($mysqli->error);
-		echo "Account has been created".PHP.EOL;
-		echo "Passwords match".PHP.EOL;
-		$data['firstName'] = $firstN;
-		$data['lastName'] = $lastN;
-		$data['username'] = $userN;
-		$data['password'] = $password;
-		$data['email'] = $email;
+		echo "Account has been created".PHP_EOL;
+		echo "Passwords match".PHP_EOL;
+		$userData['firstName'] = $firstN;
+		$userData['lastName'] = $lastN;
+		$userData['username'] = $userN;
+		$userData['password'] = $password;
+		$userData['email'] = $email;
 		$sessID = createSess($userN);
-		$userData['sessionKey' = $sessID;
+		$userData['sessionID'] = $sessID;
 		
 		return json_encode($userData);
 		
@@ -143,15 +125,15 @@ function register($firstName, $lastName, $userName, $pass, $email)
 
 function createSess($userName)
 {
-	$host = '192.168.1.6';
+	$host = '127.0.0.1';
 	$user = 'admin';
 	$pw = 'adminPwd';
 	$db = 'usersDB';
 	$mysqli = new mysqli($host, $user, $pw, $db);
 	
 	$sessionDate = time();
-	$sessionKey = hash('sha356', $userName.$sessionDate);
-	$query = "insert into session values('$userName','$sessionKey');
+	$sessionKey = hash('sha256', $userName.$sessionDate);
+	$query = "insert into session values('$userName','$sessionKey')";
 	$mysqli->query($query);
 	return $sessionKey;
 
@@ -168,11 +150,11 @@ function requestProcessor($request)
  		case "login":
 			return login($request['username'], $request['password']);
 			break;
-		case "register";
-			return register($request['firstName'], $request['lastName'], $request['userName'], $request['$pass'], $request['$email']);
+		case "register":
+			return register($request['firstName'], $request['lastName'], $request['username'], $request['password'], $request['email']);
 			break;
-		case "validate";
-			return authentication($request['$userN'], $request['$session']);
+		case "validate":
+			return auth($request['username'], $request['sessionID']);
 			break;
 		default:
 			echo "try again";
