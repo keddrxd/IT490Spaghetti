@@ -7,7 +7,7 @@
 </head>
 
 <?php
-session start();
+session_start();
 if( $_SERVER['REQUEST_METHOD'] == 'POST')
 {
 	if( isset($_POST['login']))
@@ -24,12 +24,12 @@ if( $_SERVER['REQUEST_METHOD'] == 'POST')
 <body>
 <form action = "index.php" method = "POST">
 <label> 
-Email 
-<input type = "text" required name = "username"/>
+Username 
+<input type = "text" required name= "username"/>
 </label>
 <label> 
 Password 
-<input type = "password" require name = "password"/>
+<input type = "password" required name= "password"/>
 </label>
 <button name = "login"> Login </button>
 </form>

@@ -9,8 +9,8 @@ function login($username,$password)
 	#$eClient = new rabbitMQClient("testRabbitMQ.ini","errorServer");
 	$request1 = array();
 	$request1['type'] = "login";
-  $request1['username'] = $user;
-	$request1['password'] = $pass;
+  $request1['username'] = $username;
+	$request1['password'] = $password;
 	$response = $client->send_request($request1);
 	return $response;
 }
@@ -33,7 +33,7 @@ function validateSession($username,$sessionID)
 	$client = new rabbitMQClient("testRabbitMQ.ini","testServer");
 	$request4= array();
 	$request4['type']="validate";
-	$request4['username']= $user;
+	$request4['username']= $username;
 	$request4['sessionID']= $sessionID;
 	$response= $client->send_request($request4);
 	return $response;

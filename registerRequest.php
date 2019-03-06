@@ -12,8 +12,8 @@ if ($response != false)
 	$sessionData = json_decode($response, true);
 	$_SESSION['isLogged'] = true;
 	$_SESSION['username'] = $sessionData['username'];
-	$_SESSION['firstName'] = $sessionData['firstname'];
-	$_SESSION['lastName'] = $sessionData['lastname'];
+	$_SESSION['firstName'] = $sessionData['firstName'];
+	$_SESSION['lastName'] = $sessionData['lastName'];
 	$_SESSION['sessionID'] = $sessionData['sessionID'];
 	
 	header("location: successPage.php");
