@@ -161,7 +161,7 @@ function updateSess($userName)
 	
 	$sessionDate = time();
 	$sessionKey = hash('sha256',$userName.$sessionDate);
-	$query = "update session set isValid='true', sessionKey = '$sessionKey', where username = '$userName'";
+	$query = "update session set sessionKey = '$sessionKey' where username = '$userName'";
 	$mysqli->query($query);
 	return $sessionKey;
 }
