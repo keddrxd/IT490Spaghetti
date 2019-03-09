@@ -42,6 +42,11 @@ function login($userN, $pass)
 		if($row['password'] == $password)
 		{
 			echo "Passwords match!".PHP_EOL;
+			$userData['firstName'] = $row['firstName'];
+			$userData['lastName'] = $row['lastName'];
+			$userData['username'] = $row['username'];
+			$userData['password'] = $row['password'];
+			$userData['email'] = $row['email'];
 			$sessionID = updateSess($row['username']);
 			$userData['sessionKey'] = $sessionID;
 			#dont return true, return userData values username and sessionID as generated in new function updateSession
