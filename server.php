@@ -145,7 +145,7 @@ function createSess($userName)
 	
 	$sessionDate = time();
 	$sessionKey = hash('sha256', $userName.$sessionDate);
-	$query = "insert into session values('$userName','$sessionKey')";
+	$query = "insert into session values('$userName','$sessionKey', 'true')";
 	$mysqli->query($query);
 	return $sessionKey;
 
