@@ -161,7 +161,7 @@ function updateSess($userName)
 	
 	$sessionDate = time();
 	$sessionKey = hash('sha256',$userName.$sessionDate);
-	$query = "update session set sessionKey = '$sessionKey' where username = '$userName'";
+	$query = "update session set isValid='true', sessionKey = '$sessionKey' where username = '$userName'";
 	$mysqli->query($query);
 	return $sessionKey;
 }
@@ -176,13 +176,10 @@ function requestProcessor($request)
   	{	
  		case "login":
 			return login($request['username'], $request['password']);
-			break;
 		case "register":
 			return register($request['firstName'], $request['lastName'], $request['username'], $request['password'], $request['email']);
-			break;
 		case "validate":
 			return auth($request['username'], $request['sessionID']);
-			break;
 		default:
 			echo "try again";
 	
