@@ -1,5 +1,5 @@
 <?php
-require ('loginRBMQ.php');
+require ('rabbitFunc.php');
 $username = $_POST['username'];
 $email = $_POST['email'];
 $firstN = $_POST['firstName'];
