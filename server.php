@@ -42,6 +42,8 @@ function login($userN, $pass)
 		if($row['password'] == $password)
 		{
 			echo "Passwords match!".PHP_EOL;
+			$sessionID = updateSess($row['username']);
+			$userData['sessionKey'] = $sessionID;
 			#dont return true, return userData values username and sessionID as generated in new function updateSession
 			return true;
 		}
@@ -137,6 +139,21 @@ function createSess($userName)
 	$mysqli->query($query);
 	return $sessionKey;
 
+}
+
+function updateSess($userName)
+{
+	$host = '127.0.0.1';
+	$user = 'admin';
+	$pw = 'adminPwd';
+	$db = 'usersDB';
+	$mysqli = new mysqli($host, $user, $pw, $db);
+	
+	$sessionDate = time();
+	$sessionKey = hash('sha256',$userName.$sessionDate);
+	$query = "update session set sessionKey = '$sessionKey' where username = '$userName'";
+	$mysqli->query($query);
+	return $sessionKey;
 }
 
 function requestProcessor($request)
