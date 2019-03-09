@@ -89,7 +89,7 @@ function auth($userN, $session)
 	//{
 	//	return false;	
 	//}
-	echo "sessionID did not match".PHP.EOL;
+	echo "sessionID did not match".PHP_EOL;
 	return false;
 	
 }
