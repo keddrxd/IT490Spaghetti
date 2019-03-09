@@ -50,7 +50,7 @@ function login($userN, $pass)
 			$sessionID = updateSess($row['username']);
 			$userData['sessionKey'] = $sessionID;
 			#dont return true, return userData values username and sessionID as generated in new function updateSession
-			return true;
+			return json_encode($userData);
 		}
 	}
 	echo "passswords dont match";
