@@ -1,5 +1,5 @@
 <?php
-require ('loginRBMQ.php');
+require ('rabbitFunc.php');
 $userName= $_SESSION['username'];
 $sessionID= $_SESSION['sessionID'];
 $response = validateSession($userName, $sessionID);
