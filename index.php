@@ -1,6 +1,3 @@
-
-
-
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -21,42 +18,43 @@ if( $_SERVER['REQUEST_METHOD'] == 'POST')
 	}
 }
 ?>
-<body>
+<body background="spaghetti.jpg">
 <form action = "index.php" method = "POST">
-<label> 
-Username 
-<input type = "text" required name= "username"/>
-</label>
-<label> 
-Password 
-<input type = "password" required name= "password"/>
-</label>
-<button name = "login"> Login </button>
-</form>
+<head>
+<style>
+div {
+    background-color: red;
+    width: 300px;
+    border: 5px solid black;	    
+    padding: 25px;
+    margin: 25px;
+}
+</style>
+</head>
+<center>
+		<div>
+		<h2> Returning User? Login </h2> 
+		<center>Enter Username <input type= "text" required name="username"/><br><br>
+		Enter Password <input type="password" required name="password" /><br><br>
+		<button name = "login"> Login </button> 
+		</center>
+		</div>
+<form action = "index.php" method = "POST">
+<center>
+		<div>
+		<h2> New User? Sign up </h2>
+		<center>Enter First Name <input type= "text" required name="firstName"/><br><br>
+		Enter Last Name <input type="text" required name="lastName"  /><br><br>
+		Enter Username <input type="text" required name="username" /><br><br>
+		Enter Email <input type="email" required name="email" /><br><br>
+		Enter Password <input type="password" required name="password" /><br><br>
+		<button name = "register"> Register </button>
+		</center>
+		
+		</div>
+			
+</center>
 
-<form action = "index.php" method = "POST">
-<label>
-Username
-</label>
-<input type = "text" required name = "username"/>
-<label>
-First Name
-</label>
-<input type = "text" required name = "firstName"/>
-<label>
-Last Name
-</label>
-<input type = "text" required name = "lastName"/>
-<label>
-Email
-</label>
-<input type = "email" required name = "email"/>
-<label>
-Password
-</label>
-<input type = "password" required name = "password"/>
-<button name = "register"> Register </button>
 </form>
 </body>
 </html>
-	
