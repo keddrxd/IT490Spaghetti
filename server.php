@@ -170,9 +170,11 @@ function requestProcessor($request)
 {
  	 echo "received request".PHP_EOL;
   	var_dump($request);
-  	if(isset($request['type']))
+  	if(!isset($request['type']))
   	{
- 	 switch ($request['type'])
+		return "Error: unsupported message type";	
+	}
+ 	switch ($request['type'])
   	{	
  		case "login":
 			return login($request['username'], $request['password']);
@@ -183,9 +185,8 @@ function requestProcessor($request)
 		default:
 			echo "try again";
 	
-}
-  }
- 
+	}
+   
 }
 
 $server = new rabbitMQServer("testRabbitMQ.ini","testServer");
