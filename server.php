@@ -82,10 +82,15 @@ function auth($userN, $session)
 	{
 		if($row["sessionKey"] == $session)
 		{
-			echo "Session ID's match!".PHP_EOL;	
+			echo "Session ID's match!".PHP_EOL;
+			$userData['username'] = $userN;
+			$userData['sessionID'] = $session;
+			return json_encode($userData);
 		}
 				
 	}
+	echo "sessionID did not match".PHP.EOL;
+	return false;
 	
 }
 
