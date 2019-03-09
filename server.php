@@ -67,14 +67,6 @@ function auth($userN, $session)
 	$db = 'usersDB';
 	$mysqli = new mysqli($host, $user, $pw, $db);
 	
-	if($userN==NULL)
-	{
-		return false;
-	}
-	if($session==NULL)
-	{
-		return false;	
-	}
 	
 	$query = "select * from session where username = '$userN'";
 	$reply = $mysqli->query($query);
@@ -89,6 +81,14 @@ function auth($userN, $session)
 		}
 				
 	}
+	//if($userN==NULL)
+	//{
+	//	return false;
+	//}
+	//if($session==NULL)
+	//{
+	//	return false;	
+	//}
 	echo "sessionID did not match".PHP.EOL;
 	return false;
 	
