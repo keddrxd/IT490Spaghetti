@@ -39,6 +39,7 @@ div {
 		<button name = "login"> Login </button> 
 		</center>
 		</div>
+	</form>
 <form action = "index.php" method = "POST">
 <center>
 		<div>
