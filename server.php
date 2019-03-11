@@ -72,7 +72,7 @@ function auth($userN, $session)
 	$reply = $mysqli->query($query);
 	while($row = $reply->fetch_assoc())
 	{
-		echo $session.PHP_EOL;
+		//echo $session.PHP_EOL;
 		echo $row['username'].PHP_EOL;
 		echo $row['sessionKey'].PHP_EOL;
 		if($row["sessionKey"] == $session)
