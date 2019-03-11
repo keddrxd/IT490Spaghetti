@@ -3,12 +3,8 @@
 require_once('path.inc');
 require_once('get_host_info.inc');
 require_once('rabbitMQLib.inc');
-
 #include ("account.php");
-
-
 	#$database = mysqli_connect($hostname, $username, $password, $database);
-
 global $database;
 if (mysqli_connect_errno())
 {
@@ -19,7 +15,6 @@ if (mysqli_connect_errno())
 		
 	echo "Successfully connected to MYSQL."."\n".PHP_EOL;
 }
-
 function login($userN, $pass)
 {
 	$host = '127.0.0.1';
@@ -58,7 +53,6 @@ function login($userN, $pass)
 	
 	
 }
-
 function auth($userN, $session)
 {
 	$host = '127.0.0.1';
@@ -72,7 +66,6 @@ function auth($userN, $session)
 	$reply = $mysqli->query($query);
 	while($row = $reply->fetch_assoc())
 	{
-		//echo $session.PHP_EOL;
 		echo $row['username'].PHP_EOL;
 		echo $row['sessionKey'].PHP_EOL;
 		if($row["sessionKey"] == $session)
@@ -96,9 +89,6 @@ function auth($userN, $session)
 	return false;
 	
 }
-
-
-
 function register($firstName, $lastName, $userName, $pass, $email)
 {
 	$host = '127.0.0.1';
@@ -133,11 +123,9 @@ function register($firstName, $lastName, $userName, $pass, $email)
 		return json_encode($userData);
 		
 	}
-
 	
 	
 }
-
 function createSess($userName)
 {
 	$host = '127.0.0.1';
@@ -151,9 +139,7 @@ function createSess($userName)
 	$query = "insert into session values('$userName','$sessionKey')";
 	$mysqli->query($query);
 	return $sessionKey;
-
 }
-
 function updateSess($userName)
 {
 	$host = '127.0.0.1';
@@ -168,7 +154,6 @@ function updateSess($userName)
 	$mysqli->query($query);
 	return $sessionKey;
 }
-
 function requestProcessor($request)
 {
  	 echo "received request".PHP_EOL;
@@ -191,7 +176,6 @@ function requestProcessor($request)
 	}
    
 }
-
 $server = new rabbitMQServer("testRabbitMQ.ini","testServer");
 echo "testRabbitMQServer BEGIN".PHP_EOL;
 $server->process_requests('requestProcessor');
