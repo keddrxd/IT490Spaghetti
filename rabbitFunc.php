@@ -13,7 +13,7 @@ function login($username,$password)
 	$response = $client->send_request($request1);
 	return $response;
 }
-function register($username,$email, $pass,$firstN,$lastN)
+function register($username,$email, $pass,$firstN,$lastN, $zip)
 {
 	$client = new rabbitMQClient("testRabbitMQ.ini","testServer");
 	$request2 = array();
@@ -23,6 +23,7 @@ function register($username,$email, $pass,$firstN,$lastN)
 	$request2['password']= $pass;
 	$request2['firstName'] = $firstN;
 	$request2['lastName'] = $lastN;
+	$request2['zip'] = $zip;
 	$response = $client->send_request($request2);
 	return $response;
 }
