@@ -61,7 +61,7 @@ function auth($userN, $session)
 	$db = 'usersDB';
 	$mysqli = new mysqli($host, $user, $pw, $db);
 	
-	
+	echo $session.PHP_EOL;
 	$query = "select * from session where username = '$userN'";
 	$reply = $mysqli->query($query);
 	while($row = $reply->fetch_assoc())
