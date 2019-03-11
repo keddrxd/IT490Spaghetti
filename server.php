@@ -42,6 +42,7 @@ function login($userN, $pass)
 			$userData['username'] = $row['username'];
 			$userData['password'] = $row['password'];
 			$userData['email'] = $row['email'];
+			$userData['zip'] = $row['zip'];
 			$sessionID = updateSess($row['username']);
 			$userData['sessionKey'] = $sessionID;
 			#dont return true, return userData values username and sessionID as generated in new function updateSession
@@ -90,7 +91,7 @@ function auth($userN, $session)
 	return false;
 	
 }
-function register($firstName, $lastName, $userName, $pass, $email)
+function register($firstName, $lastName, $userName, $pass, $email, $zip)
 {
 	$host = '127.0.0.1';
 	$user = 'admin';
@@ -105,11 +106,12 @@ function register($firstName, $lastName, $userName, $pass, $email)
 	$password = $mysqli->escape_string($pass);
 	$password = hash('sha256',$pass);
 	$email = $mysqli->escape_string($email);
+	$zip = $mysqli->escape_string($zip);
 	$query = "select * from users where username = '$userN'";
 	$reply = $mysqli->query($query);
 	if($reply->num_rows == 0)
 	{
-		$query = "INSERT INTO users values('$firstN', '$lastN', '$userN', '$password', '$email')";
+		$query = "INSERT INTO users values('$firstN', '$lastN', '$userN', '$password', '$email', '$zip')";
 		$mysqli->query($query) or die($mysqli->error);
 		echo "Account has been created".PHP_EOL;
 		echo "Passwords match".PHP_EOL;
@@ -118,6 +120,7 @@ function register($firstName, $lastName, $userName, $pass, $email)
 		$userData['username'] = $userN;
 		$userData['password'] = $password;
 		$userData['email'] = $email;
+		$userData['zip'] = $zip;
 		$sessID = createSess($userN);
 		$userData['sessionID'] = $sessID;
 		
@@ -168,7 +171,7 @@ function requestProcessor($request)
  		case "login":
 			return login($request['username'], $request['password']);
 		case "register":
-			return register($request['firstName'], $request['lastName'], $request['username'], $request['password'], $request['email']);
+			return register($request['firstName'], $request['lastName'], $request['username'], $request['password'], $request['email'], $request['zip']);
 		case "validate":
 			return auth($request['username'], $request['sessionID']);
 		default:
