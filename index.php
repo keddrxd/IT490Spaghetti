@@ -49,6 +49,7 @@ div {
 		Enter Username <input type="text" required name="username" /><br><br>
 		Enter Email <input type="email" required name="email" /><br><br>
 		Enter Password <input type="password" required name="password" /><br><br>
+		Enter Zip Code <input type = "zip" required name = "zip" /> <br> <br>
 		<button name = "register"> Register </button>
 		</center>
 		
