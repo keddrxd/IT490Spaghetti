@@ -13,6 +13,7 @@ if( $response != false)
 	$_SESSION['username'] = $sessionData['username'];
 	$_SESSION['firstName'] = $sessionData['firstName'];
 	$_SESSION['lastName'] = $sessionData['lastName'];
+	$_SESSION['zip'] = $sessionData['zip'];
 	
 	header("location: successPage.php");
 }
