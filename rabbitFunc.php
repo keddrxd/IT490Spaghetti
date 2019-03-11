@@ -34,7 +34,7 @@ function validateSession($username,$sessionID)
 	$request4= array();
 	$request4['type']="validate";
 	$request4['username']= $username;
-	$request4['sessionID']= $sessionID;
+	$request4['sessionKey']= $sessionID;
 	$response= $client->send_request($request4);
 	return $response;
 }
