@@ -70,9 +70,9 @@ function auth($userN, $session)
 	
 	$query = "select * from session where username = '$userN'";
 	$reply = $mysqli->query($query);
-	echo $session.PHP_EOL;
 	while($row = $reply->fetch_assoc())
 	{
+		echo $session.PHP_EOL;
 		echo $row['username'].PHP_EOL;
 		echo $row['sessionKey'].PHP_EOL;
 		if($row["sessionKey"] == $session)
