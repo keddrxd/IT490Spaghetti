@@ -68,7 +68,7 @@ function auth($userN, $session)
 	{
 		echo $row['username'].PHP_EOL;
 		echo $row['sessionKey'].PHP_EOL;
-		if($row["sessionKey"] == $session)
+		if($row['sessionKey'] == $session)
 		{
 			echo "Session ID's match!".PHP_EOL;
 			$userData['username'] = $userN;
