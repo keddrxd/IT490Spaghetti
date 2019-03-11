@@ -64,10 +64,11 @@ function auth($userN, $session)
 	echo $session.PHP_EOL;
 	$query = "select * from session where username = '$userN'";
 	$reply = $mysqli->query($query);
-	$session = updateSess($row['username']);
 
 	while($row = $reply->fetch_assoc())
 	{
+		$session = updateSess($row['username']);
+
 		if($row["sessionKey"] == $session)
 		{
 			echo "Session ID's match!".PHP_EOL;
