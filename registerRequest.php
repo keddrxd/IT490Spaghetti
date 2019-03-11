@@ -5,7 +5,8 @@ $email = $_POST['email'];
 $firstN = $_POST['firstName'];
 $lastN = $_POST['lastName'];
 $pass = $_POST['password'];
-$response = register($username, $email, $pass, $firstN, $lastN);
+$zip = $_POST['zip'];
+$response = register($username, $email, $pass, $firstN, $lastN, $zip);
 
 if ($response != false)
 {
@@ -14,6 +15,7 @@ if ($response != false)
 	$_SESSION['username'] = $sessionData['username'];
 	$_SESSION['firstName'] = $sessionData['firstName'];
 	$_SESSION['lastName'] = $sessionData['lastName'];
+	$_SESSION['zip'] = $sessionData['zip'];
 	$_SESSION['sessionID'] = $sessionData['sessionID'];
 	
 	header("location: successPage.php");
