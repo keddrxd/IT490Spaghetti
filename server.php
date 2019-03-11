@@ -47,8 +47,8 @@ function login($userN, $pass)
 			$userData['username'] = $row['username'];
 			$userData['password'] = $row['password'];
 			$userData['email'] = $row['email'];
-			//$sessionID = updateSess($row['username']);
-			//$userData['sessionKey'] = $sessionID;
+			$sessionID = updateSess($row['username']);
+			$userData['sessionKey'] = $sessionID;
 			#dont return true, return userData values username and sessionID as generated in new function updateSession
 			return json_encode($userData);
 		}
