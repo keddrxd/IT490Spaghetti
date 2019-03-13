@@ -24,7 +24,7 @@ else
 {
 	$errorMSG = "Email already exists";
 	echo "$errorMSG";
-	
+	error($errorMSG);
 	
 	header("location: index.php");
 }
