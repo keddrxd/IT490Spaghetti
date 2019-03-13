@@ -2,7 +2,6 @@
 require_once('path.inc');
 require_once('get_host_info.inc');
 require_once('rabbitMQLib.inc');
-
 function login($username,$password)
 {
 	$client = new rabbitMQClient("testRabbitMQ.ini","testServer");
@@ -27,13 +26,26 @@ function register($username,$email, $pass,$firstN,$lastN, $zip)
 	$response = $client->send_request($request2);
 	return $response;
 }
+
 function validateSession($username,$sessionID)
 {
 	$client = new rabbitMQClient("testRabbitMQ.ini","testServer");
-	$request4= array();
-	$request4['type']="validate";
-	$request4['username']= $username;
-	$request4['sessionID']= $sessionID;
-	$response= $client->send_request($request4);
+	$request3= array();
+	$request3['type']="validate";
+	$request3['username']= $username;
+	$request3['sessionID']= $sessionID;
+	$response= $client->send_request($request3);
 	return $response;
 }
+function error($errorMSG)
+{
+	$errorClient = new rabbitMQClient("errorServer.ini","errorServer");
+	$request4 = array();
+	$errorDate = date_create();
+	$request4['type'] ="error"
+	$request4['date']=$errorDate;
+	$request4['log']=$message;
+	$errorClient->send_request($request4);
+
+}
+
