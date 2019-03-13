@@ -91,6 +91,44 @@ function auth($userN, $session)
 	return false;
 	
 }
+
+function firstLogin($username, $comedy, $horror, $action, $scifi, $romance, $animation)
+{
+	$host = '127.0.0.1';
+	$user = 'admin';
+	$pw = 'adminPwd';
+	$db = 'usersDB';
+	$mysqli = new mysqli($host, $user, $pw, $db);
+	
+	$userData = array();
+	$username = $mysqli->escape_string($username);
+	$comedy = $mysqli->escape_string($comedy);
+	$horror = $mysqli->escape_string($horror);
+	$action = $mysqli->escape_string($action);
+	$scifi = $mysqli->escape_string($scifi);
+	$romance = $mysqli->escape_string($romance);
+	$animation = $mysqli->escape_string($animation);
+	$query = "select * from category where username = '$username'";
+	$reply = $mysqli->query($query);
+	if($reply->num_rows == 0)
+	{
+		$query = "INSERT INTO category values('$username', '$comedy', '$horror', '$action', '$scifi', '$romance', '$animation')";
+		$mysqli->query($query) or die($mysqli->error);
+		$userData['username'] = $username;
+		$userData['comedy'] = $comedy;
+		$userData['horror'] = $horror;
+		$userData['action'] = $action;
+		$userData['scifi'] = $scifi;
+		$userData['romance'] = $romance;
+		$userData['animation'] = $animation;
+		return json_encode($userData);
+						
+	}
+
+	
+
+}
+
 function register($firstName, $lastName, $userName, $pass, $email, $zip)
 {
 	$host = '127.0.0.1';
@@ -174,6 +212,9 @@ function requestProcessor($request)
 			return register($request['firstName'], $request['lastName'], $request['username'], $request['password'], $request['email'], $request['zip']);
 		case "validate":
 			return auth($request['username'], $request['sessionID']);
+		case "first":
+			return auth($request['username'], $request['comedy'], $request['horror'], $request['action'], $request['scifi'], $request['romance'], $request['animation']);
+		
 		default:
 			echo "try again";
 	
