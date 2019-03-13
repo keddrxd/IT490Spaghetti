@@ -37,6 +37,7 @@ function validateSession($username,$sessionID)
 	$response= $client->send_request($request3);
 	return $response;
 }
+
 function error($errorMSG)
 {
 	$errorClient = new rabbitMQClient("errorServer.ini","errorServer");
@@ -48,4 +49,25 @@ function error($errorMSG)
 	$errorClient->send_request($request4);
 
 }
+
+function firstLogin($username, $comedy, $horror, $action, $scifi, $romance, $animation)
+{
+	$client = new rabbitMQClient("testRabbitMQ.ini","testServer");
+	$request5= array();	
+	$request5['type']="first";
+	$request5['username']= $username;
+	$request5['comedy']= $comedy;
+	$request5['horror']= $horror;
+	$request5['action']= $action;
+	$request5['scifi']= $scifi;
+	$request5['romance']= $romance;
+	$request5['animation']= $animation;
+	$response= $client->send_request($request5);
+	return $response;
+
+}
+
+
+
+
 
