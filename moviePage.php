@@ -15,6 +15,11 @@ if( $_SERVER['REQUEST_METHOD'] == 'POST')
 		//require 'registerRequest.php'; #change file name
 		//reg()
 	}
+	if(isset($_POST['first']))
+	{
+		require 'firstRequest.php'; #change file name
+		
+	}
 }
 ?>
 <title>First Timers</title>
@@ -106,6 +111,7 @@ if( $_SERVER['REQUEST_METHOD'] == 'POST')
 </head>
 
 <body background = "spaghetti.jpg">
+<form action = "moviePage.php" method = "POST">
 <center>
 <h1 style="font-size:60px;" >Welcome!</h1>
 <h2 style = "font-size: 35px; ">Tell us what you may like </h2>
@@ -150,7 +156,7 @@ if( $_SERVER['REQUEST_METHOD'] == 'POST')
 
 
 <div id = "submit">
-		<button name = "submit" style = "height:50px;width:80px"><font size = 4> Submit </font></button>
+		<button name = "first" style = "height:50px;width:80px"><font size = 4> Submit </font></button>
 		</div>
 <center>
 
