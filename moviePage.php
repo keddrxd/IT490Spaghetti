@@ -1,7 +1,21 @@
 <!DOCTYPE html>
 <html>
 <head>
-
+<?php
+session_start();
+if( $_SERVER['REQUEST_METHOD'] == 'POST')
+{
+	if( isset($_POST['login']))
+	{
+		echo "login successful";
+		require 'loginRequest.php'; #change file name
+	}
+	if(isset($_POST['register']))
+	{
+		require 'registerRequest.php'; #change file name
+	}
+}
+?>
 <title>First Timers</title>
 
 <style>
