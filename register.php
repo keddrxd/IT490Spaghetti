@@ -19,7 +19,6 @@ if( $_SERVER['REQUEST_METHOD'] == 'POST')
 }
 ?>
 <body background="spaghetti.jpg">
-<form action = "register.php" method = "POST">
 <head>
 <style>
 div {
