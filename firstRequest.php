@@ -1,5 +1,5 @@
 <?php
-function one{
+function one(){
 require ('rabbitFunc.php');
 //$username = $_POST['username'];
 $username = "0";
