@@ -15,6 +15,7 @@ if( $_SERVER['REQUEST_METHOD'] == 'POST')
 	if(isset($_POST['register']))
 	{
 		require 'registerRequest.php'; #change file name
+		reg();
 	}
 }
 ?>
