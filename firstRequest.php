@@ -1,6 +1,7 @@
 <?php
 require ('rabbitFunc.php');
-$username = $_POST['username'];
+//$username = $_POST['username'];
+$username = "0";
 
 if(isset($_POST['comedy'])){
     $comedy  = $_POST['active'];
