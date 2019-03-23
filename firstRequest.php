@@ -2,7 +2,7 @@
 
 require ('rabbitFunc.php');
 //$username = $_POST['username'];
-$username = 'andy';
+$username = "andy";
 
 if(isset($_POST['comedy'])){
     $comedy  = $_POST['active'];
