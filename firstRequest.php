@@ -47,8 +47,8 @@ else{
 //$animation = $_POST['animation'];
 
 $response = firstLogin($username, $comedy, $horror, $action, $scifi, $romance, $animation);
-if ($response != false)
-{
+//if ($response != false)
+//{
 	$sessionData = json_decode($response, true);
 	$_SESSION['isLogged'] = true;
 	$_SESSION['username'] = $sessionData['username'];
@@ -60,12 +60,12 @@ if ($response != false)
 	$_SESSION['animation'] = $sessionData['animation'];
 
 	header("location: mainPage.php");
-}
-else
-{
-	$errorMSG = "Email already exists";
-	echo "$errorMSG";
-	error($errorMSG);
-	
-	header("location: index.php");
-}
+//}
+//else
+//{
+//	$errorMSG = "Email already exists";
+//	echo "$errorMSG";
+//	error($errorMSG);
+//	
+//	header("location: index.php");
+//}
