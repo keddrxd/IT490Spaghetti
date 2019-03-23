@@ -105,7 +105,7 @@ function firstLogin($username, $comedy, $horror, $action, $scifi, $romance, $ani
 	$scifi = $mysqli->escape_string($scifi);
 	$romance = $mysqli->escape_string($romance);
 	$animation = $mysqli->escape_string($animation);
-	$query = "select * from category where username = '$username'";
+	$query = "select * from category where username = 'andy'";
 	$reply = $mysqli->query($query);
 	if($reply->num_rows == 0)
 	{
