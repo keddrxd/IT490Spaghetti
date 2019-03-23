@@ -19,7 +19,7 @@ if( $_SERVER['REQUEST_METHOD'] == 'POST')
 }
 ?>
 <body background="spaghetti.jpg">
-<form action = "index.php" method = "POST">
+<form action = "register.php" method = "POST">
 <head>
 <style>
 div {
@@ -34,7 +34,7 @@ div {
 <center>
 		
 </form>
-<form action = "moviePage.php" method = "POST">
+<form action = "register.php" method = "POST">
 <center>
 		<div>
 		<h2> Please Register Below </h2>
