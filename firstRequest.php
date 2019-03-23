@@ -59,7 +59,7 @@ if ($response != false)
 	$_SESSION['romance'] = $sessionData['romance'];
 	$_SESSION['animation'] = $sessionData['animation'];
 
-	header("location: successPage.php");
+	header("location: mainPage.php");
 }
 else
 {
