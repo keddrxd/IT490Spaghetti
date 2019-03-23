@@ -7,12 +7,12 @@ if( $_SERVER['REQUEST_METHOD'] == 'POST')
 {
 	if( isset($_POST['login']))
 	{
-		echo "login successful";
-		require 'loginRequest.php'; #change file name
+		//echo "login successful";
+		//require 'loginRequest.php'; #change file name
 	}
 	if(isset($_POST['register']))
 	{
-		require 'registerRequest.php'; #change file name
+		//require 'registerRequest.php'; #change file name
 		//reg()
 	}
 }
