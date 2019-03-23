@@ -65,11 +65,9 @@ function auth($userN, $session)
 	echo $session.PHP_EOL;
 	$query = "select * from session where username = '$userN'";
 	$reply = $mysqli->query($query);
-
 	while($row = $reply->fetch_assoc())
 	{
 		$session = updateSess($row['username']);
-
 		if($row["sessionKey"] == $session)
 		{
 			echo "Session ID's match!".PHP_EOL;
@@ -91,7 +89,6 @@ function auth($userN, $session)
 	return false;
 	
 }
-
 function firstLogin($username, $comedy, $horror, $action, $scifi, $romance, $animation)
 {
 	$host = '127.0.0.1';
@@ -124,11 +121,8 @@ function firstLogin($username, $comedy, $horror, $action, $scifi, $romance, $ani
 		return json_encode($userData);
 						
 	}
-
 	
-
 }
-
 function register($firstName, $lastName, $userName, $pass, $email, $zip)
 {
 	$host = '127.0.0.1';

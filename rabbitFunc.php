@@ -37,7 +37,6 @@ function validateSession($username,$sessionID)
 	$response= $client->send_request($request3);
 	return $response;
 }
-
 function error($errorMSG)
 {
 	$errorClient = new rabbitMQClient("errorServer.ini","errorServer");
@@ -49,6 +48,7 @@ function error($errorMSG)
 	$errorClient->send_request($request4);
 
 }
+
 
 function firstLogin($username, $comedy, $horror, $action, $scifi, $romance, $animation)
 {

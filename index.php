@@ -15,6 +15,7 @@ if( $_SERVER['REQUEST_METHOD'] == 'POST')
 	if(isset($_POST['register']))
 	{
 		require 'registerRequest.php'; #change file name
+		reg();
 	}
 }
 ?>
@@ -22,13 +23,10 @@ if( $_SERVER['REQUEST_METHOD'] == 'POST')
 <form action = "index.php" method = "POST">
 <head>
 <center>
-
-<h1 style="font-size:60px; " >Welcome to Rotten Spaghetti</h1>
-<h1 style="font-size:40px; " >Your Personal Movie Recommender</h1>
-</center>
+<h1> Welcome to Rotten Spaghetti </h1>
 <style>
 div {
-    background-color: silver;
+    background-color: red;
     width: 300px;
     border: 5px solid black;	    
     padding: 25px;
@@ -38,19 +36,23 @@ div {
 </head>
 <center>
 		<div>
-		<h3> Returning User? Login </h3> 
+		<h2> Returning User? Login </h2> 
 		<center>Enter Username <input type= "text" required name="username"/><br><br>
 		Enter Password <input type="password" required name="password" /><br><br>
 		<button name = "login"> Login </button> 
 		</center>
 		</div>
-	</form>
-<form action = "register.php" method = "POST">
+		</form>
+<form action = "index.php" method = "POST">
 <center>
 		<div>
-		<h3> New User? </h3>
-	
-		<button name = "register"> Register here </button>
+		<h2> New User? Sign up </h2>
+		<center>Enter First Name <input type= "text" required name="firstName"/><br><br>
+		Enter Last Name <input type="text" required name="lastName"  /><br><br>
+		Enter Username <input type="text" required name="username" /><br><br>
+		Enter Email <input type="email" required name="email" /><br><br>
+		Enter Password <input type="password" required name="password" /><br><br>
+		<button name = "register"> Register </button>
 		</center>
 		
 		</div>
