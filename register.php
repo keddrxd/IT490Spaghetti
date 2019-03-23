@@ -34,7 +34,7 @@ div {
 <center>
 		
 </form>
-<!--<form action = "moviePage.php" method = "POST"> -->
+<form action = "moviePage.php" method = "POST">
 <center>
 		<div>
 		<h2> Please Register Below </h2>
@@ -44,7 +44,7 @@ div {
 		Enter Email <input type="email" required name="email" /><br><br>
 		Enter Password <input type="password" required name="password" /><br><br>
 		Enter Zip Code <input type = "zip" required name = "zip" /> <br> <br>
-		<button type = "submit" name = "register" formaction = "moviePage.php" method = "POST"> Register </button> 
+		<button name = "register"> Register </button>
 		</center>
 		
 		</div>
