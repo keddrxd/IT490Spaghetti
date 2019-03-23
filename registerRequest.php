@@ -1,6 +1,6 @@
 <?php
 require ('rabbitFunc.php');
-
+function reg() {
 $username = $_POST['username'];
 $email = $_POST['email'];
 $firstN = $_POST['firstName'];
@@ -28,4 +28,4 @@ else
 	
 	header("location: index.php");
 }
-?>
+}
