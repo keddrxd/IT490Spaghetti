@@ -45,13 +45,13 @@ div {
 		</center>
 		</div>
 	</form>
-<form action = "register.php" method = "POST">
+<formaction = "register.php" method = "POST">
 <center>
 		<div>
 		<h3> New User? </h3>
 	
 		<!–– <button name = "register"> Register here </button> -->
-		<button type = "submit" formaction = "register.php"> Register here </button>
+		<!-- <button type = "submit" formaction = "register.php"> Register here </button> -->
 		</center>
 		
 		</div>
