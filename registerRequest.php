@@ -18,7 +18,7 @@ if ($response != false)
 	$_SESSION['zip'] = $sessionData['zip'];
 	$_SESSION['sessionID'] = $sessionData['sessionID'];
 	
-	header("location: successPage.php");
+	header("location: moviePage.php");
 }
 else
 {
