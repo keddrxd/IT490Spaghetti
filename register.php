@@ -21,11 +21,6 @@ if( $_SERVER['REQUEST_METHOD'] == 'POST')
 <body background="spaghetti.jpg">
 <form action = "index.php" method = "POST">
 <head>
-<center>
-
-<h1 style="font-size:60px; " >Welcome to Rotten Spaghetti</h1>
-<h1 style="font-size:40px; " >Your Personal Movie Recommender</h1>
-</center>
 <style>
 div {
     background-color: silver;
@@ -37,20 +32,19 @@ div {
 </style>
 </head>
 <center>
-		<div>
-		<h3> Returning User? Login </h3> 
-		<center>Enter Username <input type= "text" required name="username"/><br><br>
-		Enter Password <input type="password" required name="password" /><br><br>
-		<button name = "login"> Login </button> 
-		</center>
-		</div>
-	</form>
-<form action = "register.php" method = "POST">
+		
+</form>
+<form action = "index.php" method = "POST">
 <center>
 		<div>
-		<h3> New User? </h3>
-	
-		<button name = "register"> Register here </button>
+		<h2> Please Register Below </h2>
+		<center>Enter First Name <input type= "text" required name="firstName"/><br><br>
+		Enter Last Name <input type="text" required name="lastName"  /><br><br>
+		Enter Username <input type="text" required name="username" /><br><br>
+		Enter Email <input type="email" required name="email" /><br><br>
+		Enter Password <input type="password" required name="password" /><br><br>
+		Enter Zip Code <input type = "zip" required name = "zip" /> <br> <br>
+		<button name = "register"> Register </button>
 		</center>
 		
 		</div>
