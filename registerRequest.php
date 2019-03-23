@@ -1,3 +1,4 @@
+
 <?php
 require ('rabbitFunc.php');
 function reg() {
@@ -8,7 +9,6 @@ $lastN = $_POST['lastName'];
 $pass = $_POST['password'];
 $zip = $_POST['zip'];
 $response = register($username, $email, $pass, $firstN, $lastN, $zip);
-
 if ($response != false)
 {
 	$sessionData = json_decode($response, true);
