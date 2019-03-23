@@ -145,6 +145,8 @@ function register($firstName, $lastName, $userName, $pass, $email, $zip)
 	{
 		$query = "INSERT INTO users values('$firstN', '$lastN', '$userN', '$password', '$email', '$zip')";
 		$mysqli->query($query) or die($mysqli->error);
+		$query1 = "INSERT INTO category values('$username', '0', '0', '0', '0', '0', '0')";
+		$mysqli->query($query1) or die($mysqli->error);
 		echo "Account has been created".PHP_EOL;
 		echo "Passwords match".PHP_EOL;
 		$userData['firstName'] = $firstN;
