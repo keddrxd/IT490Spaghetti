@@ -34,7 +34,7 @@ div {
 <center>
 		
 </form>
-<form action = "index.php" method = "POST">
+<form action = "moviePage.php" method = "POST">
 <center>
 		<div>
 		<h2> Please Register Below </h2>
