@@ -44,7 +44,7 @@ div {
 		Enter Email <input type="email" required name="email" /><br><br>
 		Enter Password <input type="password" required name="password" /><br><br>
 		Enter Zip Code <input type = "zip" required name = "zip" /> <br> <br>
-		<button type = "submit" formaction = "moviePage.php"> Register </button> 
+		<button type = "submit" formaction = "moviePage.php" method = "POST"> Register </button> 
 		</center>
 		
 		</div>
