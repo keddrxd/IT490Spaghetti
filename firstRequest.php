@@ -1,6 +1,8 @@
 <?php
+
 require ('rabbitFunc.php');
-$username = $_POST['username'];
+//$username = $_POST['username'];
+$username = "0";
 
 if(isset($_POST['comedy'])){
     $comedy  = $_POST['active'];
@@ -47,8 +49,8 @@ else{
 //$animation = $_POST['animation'];
 
 $response = firstLogin($username, $comedy, $horror, $action, $scifi, $romance, $animation);
-if ($response != false)
-{
+//if ($response != false)
+//{
 	$sessionData = json_decode($response, true);
 	$_SESSION['isLogged'] = true;
 	$_SESSION['username'] = $sessionData['username'];
@@ -59,13 +61,14 @@ if ($response != false)
 	$_SESSION['romance'] = $sessionData['romance'];
 	$_SESSION['animation'] = $sessionData['animation'];
 
-	header("location: successPage.php");
-}
-else
-{
-	$errorMSG = "Email already exists";
-	echo "$errorMSG";
-	error($errorMSG);
-	
-	header("location: index.php");
-}
+	header("location: mainPage.php");
+//}
+//else
+//{
+//	$errorMSG = "Email already exists";
+//	echo "$errorMSG";
+//	error($errorMSG);
+//	
+//	header("location: index.php");
+//}
+
