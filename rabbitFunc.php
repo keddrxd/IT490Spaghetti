@@ -66,6 +66,7 @@ function firstLogin($username, $comedy, $horror, $action, $scifi, $romance, $ani
 	return $response;
 
 }
+?>
 
 
 
