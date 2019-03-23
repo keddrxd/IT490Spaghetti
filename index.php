@@ -51,7 +51,7 @@ div {
 		<h3> New User? </h3>
 	
 		
-		<button type = "submit" formaction = "register.php"> Register here </button> 
+		<button type = "submit" formaction = "register.php" method = "POST"> Register here </button> 
 		</center>
 		
 		</div>
