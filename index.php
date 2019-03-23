@@ -19,25 +19,6 @@ if( $_SERVER['REQUEST_METHOD'] == 'POST')
 }
 	
 
-$request = new HttpRequest();
-$request->setUrl('https://api.themoviedb.org/3/movie/upcoming');
-$request->setMethod(HTTP_METH_GET);
-
-$request->setQueryData(array(
-  'page' => '1',
-  'language' => 'en-US',
-  'api_key' => '<<api_key>>f8b954579281e43ef2cd96c216d57cb2'
-));
-
-$request->setBody('{}');
-
-try {
-  $response = $request->send();
-
-  echo $response->getBody();
-} catch (HttpException $ex) {
-  echo $ex;
-}
 
 ?>
 <body background="spaghetti.jpg">
