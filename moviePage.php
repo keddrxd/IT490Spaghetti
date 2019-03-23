@@ -15,6 +15,11 @@ if( $_SERVER['REQUEST_METHOD'] == 'POST')
 		//require 'registerRequest.php'; #change file name
 		//reg()
 	}
+	if(isset($_POST['first']))
+	{
+		require 'firstRequest.php'; #change file name
+		
+	}
 }
 ?>
 <title>First Timers</title>
