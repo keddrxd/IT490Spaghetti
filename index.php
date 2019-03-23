@@ -45,7 +45,7 @@ div {
 		</center>
 		</div>
 	</form>
-<formaction = "register.php" method = "POST">
+<form action = "register.php" method = "POST">
 <center>
 		<div>
 		<h3> New User? </h3>
