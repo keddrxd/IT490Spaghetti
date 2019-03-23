@@ -50,7 +50,7 @@ div {
 		<div>
 		<h3> New User? </h3>
 	
-		<!–– <button name = "register"> Register here </button> -->
+		<button name = "register"> Register here </button>
 		<!-- <button type = "submit" formaction = "register.php"> Register here </button> -->
 		</center>
 		
