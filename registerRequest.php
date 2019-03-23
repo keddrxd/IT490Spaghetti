@@ -26,5 +26,5 @@ else
 	echo "$errorMSG";
 	error($errorMSG);
 	
-	header("location: register.php");
+	header("location: index.php");
 }
