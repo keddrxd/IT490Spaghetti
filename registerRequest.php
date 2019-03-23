@@ -1,4 +1,3 @@
-
 <?php
 require ('rabbitFunc.php');
 function reg() {
