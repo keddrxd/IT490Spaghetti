@@ -1,5 +1,5 @@
 <?php
-function one(){
+
 require ('rabbitFunc.php');
 //$username = $_POST['username'];
 $username = "0";
@@ -71,5 +71,4 @@ $response = firstLogin($username, $comedy, $horror, $action, $scifi, $romance, $
 //	
 //	header("location: index.php");
 //}
-}
-?>
+
