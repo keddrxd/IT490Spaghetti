@@ -79,7 +79,7 @@ if( $_SERVER['REQUEST_METHOD'] == 'POST')
 		 { 
          padding : 1%; 
          color: white; 
-		 float; left;
+		 float: left;
          background-color: light gray; 
 		 height: 400px;
          width: 300px; 
@@ -96,8 +96,9 @@ if( $_SERVER['REQUEST_METHOD'] == 'POST')
          border: white; 
          } 
 		 #submit {
-		 margin-left: 1250px;
-		 margin-top: -85px;s4e1s
+		<!-- margin-left: 1250px;-->
+		 <!--margin-top: -85px;s4e1s-->
+		 float: center;
 		 width: 84px;
 		 height: 40px;   
 		 font-size:14px;
