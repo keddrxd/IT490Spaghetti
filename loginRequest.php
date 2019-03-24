@@ -15,7 +15,7 @@ if( $response != false)
 	$_SESSION['lastName'] = $sessionData['lastName'];
 	$_SESSION['zip'] = $sessionData['zip'];
 	
-	header("location: successPage.php");
+	header("location: mainPage.php");
 }
 else
 {

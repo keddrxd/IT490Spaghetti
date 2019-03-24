@@ -68,7 +68,7 @@ function auth($userN, $session)
 	while($row = $reply->fetch_assoc())
 	{
 		$session = updateSess($row['username']);
-		if($row["sessionKey"] == $session)
+		if($row["sessionKey"] != $session)
 		{
 			echo "Session ID's match!".PHP_EOL;
 			$userData['username'] = $userN;

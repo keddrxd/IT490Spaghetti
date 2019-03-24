@@ -25,7 +25,7 @@ if( $_SERVER['REQUEST_METHOD'] == 'POST')
 ?>
 
 <body background="spaghetti.jpg">
-<form action = "index.php" method = "POST">
+
 <head>
 <style>
 
@@ -102,10 +102,13 @@ if( $_SERVER['REQUEST_METHOD'] == 'POST')
 		</marquee>
 		</center>
 		</div>
-</form>
+	
+	<form action="index.php" >
+
 		<div id = "logout">
 		<button name = "logout" style = "height:50px;width:80px"><font size = 4> Logout </font></button>
 		</div>
+	</form>
 		
 		<div id = "body">
 		<p>Hello testing</p>
@@ -147,7 +150,7 @@ if( $_SERVER['REQUEST_METHOD'] == 'POST')
 
 						var requests = {
 							location:event.latLng,
-							radius:25000,
+							radius:15000,
 							query:'Movies'
 						};
 						service.textSearch(requests, callback);
