@@ -147,7 +147,7 @@ if( $_SERVER['REQUEST_METHOD'] == 'POST')
 
 						var requests = {
 							location:event.latLng,
-							radius:25000,
+							radius:15000,
 							query:'Movies'
 						};
 						service.textSearch(requests, callback);
