@@ -96,7 +96,7 @@ function firstLogin($username, $comedy, $horror, $action, $scifi, $romance, $ani
 	$pw = 'adminPwd';
 	$db = 'usersDB';
 	$mysqli = new mysqli($host, $user, $pw, $db);
-	$sql = "SELECT username, FROM users WHERE username = '" . $_SESSION['username'] . "'";
+	$sql = "SELECT username, FROM users WHERE username = $_SESSION['username']";
 	$result = $mysqli->query($sql);
 	while($row = $result->fetch_assoc())
 	{
