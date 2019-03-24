@@ -96,6 +96,7 @@ function firstLogin($username, $comedy, $horror, $action, $scifi, $romance, $ani
 	$pw = 'adminPwd';
 	$db = 'usersDB';
 	$mysqli = new mysqli($host, $user, $pw, $db);
+	
 	$userData = array();
 	$username = $mysqli->escape_string($username);
 	$comedy = $mysqli->escape_string($comedy);
