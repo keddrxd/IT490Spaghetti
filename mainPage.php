@@ -102,10 +102,13 @@ if( $_SERVER['REQUEST_METHOD'] == 'POST')
 		</marquee>
 		</center>
 		</div>
+	
+	<form action="index.php" >
 
 		<div id = "logout">
-		<button name = "logout" style = "height:50px;width:80px" formaction = "index.php"><font size = 4> Logout </font></button>
+		<button name = "logout" style = "height:50px;width:80px"><font size = 4> Logout </font></button>
 		</div>
+	</form>
 		
 		<div id = "body">
 		<p>Hello testing</p>
