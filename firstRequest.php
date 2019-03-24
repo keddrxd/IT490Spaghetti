@@ -6,7 +6,7 @@ $username = $_POST['username'];
 //$username = $_GET['username'];
 
 if(isset($_POST['comedy'])){
-    $comedy  = $_POST['active'];
+    $comedy  = $_POST['comedy'];
 }
 else{
     $comedy = "0";
