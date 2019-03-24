@@ -97,11 +97,14 @@ function firstLogin($username, $comedy, $horror, $action, $scifi, $romance, $ani
 	$db = 'usersDB';
 	$mysqli = new mysqli($host, $user, $pw, $db);
 	$sql = "SELECT username, FROM users WHERE username = '" . $_SESSION['username'] . "'";
-	$result = mysql_query($sql);
-	$row = mysql_fetch_array($result);
+	$result = mysql->query($sql);
+	while($row = $result->fetch_assoc())
+	{
+		$username = $row['username'];
+	}
 	//echo "Hello, " . $row['name'] . " (" . $row['email'] . ").";
 	$userData = array();
-	$username = $mysqli->escape_string($row['username']);
+	//$username = $mysqli->escape_string($row['username']);
 	$comedy = $mysqli->escape_string($comedy);
 	$horror = $mysqli->escape_string($horror);
 	$action = $mysqli->escape_string($action);
