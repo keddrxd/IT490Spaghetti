@@ -43,8 +43,8 @@ function login($userN, $pass)
 			$userData['password'] = $row['password'];
 			$userData['email'] = $row['email'];
 			$userData['zip'] = $row['zip'];
-			//$sessionID = updateSess($row['username']);
-			//$userData['sessionKey'] = $sessionID;
+			$sessionID = updateSess($row['username']);
+			$userData['sessionKey'] = $sessionID;
 			#dont return true, return userData values username and sessionID as generated in new function updateSession
 			return json_encode($userData);
 		}
@@ -209,7 +209,7 @@ function requestProcessor($request)
 		case "validate":
 			return auth($request['username'], $request['sessionID']);
 		case "first":
-			return firstLogin($request['username'], $request['comedy'], $request['horror'], $request['action'], $request['scifi'], $request['romance'], $request['animation']);
+			return auth($request['username'], $request['comedy'], $request['horror'], $request['action'], $request['scifi'], $request['romance'], $request['animation']);
 		
 		default:
 			echo "try again";
