@@ -98,7 +98,7 @@ if( $_SERVER['REQUEST_METHOD'] == 'POST')
 		 #submit {
 		<!-- margin-left: 1250px;-->
 		 <!--margin-top: -85px;s4e1s-->
-		 float: center;
+		 float: auto:;
 		 width: 84px;
 		 height: 40px;   
 		 font-size:14px;

@@ -48,8 +48,9 @@ if( $_SERVER['REQUEST_METHOD'] == 'POST')
 }
 
 #logout {
-	margin-left: 1250px;
-    margin-top: -85px;s4e1s
+	margin-left: 600px;
+    margin-top: -75px;s4e1s
+margin-right: 75px;	
     width: 84px;
     height: 40px;   
     font-size:14px;
@@ -59,7 +60,6 @@ if( $_SERVER['REQUEST_METHOD'] == 'POST')
 
 
 #body {
-	
 	margin-left: 75px;
     margin-top: 125px;
 	margin-right: 75px;
@@ -67,7 +67,7 @@ if( $_SERVER['REQUEST_METHOD'] == 'POST')
     height: 750px;   
     font-size:14px;
     font-weight:700;
-    background-color: light gray;
+    background-color:light gray;
 }
 #map {
     background-color: clear;
@@ -75,9 +75,7 @@ if( $_SERVER['REQUEST_METHOD'] == 'POST')
     border: clear;	    
     padding: 25px;
 	height: 500px;   
-
-    margin: 25px;
-	margin-left: 400px;
+	margin-left:75px;
     margin-top: 100px;
 	margin-right: 75px;
 }
