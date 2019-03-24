@@ -59,7 +59,7 @@ if( $_SERVER['REQUEST_METHOD'] == 'POST')
 
 
 #body {
-	opacity: 0.4;
+	
 	margin-left: 75px;
     margin-top: 125px;
 	margin-right: 75px;
@@ -67,7 +67,7 @@ if( $_SERVER['REQUEST_METHOD'] == 'POST')
     height: 750px;   
     font-size:14px;
     font-weight:700;
-    background-color: red;
+    background-color: light gray;
 }
 #map {
     background-color: clear;
@@ -78,7 +78,7 @@ if( $_SERVER['REQUEST_METHOD'] == 'POST')
 
     margin: 25px;
 	margin-left: 400px;
-    margin-top: 1000px;
+    margin-top: 100px;
 	margin-right: 75px;
 }
 
@@ -111,7 +111,7 @@ if( $_SERVER['REQUEST_METHOD'] == 'POST')
 	</form>
 		
 		<div id = "body">
-		<p>Hello testing</p>
+		<h2><font size="10" face = "courier" color = "black">Hello, User!</font></h2> 
 		</div>
 		
 		<div id= "map">
