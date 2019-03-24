@@ -79,7 +79,7 @@ if( $_SERVER['REQUEST_METHOD'] == 'POST')
 		 { 
          padding : 1%; 
          color: white; 
-		 float; left;
+		 float: left;
          background-color: light gray; 
 		 height: 400px;
          width: 300px; 
