@@ -22,6 +22,19 @@ if( $_SERVER['REQUEST_METHOD'] == 'POST')
 		
 	}
 }
+	$host = '127.0.0.1';
+	$user = 'admin';
+	$pw = 'adminPwd';
+	$db = 'usersDB';
+	$mysqli = new mysqli($host, $user, $pw, $db);
+	$query = "select * from users where username = 'andypoo'";
+	$reply = $mysqli->query($query);
+	while ($row = $reply->fetch_assoc())
+	{
+		echo "<br> Your username is: ". row['username'];
+		echo "<br> Comedy = ". row['comedy'];
+	}
+
 ?>
 
 <body background="spaghetti.jpg">
