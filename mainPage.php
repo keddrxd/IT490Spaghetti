@@ -25,7 +25,7 @@ if( $_SERVER['REQUEST_METHOD'] == 'POST')
 ?>
 
 <body background="spaghetti.jpg">
-<form action = "index.php" method = "POST">
+
 <head>
 <style>
 
@@ -102,7 +102,7 @@ if( $_SERVER['REQUEST_METHOD'] == 'POST')
 		</marquee>
 		</center>
 		</div>
-</form>
+
 		<div id = "logout">
 		<button name = "logout" style = "height:50px;width:80px" formaction = "index.php"><font size = 4> Logout </font></button>
 		</div>
