@@ -22,7 +22,7 @@ if( $_SERVER['REQUEST_METHOD'] == 'POST')
 		
 	}
 }
-	$host = '127.0.0.1';
+	$host = '25.80.231.148';
 	$user = 'admin';
 	$pw = 'adminPwd';
 	$db = 'usersDB';
