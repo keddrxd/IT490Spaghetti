@@ -209,7 +209,7 @@ function requestProcessor($request)
 		case "validate":
 			return auth($request['username'], $request['sessionID']);
 		case "first":
-			return auth($request['username'], $request['comedy'], $request['horror'], $request['action'], $request['scifi'], $request['romance'], $request['animation']);
+			return firstLogin($request['username'], $request['comedy'], $request['horror'], $request['action'], $request['scifi'], $request['romance'], $request['animation']);
 		
 		default:
 			echo "try again";
