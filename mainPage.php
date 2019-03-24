@@ -132,7 +132,7 @@ if( $_SERVER['REQUEST_METHOD'] == 'POST')
 				});
 				request = {
 					location:center,
-					radius:25000,
+					radius:15000,
 					//types:['cinema']
 					query: 'Movies'
 				};
