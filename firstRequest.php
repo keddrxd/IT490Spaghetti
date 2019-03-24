@@ -6,7 +6,7 @@ require ('rabbitFunc.php');
 //$username = $_GET['username'];
 //$username = $_SESSION['username'];
 $username = $_REQUEST['username'];
-
+echo $username;
 if(isset($_POST['comedy'])){
     $comedy  = $_POST['comedy'];
 }
