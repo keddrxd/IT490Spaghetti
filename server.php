@@ -67,7 +67,7 @@ function auth($userN, $session)
 	$reply = $mysqli->query($query);
 	while($row = $reply->fetch_assoc())
 	{
-		$session = updateSess($row['username']);
+		//$session = updateSess($row['username']);
 		if($row["sessionKey"] == $session)
 		{
 			echo "Session ID's match!".PHP_EOL;
