@@ -20,7 +20,7 @@ else
 {
 	$errorMSG = "Login Unsucessful";
 	echo "$errorMSG";
-	error($errorMSG);
+	//error($errorMSG);
 	header("location: index.php");
 }
 
