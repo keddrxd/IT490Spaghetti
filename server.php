@@ -62,6 +62,7 @@ function login($userN, $pass)
 			return json_encode($userData);
 		}
 	}
+		$error = "Passwords don't match";
 		echo $error;
 		error($error);
 		echo "passswords dont match";
