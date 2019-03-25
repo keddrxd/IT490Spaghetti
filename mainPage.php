@@ -1,5 +1,6 @@
 <!DOCTYPE HTML>
 <html>
+<form action = "currentUser.php">
 <head>
 </head>
 	
@@ -210,6 +211,6 @@ margin-right: 75px;
 		</div>
 		
 </center>
-
+	</form>
 </body>
 </html>
