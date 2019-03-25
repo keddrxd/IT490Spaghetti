@@ -63,8 +63,8 @@ function login($userN, $pass)
 	}
 	$error = "Passwords don't match\n";
 	//echo $error;
-	//header("location: index.php");
-	//error($error);
+	header("location: index.php");
+	error($error);
 	echo "passswords dont match";
 	return false;
 	
