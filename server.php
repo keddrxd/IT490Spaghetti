@@ -25,6 +25,7 @@ function error($errorMSG)
 	$request4['log']=$errorMSG;
 	file_put_contents('error.log',$request4['log'], FILE_APPEND);
 	$errorClient->send_request($request4);
+	return false;
 }
 
 function login($userN, $pass)
