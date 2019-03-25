@@ -3,8 +3,7 @@
 <head>
 </head>
 <?php
-	include("welcomeRequest.php");
-	display();
+	
 session_start();
 
 if( $_SERVER['REQUEST_METHOD'] == 'POST')
