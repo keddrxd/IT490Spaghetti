@@ -23,7 +23,7 @@ function error($errorMSG)
 	$errorDate = date_create();
 	$request4['type'] ="error";
 	$request4['date']=$errorDate;
-	$request4['log']=$message;
+	$request4['log']=$errorMSG;
 	file_put_contents('error.log',$request['LogMessage'], FILE_APPEND);
 	$errorClient->send_request($request4);
 }
