@@ -34,7 +34,15 @@ if( $_SERVER['REQUEST_METHOD'] == 'POST')
 		border:2px solid #555;
 		
 		}
-		
+	div.username
+{
+padding: 1%;
+color:white;
+background-color: light gray;
+height: 10px;
+width: 15px;
+border: white;
+}	
          div.comedy
 		 { 
          padding : 1%; 
@@ -114,6 +122,10 @@ if( $_SERVER['REQUEST_METHOD'] == 'POST')
 <form action = "moviePage.php" method = "POST">
 <center>
 <h1 style="font-size:60px;" >Welcome!</h1>
+<center>
+<div class = "username">
+Please type your username one more time: <input type = "text" required name = "username"/>
+</center>
 <h2 style = "font-size: 35px; ">Tell us what you may like </h2>
 </center>
 <center>

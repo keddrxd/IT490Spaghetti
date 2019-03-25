@@ -54,6 +54,31 @@ function login($userN, $pass)
 	
 	
 }
+function display()
+{
+	$host = '127.0.0.1';
+	$user = 'admin';
+	$pw = 'adminPwd';
+	$db = 'usersDB';
+	$mysqli = new mysqli($host, $user, $pw, $db); 
+	if (mysqli_connect_errno($mysqli))
+  	{
+          echo "Failed to connect to MySQL: " . mysqli_connect_error();
+          exit();
+  	}
+	$s = mysqli_query($mysqli, "SELECT * FROM category WHERE username = 'andypoo'");
+	while ($row = mysqli_fetch_array($s, MYSQLI_ASSOC)) {
+		$user = $row["username"];
+		$comedy = $row["comedy"];
+		$horror = $row["horror"];
+		$action = $row["action"];
+		$scifi = $row["scifi"];
+		$romance = $row["romance"];
+		$animation = $row["animation"];
+	}
+	echo "Username is: $user<br>";
+	echo "Comedy is: $comedy<br>";
+}
 function auth($userN, $session)
 {
 	$host = '127.0.0.1';
@@ -145,8 +170,8 @@ function register($firstName, $lastName, $userName, $pass, $email, $zip)
 	{
 		$query = "INSERT INTO users values('$firstN', '$lastN', '$userN', '$password', '$email', '$zip')";
 		$mysqli->query($query) or die($mysqli->error);
-		$query1 = "INSERT INTO category values('$userN', '0', '0', '0', '0', '0', '0')";
-		$mysqli->query($query1) or die($mysqli->error);
+		//$query1 = "INSERT INTO category values('$userN', '0', '0', '0', '0', '0', '0')";
+		//$mysqli->query($query1) or die($mysqli->error);
 		echo "Account has been created".PHP_EOL;
 		echo "Passwords match".PHP_EOL;
 		$userData['firstName'] = $firstN;
