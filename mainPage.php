@@ -29,22 +29,22 @@
 	echo $comedy;
 	echo $horror;
 	if($comedy != 0){
-		echo "$comedy<br>";	
+		echo $comedy;	
 	}
 	if($horror != 0){
-		echo "$horror<br>";	
+		echo $horror;	
 	}
 	if($action != 0){
-		echo "$action<br>";	
+		echo $action;	
 	}
 	if($scifi != 0){
-		echo "$scifi<br>";	
+		echo $scifi;	
 	}
 	if($romance != 0){
-		echo "$romance<br>";	
+		echo $romance;	
 	}
 	if($animation != 0){
-		echo "$animation<br>";	
+		echo $animation;	
 	}
 ?>
 	
