@@ -61,10 +61,10 @@ function login($userN, $pass)
 			return json_encode($userData);
 		}
 	}
-	$error = "Passwords don't match";
-	echo $error;
-	header("location: index.php");
-	error($error);
+	$error = "Passwords don't match\n";
+	//echo $error;
+	//header("location: index.php");
+	//error($error);
 	echo "passswords dont match";
 	return false;
 	
