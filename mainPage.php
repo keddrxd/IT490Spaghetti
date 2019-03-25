@@ -3,7 +3,7 @@
 <head>
 </head>
 <?php 
-	$host = '25.80.231.148';
+	$host = 'localhost';
 	$user = 'admin';
 	$pw = 'adminPwd';
 	$db = 'usersDB';
