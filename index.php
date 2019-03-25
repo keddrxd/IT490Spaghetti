@@ -9,7 +9,6 @@ if( $_SERVER['REQUEST_METHOD'] == 'POST')
 {
 	if( isset($_POST['login']))
 	{
-		echo "login successful";
 		require 'loginRequest.php'; #change file name
 	}
 	if(isset($_POST['register']))
