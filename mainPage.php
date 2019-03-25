@@ -10,39 +10,29 @@
 	$mysqli = new mysqli($host, $user, $pw, $db); 
 	$query = "SELECT * FROM category where username = 'andypoo'";
  
- 
-echo '<table border="0" cellspacing="2" cellpadding="2"> 
-      <tr> 
-          <td> <font face="Arial">Value1</font> </td> 
-          <td> <font face="Arial">Value2</font> </td> 
-          <td> <font face="Arial">Value3</font> </td> 
-          <td> <font face="Arial">Value4</font> </td> 
-          <td> <font face="Arial">Value5</font> </td> 
-      </tr>';
- 
-if ($result = $mysqli->query($query)) {
-    while ($row = $result->fetch_assoc()) {
-        $field1name = $row["username"];
-        $field2name = $row["comedy"];
-        $field3name = $row["horror"];
-        $field4name = $row["action"];
-        $field5name = $row["scifi"]; 
-        $field6name = $row["romance"]; 
-        $field7name = $row["animation"]; 
+	$result = $mysqli->query($query);
+	while ($row = $result->fetch_assoc()) {
+		$field1name = $row["username"];
+		$field2name = $row["comedy"];
+		$field3name = $row["horror"];
+		$field4name = $row["action"];
+		$field5name = $row["scifi"]; 
+		$field6name = $row["romance"]; 
+		$field7name = $row["animation"]; 
 
-        echo '<tr> 
-                  <td>'.$field1name.'</td> 
-                  <td>'.$field2name.'</td> 
-                  <td>'.$field3name.'</td> 
-                  <td>'.$field4name.'</td> 
-                  <td>'.$field5name.'</td> 
-                  <td>'.$field6name.'</td> 
-                  <td>'.$field7name.'</td> 
+		echo '<tr> 
+			  <td>'.$field1name.'</td> 
+			  <td>'.$field2name.'</td> 
+			  <td>'.$field3name.'</td> 
+			  <td>'.$field4name.'</td> 
+			  <td>'.$field5name.'</td> 
+			  <td>'.$field6name.'</td> 
+			  <td>'.$field7name.'</td> 
 
-              </tr>';
-    }
-    $result->free();
-} 
+		      </tr>';
+	    }
+	    $result->free();
+
 ?>
 	
 <?php
