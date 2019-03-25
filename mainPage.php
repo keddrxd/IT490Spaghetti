@@ -3,7 +3,7 @@
 <head>
 </head>
 	
-<?php>
+<?php
 include("server.php");
 display();	
 ?>
