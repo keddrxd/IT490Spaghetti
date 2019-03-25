@@ -2,37 +2,14 @@
 <html>
 <head>
 </head>
-<?php 
-	$host = 'localhost';
-	$user = 'admin';
-	$pw = 'adminPwd';
-	$db = 'usersDB';
-	$mysqli = new mysqli($host, $user, $pw, $db); 
-	if (mysqli_connect_errno($mysqli))
-  	{
-          echo "Failed to connect to MySQL: " . mysqli_connect_error();
-          exit();
-  	}
-	$s = mysqli_query($mysqli, "SELECT * FROM category WHERE username = 'andypoo'");
-	while ($row = mysqli_fetch_array($s, MYSQLI_ASSOC)) {
-		$user = $row["username"];
-		$comedy = $row["comedy"];
-		$horror = $row["horror"];
-		$action = $row["action"];
-		$scifi = $row["scifi"];
-		$romance = $row["romance"];
-		$animation = $row["animation"];
-	}
-	echo "Username is: $user<br>";
-	echo "Comedy is: $comedy<br>";
-
- 
 	
-
+<?php>
+include("server.php");
+display();	
 ?>
 	
 <?php
-	
+
 session_start();
 
 if( $_SERVER['REQUEST_METHOD'] == 'POST')
