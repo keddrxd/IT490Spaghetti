@@ -26,6 +26,8 @@
 	}
 	echo "<br>Hello $user !<br>";
 	echo "Your favorite categories are: ";
+	echo $comedy;
+	echo $horror;
 	if($comedy != 0){
 		echo "$comedy<br>";	
 	}
