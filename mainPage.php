@@ -3,7 +3,7 @@
 <head>
 </head>
 <?php
-	require 'welcomeRequest.php';
+	include("welcomeRequest.php");
 	display();
 session_start();
 
