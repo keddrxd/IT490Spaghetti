@@ -16,7 +16,7 @@
   	}
 		//$s = mysqli_query($mysqli, "SELECT * FROM category WHERE username = $user");
 		//$s = mysqli_query($mysqli, "Select * from category where category.username = '$username'");
-		$s = mysqli_query($mysqli, "select username from category where username ='".$_SESSION['username']."'");
+		$s = mysqli_query($mysqli, "select * from category where username ='".$_SESSION['username']."'");
 
 		while ($row = mysqli_fetch_array($s, MYSQLI_ASSOC)) {
 			$user = $row["username"];
