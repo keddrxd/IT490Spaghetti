@@ -15,7 +15,17 @@ if (mysqli_connect_errno())
 		
 	echo "Successfully connected to MYSQL."."\n".PHP_EOL;
 }
-
+function error($errorMSG)
+{
+	$errorClient = new rabbitMQClient("errorServer.ini","errorServer");
+	$request4 = array();
+	//$errorDate = date_create();
+	$request4['type'] ="error";
+	//$request4['date']=$errorDate;
+	$request4['log']=$errorMSG;
+	file_put_contents('error.log',$request4['log'], FILE_APPEND);
+	$errorClient->send_request($request4);
+}
 
 function login($userN, $pass)
 {
@@ -51,10 +61,10 @@ function login($userN, $pass)
 			return json_encode($userData);
 		}
 	}
-	$error = "Passwords don't match";
-	echo $error;
+	//$error = "Passwords don't match";
+	//echo $error;
 	//error($error);
-	//echo "passswords dont match";
+	echo "passswords dont match";
 	return false;
 	
 	
