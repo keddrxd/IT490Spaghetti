@@ -19,7 +19,7 @@
 		$s = mysqli_query($mysqli, "select * from category where username ='".$_SESSION['username']."'");
 
 		while ($row = mysqli_fetch_array($s, MYSQLI_ASSOC)) {
-			$user = $row["username"];
+			$username = $row["username"];
 			$comedy = $row["comedy"];
 			$horror = $row["horror"];
 			$action = $row["action"];
@@ -27,7 +27,7 @@
 			$romance = $row["romance"];
 			$animation = $row["animation"];
 		}
-		echo "<br>Hello $user !<br>";
+		echo "<br>Hello $username !<br>";
 		echo "Your favorite categories are: <br>";
 		if($comedy !== '0'){
 			echo "$comedy<br>";	
