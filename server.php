@@ -57,7 +57,6 @@ function login($userN, $pass)
 			$userData['zip'] = $row['zip'];
 			$sessionID = updateSess($row['username']);
 			$userData['sessionKey'] = $sessionID;
-			#dont return true, return userData values username and sessionID as generated in new function updateSession
 			return json_encode($userData);
 		}
 	}
