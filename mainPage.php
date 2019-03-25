@@ -4,6 +4,8 @@
 </head>
 <?php
 session_start();
+require 'server.php';
+display();
 if( $_SERVER['REQUEST_METHOD'] == 'POST')
 {
 	if( isset($_POST['login']))
