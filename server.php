@@ -54,6 +54,21 @@ function login($userN, $pass)
 	
 	
 }
+function display()
+{
+	$host = '127.0.0.1';
+	$user = 'admin';
+	$pw = 'adminPwd';
+	$db = 'usersDB';
+	$mysqli = new mysqli($host, $user, $pw, $db);
+	$query = "select * from users where username = 'andypoo'";
+	$reply = $mysqli->query($query);
+	while ($row = $reply->fetch_assoc())
+	{
+		echo "<br> Your username is: ". row['username'];
+		echo "<br> Comedy = ". row['comedy'];
+	}
+}
 function auth($userN, $session)
 {
 	$host = '127.0.0.1';
