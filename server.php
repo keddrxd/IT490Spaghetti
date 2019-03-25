@@ -60,14 +60,24 @@ function display()
 	$user = 'admin';
 	$pw = 'adminPwd';
 	$db = 'usersDB';
-	$mysqli = new mysqli($host, $user, $pw, $db);
-	$query = "select * from users where username = 'andypoo'";
-	$reply = $mysqli->query($query);
-	while ($row = $reply->fetch_assoc())
-	{
-		echo "<br> Your username is: ". row['username'];
-		echo "<br> Comedy = ". row['comedy'];
+	$mysqli = new mysqli($host, $user, $pw, $db); 
+	if (mysqli_connect_errno($mysqli))
+  	{
+          echo "Failed to connect to MySQL: " . mysqli_connect_error();
+          exit();
+  	}
+	$s = mysqli_query($mysqli, "SELECT * FROM category WHERE username = 'andypoo'");
+	while ($row = mysqli_fetch_array($s, MYSQLI_ASSOC)) {
+		$user = $row["username"];
+		$comedy = $row["comedy"];
+		$horror = $row["horror"];
+		$action = $row["action"];
+		$scifi = $row["scifi"];
+		$romance = $row["romance"];
+		$animation = $row["animation"];
 	}
+	echo "Username is: $user<br>";
+	echo "Comedy is: $comedy<br>";
 }
 function auth($userN, $session)
 {
