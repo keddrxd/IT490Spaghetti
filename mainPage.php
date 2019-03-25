@@ -4,8 +4,7 @@
 </head>
 	
 <?php
-include("server.php");
-display();	
+	
 ?>
 	
 <?php
