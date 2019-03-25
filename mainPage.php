@@ -8,30 +8,26 @@
 	$pw = 'adminPwd';
 	$db = 'usersDB';
 	$mysqli = new mysqli($host, $user, $pw, $db); 
-	$query = "SELECT * FROM category where username = 'andypoo'";
+	if (mysqli_connect_errno($mysqli))
+  	{
+          echo "Failed to connect to MySQL: " . mysqli_connect_error();
+          exit();
+  	}
+	$s = mysqli_query($mysqli, "SELECT * FROM category WHERE username = 'andypoo'");
+	while ($row = mysqli_fetch_array($s, MYSQLI_ASSOC)) {
+		$user = $row["username"];
+		$comedy = $row["comedy"];
+		$horror = $row["horror"];
+		$action = $row["action"];
+		$scifi = $row["scifi"];
+		$romance = $row["romance"];
+		$animation = $row["animation"];
+	}
+	echo "Username is: $user<br>";
+	echo "Comedy is: $comedy<br>";
+
  
-	$result = $mysqli->query($query);
-	while ($row = $result->fetch_assoc()) {
-		$field1name = $row["username"];
-		$field2name = $row["comedy"];
-		$field3name = $row["horror"];
-		$field4name = $row["action"];
-		$field5name = $row["scifi"]; 
-		$field6name = $row["romance"]; 
-		$field7name = $row["animation"]; 
-
-		echo '<tr> 
-			  <td>'.$field1name.'</td> 
-			  <td>'.$field2name.'</td> 
-			  <td>'.$field3name.'</td> 
-			  <td>'.$field4name.'</td> 
-			  <td>'.$field5name.'</td> 
-			  <td>'.$field6name.'</td> 
-			  <td>'.$field7name.'</td> 
-
-		      </tr>';
-	    }
-	    $result->free();
+	
 
 ?>
 	
