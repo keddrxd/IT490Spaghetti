@@ -4,7 +4,6 @@ require ('rabbitFunc.php');
 $user = $_POST['username'];
 $pass = $_POST['password'];
 $response = login($user,$pass);
-file_put_contents('error.log', "[".$date."]".$errorMSG.PHP_EOL, FILE_APPEND);
 if( $response != false)
 {
 	$sessionData = json_decode($response, true);
@@ -21,7 +20,7 @@ else
 {
 	$errorMSG = "Login Unsucessful";
 	echo "$errorMSG";
-	error($errorMSG);
+	//error($errorMSG);
 	header("location: index.php");
 }
 
