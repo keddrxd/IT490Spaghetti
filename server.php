@@ -24,6 +24,7 @@ function error($errorMSG)
 	$request4['type'] ="error";
 	$request4['date']=$errorDate;
 	$request4['log']=$message;
+	file_put_contents('error.log',$request['LogMessage'], FILE_APPEND);
 	$errorClient->send_request($request4);
 }
 
@@ -61,10 +62,11 @@ function login($userN, $pass)
 			return json_encode($userData);
 		}
 	}
-	else{
+		echo $error;
+		logger($error);
 		echo "passswords dont match";
 		return false;
-	}
+	
 	
 	
 }
