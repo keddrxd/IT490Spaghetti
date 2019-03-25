@@ -25,23 +25,23 @@
 		$animation = $row["animation"];
 	}
 	echo "<br>Hello $user !<br>";
-	echo "Your favorite categories are: ";
-	if($comedy !== 0){
+	echo "Your favorite categories are: <br>";
+	if($comedy !== '0'){
 		echo "$comedy<br>";	
 	}
-	if($horror !== 0){
+	if($horror !== '0'){
 		echo "$horror<br>";	
 	}
-	if($action !== 0){
+	if($action !== '0'){
 		echo "$action<br>";	
 	}
-	if($scifi !== 0){
+	if($scifi !== '0'){
 		echo "$scifi<br>";	
 	}
-	if($romance !== 0){
+	if($romance !== '0'){
 		echo "$romance<br>";	
 	}
-	if($animation !== 0){
+	if($animation !== '0'){
 		echo "$animation<br>";	
 	}
 ?>
