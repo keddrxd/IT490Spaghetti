@@ -62,7 +62,7 @@ function login($userN, $pass)
 		}
 	}
 	$error = "Passwords don't match";
-	echo $error;
+	//echo $error;
 	error($error);
 	echo "passswords dont match";
 	return false;
