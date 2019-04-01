@@ -65,6 +65,9 @@ if ($response != false)
 
 	header("location: mainPage.php");
 }
+
+   
+
 //else
 //{
 //	$errorMSG = "Email already exists";
