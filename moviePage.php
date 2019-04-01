@@ -124,7 +124,7 @@ border: white;
 <h1 style="font-size:60px;" >Welcome!</h1>
 <center>
 <div class = "username">
-Please type your username one more time: <input type = "text" required name = "username"/>
+Please type your username one more time: <input type = "text" name = "username"/>
 </center>
 <h2 style = "font-size: 35px; ">Tell us what you may like </h2>
 </center>
