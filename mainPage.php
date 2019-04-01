@@ -25,7 +25,7 @@
 			$romance = $row["romance"];
 			$animation = $row["animation"];
 		}
-		echo "<br>Hello ".$_SESSION['username']<br>;
+		echo "Hello ".$_SESSION['username']<br>;
 		echo "Your favorite categories are: <br>";
 		if($comedy !== '0'){
 			echo "$comedy<br>";	
