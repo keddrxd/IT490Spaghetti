@@ -66,9 +66,9 @@ for i in rsp_json["results"]:
 
 #print(data.decode("utf-8"))
 
-
+mycursor = mydb.cursor()
 sql = "INSERT INTO movieRec (username, comedy, rd1, horror, rd2, action, rd3, scifi, rd4, romance, rd5, animation, rd6) VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)"
 val = (actionRec, rd1)
-
+mycursor.execute(sql, val)
 mydb.commit()
                 
