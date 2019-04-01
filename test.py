@@ -33,7 +33,7 @@ rsp_json = json.loads(data.decode("utf-8"))
 
 
 for i in rsp_json["results"]:
-    username = "andypoo'
+    username = "andypoo"
     comedy = ""
     rd1 = ""
     horror = ""
