@@ -34,18 +34,18 @@ rsp_json = json.loads(data.decode("utf-8"))
 
 for i in rsp_json["results"]:
     username = "andypoo"
-    comedy = ""
-    rd1 = ""
-    horror = ""
-    rd2 = ""
-    action = ""
-    rd3 = ""
-    scifi = ""
-    rd4 = ""
-    romance = ""
-    rd5 = ""
-    animation = ""
-    rd6 = ""
+    #comedyRec = ""
+   # rd1 = ""
+   # horrorRec = ""
+   # rd2 = ""
+    #actionRec = ""
+    #rd3 = ""
+   # scifiRec = ""
+   # rd4 = ""
+    #romanceRec = ""
+    #rd5 = ""
+   # animationRec = ""
+   # rd6 = ""
     
     action = 28    
     comedy = 35
@@ -56,29 +56,42 @@ for i in rsp_json["results"]:
     
     #print("genre: {}".format(i["genre_ids"]))
     for g in i["genre_ids"]:
+        if comedy == g:
+            comedyRec = i["title"]
+            rd1 = i["release_date"]
+            print(i["title"]+" - is a comedy movie. It will be released on "+i["release_date"])
+        if horror == g:
+            horrorRec = i["title"]
+            rd2 = i["release_date"]
+            print(i["title"]+" - is a horror movie. It will be released on "+i["release_date"])
         if action == g:
             #i["title"] = actionRec
             actionRec =  i["title"]
-            rd1 = i["release_date"]
+            rd3 = i["release_date"]
             print (actionRec+rd1)
             #print (rd1)
             #print(i["title"]+" - is a action movie. It will be released on "+i["release_date"])
-        if comedy == g:
-            print(i["title"]+" - is a comedy movie. It will be released on "+i["release_date"])
-        if animation == g:
-            print(i["title"]+" - is a animation movie. It will be released on "+i["release_date"])
-        if horror == g:
-            print(i["title"]+" - is a horror movie. It will be released on "+i["release_date"])
-        if romance == g:
-            print(i["title"]+" - is a romance movie. It will be released on "+i["release_date"])
         if scifi == g:
+            scifiRec = i["title"]
+            rd4 = i["release_date"]
             print(i["title"]+" - is a science fiction movie. It will be released on "+i["release_date"])
+        if romance == g:
+            romanceRec = i["title"]
+            rd5 = i["release_date"]
+            print(i["title"]+" - is a romance movie. It will be released on "+i["release_date"])
+        if animation == g:
+            animationRec = i["title"]
+            rd6 = i["release_date"]
+            print(i["title"]+" - is a animation movie. It will be released on "+i["release_date"])
+        
+        
+        
 
 #print(data.decode("utf-8"))
 
 mycursor = mydb.cursor()
 sql = "INSERT INTO movieRec (username, comedy, rd1, horror, rd2, action, rd3, scifi, rd4, romance, rd5, animation, rd6) VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)"
-val = (username, comedy, rd1, horror, rd2, action, rd3, scifi, rd4, romance, rd5, animation, rd6)
+val = (username, comedyRec, rd1, horrorRec, rd2, actionRec, rd3, scifiRec, rd4, romanceRec, rd5, animationRec, rd6)
 mycursor.execute(sql, val)
 mydb.commit()
                 
