@@ -1,15 +1,15 @@
 import http.client
 import json
-#import mysql.connector
+import mysql.connector
 
-#mydb = mysql.connector.connect(
-#    host = "localhost",
-#    user = "admin",
-#    password = "adminPwd",
-#    database = "usersDB"
-#)
+mydb = mysql.connector.connect(
+    host = "localhost",
+    user = "admin",
+    password = "adminPwd",
+    database = "usersDB"
+)
 
-#mycursor = mydb.cursor()
+
 
 
 
@@ -35,21 +35,24 @@ rsp_json = json.loads(data.decode("utf-8"))
 for i in rsp_json["results"]:
 
     actionRec = ""
-
-    action = 28
+    rd1 = ""
     
+    action = 28    
     comedy = 35
     animation = 16
     horror = 27
     romance = 10749
     scifi = 878
+    
     #print("genre: {}".format(i["genre_ids"]))
     for g in i["genre_ids"]:
         if action == g:
-            i["title"] = actionRec
-            #i['release_date'] = rd1
-            print (actionRec)
-            print(i["title"]+" - is a action movie. It will be released on "+i["release_date"])
+            #i["title"] = actionRec
+            actionRec =  i["title"]
+            rd1 = i["release_date"]
+            print (actionRec+rd1)
+            #print (rd1)
+            #print(i["title"]+" - is a action movie. It will be released on "+i["release_date"])
         if comedy == g:
             print(i["title"]+" - is a comedy movie. It will be released on "+i["release_date"])
         if animation == g:
@@ -64,5 +67,8 @@ for i in rsp_json["results"]:
 #print(data.decode("utf-8"))
 
 
-#sql = "INSERT INTO movieRec (movieName)
-            
+sql = "INSERT INTO movieRec (username, comedy, rd1, horror, rd2, action, rd3, scifi, rd4, romance, rd5, animation, rd6) VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)"
+val = (actionRec, rd1)
+
+mydb.commit()
+                
