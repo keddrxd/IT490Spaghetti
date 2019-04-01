@@ -68,7 +68,7 @@ for i in rsp_json["results"]:
             #i["title"] = actionRec
             actionRec =  i["title"]
             rd3 = i["release_date"]
-            print (actionRec+rd1)
+            #print (actionRec+rd1)
             #print (rd1)
             #print(i["title"]+" - is a action movie. It will be released on "+i["release_date"])
         if scifi == g:
