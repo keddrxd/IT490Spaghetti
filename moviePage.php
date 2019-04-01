@@ -122,10 +122,10 @@ border: white;
 <form action = "moviePage.php" method = "POST">
 <center>
 <h1 style="font-size:60px;" >Welcome!</h1>
-<center>
+<!--<center>
 <div class = "username">
 Please type your username one more time: <input type = "text" name = "username"/>
-</center>
+</center>-->
 <h2 style = "font-size: 35px; ">Tell us what you may like </h2>
 </center>
 <center>
