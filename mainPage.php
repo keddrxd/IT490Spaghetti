@@ -13,7 +13,7 @@
           echo "Failed to connect to MySQL: " . mysqli_connect_error();
           exit();
   	}
-		$s = mysqli_query($mysqli, "SELECT * FROM category WHERE username = 'andypoo'");
+		$s = mysqli_query($mysqli, "SELECT * FROM category WHERE username = '$_SESSION['username']'");
 		//$s = mysqli_query($mysqli, "Select * from category where category.username = '$username'");
 		//$s = mysqli_query($mysqli, "select * from category where username ='".$_SESSION['username']."'");
 		while ($row = mysqli_fetch_array($s, MYSQLI_ASSOC)) {
