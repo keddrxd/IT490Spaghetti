@@ -20,27 +20,27 @@ $animation = $_SESSION['animation'];
 echo "<br> Your favorite categories are: ";
 if($comedy !== 0)
 {
-	echo "<br>" $comedy;	
+	echo $comedy;	
 }
 if($horror !== 0)
 {
-	echo "<br>" $horror;	
+	echo $horror;	
 }
 if($action !== 0)
 {
-	echo "<br>" $action;	
+	echo $action;	
 }	
 if($scifi !== 0)
 {
-	echo "<br>" $scifi;	
+	echo $scifi;	
 }		
 if($romance !== 0)
 {
-	echo "<br>" $romance;	
+	echo $romance;	
 }
 if($animation !== 0)
 {
-	echo "<br>" $animation;	
+	echo $animation;	
 }
 	
 	
