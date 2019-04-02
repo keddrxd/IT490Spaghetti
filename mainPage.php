@@ -12,7 +12,7 @@ echo "Hello ".$_SESSION['username'];
 //echo "Hello ".$_SESSION['comedy'];
 
 //$comedy = $_SESSION['comedy'];
-//$horror = $_SESSION['horror'];
+$horror = $_SESSION['horror'];
 //$action = $_SESSION['action'];
 //$scifi = $_SESSION['scifi'];
 //$romance = $_SESSION['romance'];
