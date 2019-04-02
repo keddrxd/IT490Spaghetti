@@ -9,18 +9,18 @@
 
 session_start();
 echo "Hello ".$_SESSION['username'];
-echo "Hello ".$_SESSION['comedy'];
+//echo "Hello ".$_SESSION['comedy'];
 
-$comedy = $_SESSION['comedy'];
-$horror = $_SESSION['horror'];
-$action = $_SESSION['action'];
-$scifi = $_SESSION['scifi'];
-$romance = $_SESSION['romance'];
-$animation = $_SESSION['animation'];
+//$comedy = $_SESSION['comedy'];
+//$horror = $_SESSION['horror'];
+//$action = $_SESSION['action'];
+//$scifi = $_SESSION['scifi'];
+//$romance = $_SESSION['romance'];
+//$animation = $_SESSION['animation'];
 echo "<br> Your favorite categories are: <br>";
-if($comedy != 0)
+if($_SESSION['comedy'] != 0)
 {
-	echo $comedy;	
+	echo "".$_SESSION['comedy'];	
 }
 if($horror != 0)
 {
