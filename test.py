@@ -1,6 +1,17 @@
 import http.client
 import json
 import mysql.connector
+import pika
+
+#RabbitMQ Connection
+RABBIT_HOST = '25.80.204.225'
+RABBIT_PORT = '5672'
+RABBIT_Q = '*'
+RABBIT_USER = 'test'
+RABBIT_PASS = 'test'
+RABBIT_VH = 'testHost'
+RABBIT_EX = 'movieExchange'
+
 
 mydb = mysql.connector.connect(
     host = "localhost",
@@ -109,6 +120,9 @@ for i in rsp_json["results"]:
 
 
 #print(data.decode("utf-8"))
+
+
+
 
 
                 
