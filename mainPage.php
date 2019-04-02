@@ -18,30 +18,19 @@ $scifi = $_SESSION['scifi'];
 $romance = $_SESSION['romance'];
 $animation = $_SESSION['animation'];
 echo "<br> Your favorite categories are: ";
-if($comedy !== 0)
-{
-	echo $comedy;	
-}
-if($horror !== 0)
-{
-	echo $horror;	
-}
-if($action !== 0)
-{
-	echo $action;	
-}	
-if($scifi !== 0)
-{
-	echo $scifi;	
-}		
-if($romance !== 0)
-{
-	echo $romance;	
-}
-if($animation !== 0)
-{
-	echo $animation;	
-}
+echo "<br>";
+echo $comedy;
+echo "<br>";
+echo $horror;
+echo "<br>";
+echo $action;
+echo "<br>";
+echo $scifi;
+echo "<br>";
+echo $romance;
+echo "<br>";
+echo $animation;
+
 	
 	
 if( $_SERVER['REQUEST_METHOD'] == 'POST')
