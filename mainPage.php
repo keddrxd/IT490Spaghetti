@@ -11,36 +11,36 @@ session_start();
 echo "Hello ".$_SESSION['username'];
 //echo "Hello ".$_SESSION['comedy'];
 
-//$comedy = $_SESSION['comedy'];
+$comedy = $_SESSION['comedy'];
 $horror = $_SESSION['horror'];
-//$action = $_SESSION['action'];
-//$scifi = $_SESSION['scifi'];
-//$romance = $_SESSION['romance'];
-//$animation = $_SESSION['animation'];
-echo "<br> Your favorite categories are: <br>";
-if($_SESSION['comedy'] !== 0)
+$action = $_SESSION['action'];
+$scifi = $_SESSION['scifi'];
+$romance = $_SESSION['romance'];
+$animation = $_SESSION['animation'];
+echo "<br> Your favorite categories are: ";
+if($comedy !== 0)
 {
-	echo " ".$_SESSION['comedy'];	
+	echo "<br>" $comedy;	
 }
 if($horror !== 0)
 {
-	echo $horror;	
+	echo "<br>" $horror;	
 }
 if($action !== 0)
 {
-	echo $action;	
+	echo "<br>" $action;	
 }	
 if($scifi !== 0)
 {
-	echo $scifi;	
+	echo "<br>" $scifi;	
 }		
 if($romance !== 0)
 {
-	echo $romance;	
+	echo "<br>" $romance;	
 }
 if($animation !== 0)
 {
-	echo $animation;	
+	echo "<br>" $animation;	
 }
 	
 	
