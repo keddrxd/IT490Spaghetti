@@ -9,7 +9,7 @@
 
 session_start();
 echo "Hello ".$_SESSION['username'];
-echo .$_SESSION['comedy'];
+echo "Hello ".$_SESSION['comedy'];
 
 $comedy = $_SESSION['comedy'];
 $horror = $_SESSION['horror'];
