@@ -18,17 +18,12 @@ $scifi = $_SESSION['scifi'];
 $romance = $_SESSION['romance'];
 $animation = $_SESSION['animation'];
 echo "<br> Your favorite categories are: <br>";
-echo $comedy;
-echo "<br>";
-echo $horror;
-echo "<br>";
-echo $action;
-echo "<br>";
-echo $scifi;
-echo "<br>";
-echo $romance;
-echo "<br>";
-echo $animation;
+echo "$comedy<br>";
+echo "$horror<br>";
+echo "$action<br>";
+echo "$scifi<br>";
+echo "$romance<br>";
+echo "$animation<br>";
 
 	
 	
