@@ -18,27 +18,27 @@ echo "Hello ".$_SESSION['username'];
 //$romance = $_SESSION['romance'];
 //$animation = $_SESSION['animation'];
 echo "<br> Your favorite categories are: <br>";
-if($_SESSION['comedy'] != 0)
+if($_SESSION['comedy'] !== 0)
 {
 	echo " ".$_SESSION['comedy'];	
 }
-if($horror != 0)
+if($horror !== 0)
 {
 	echo $horror;	
 }
-if($action != 0)
+if($action !== 0)
 {
 	echo $action;	
 }	
-if($scifi != 0)
+if($scifi !== 0)
 {
 	echo $scifi;	
 }		
-if($romance != 0)
+if($romance !== 0)
 {
 	echo $romance;	
 }
-if($animation != 0)
+if($animation !== 0)
 {
 	echo $animation;	
 }
