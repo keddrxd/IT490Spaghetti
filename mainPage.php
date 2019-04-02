@@ -20,7 +20,7 @@ echo "Hello ".$_SESSION['username'];
 echo "<br> Your favorite categories are: <br>";
 if($_SESSION['comedy'] != 0)
 {
-	echo "".$_SESSION['comedy'];	
+	echo " ".$_SESSION['comedy'];	
 }
 if($horror != 0)
 {
