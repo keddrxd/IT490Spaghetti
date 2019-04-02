@@ -10,38 +10,38 @@ if(isset($_POST['comedy'])){
     $comedy  = $_POST['comedy'];
 }
 else{
-    $comedy = "0";
+    $comedy = "";
 }
 
 if(isset($_POST['horror'])){
     $horror  = $_POST['horror'];
 }
 else{
-    $horror = "0";
+    $horror = "";
 }
 if(isset($_POST['action'])){
     $action  = $_POST['action'];
 }
 else{
-    $action = "0";
+    $action = "";
 }
 if(isset($_POST['sci-fi'])){
     $scifi  = $_POST['sci-fi'];
 }
 else{
-    $scifi = "0";
+    $scifi = "";
 }
 if(isset($_POST['romance'])){
     $romance  = $_POST['romance'];
 }
 else{
-    $romance = "0";
+    $romance = "";
 }
 if(isset($_POST['animation'])){
     $animation  = $_POST['animation'];
 }
 else{
-    $animation = "0";
+    $animation = "";
 }
 //$comedy = $_POST['comedy'];
 //$horror = $_POST['horror'];
