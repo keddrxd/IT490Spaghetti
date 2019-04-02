@@ -9,6 +9,39 @@
 
 session_start();
 echo "Hello ".$_SESSION['username'];
+$comedy = $_SESSION['comedy'];
+$horror = $_SESSION['horror'];
+$action = $_SESSION['action'];
+$scifi = $_SESSION['scifi'];
+$romance = $_SESSION['romance'];
+$animation = $_SESSION['animation'];
+echo "<br> Your favorite categories are: <br>";
+if($comedy != 0)
+{
+	echo "$comedy <br>";	
+}
+if($horror != 0)
+{
+	echo "$horror <br>";	
+}
+if($action != 0)
+{
+	echo "$action <br>";	
+}	
+if($scifi != 0)
+{
+	echo "$scifi <br>";	
+}		
+if($romance != 0)
+{
+	echo "$romance <br>";	
+}
+if($animation != 0)
+{
+	echo "$animation <br>";	
+}
+	
+	
 if( $_SERVER['REQUEST_METHOD'] == 'POST')
 {
 	if( isset($_POST['login']))
