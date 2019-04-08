@@ -38,10 +38,17 @@
 	{
 		$query2 = "select horror from horror";
 		$reply2 = $mysqli->query($query2);
+		echo "<br>";
 		echo "Here are some horror movies you may like:";
+		echo "<br>";
 		while($row = $reply2->fetch_assoc())
 		{
-			echo $row;	
+			foreach($row as $key => $value)
+			{
+ 				echo $value;
+				echo "<br>";
+			}
+			//echo $row;	
 		}
 	}
 
@@ -49,10 +56,17 @@
 	{
 		$query3 = "select action from action";
 		$reply3 = $mysqli->query($query3);
+		echo "<br>";
 		echo "Here are some action movies you may like:";
+		echo "<br>";
 		while($row = $reply3->fetch_assoc())
 		{
-			echo $row;	
+			foreach($row as $key => $value)
+			{
+ 				echo $value;
+				echo "<br>";
+			}
+			//echo $row;	
 		}
 	}
 
@@ -60,10 +74,17 @@
 	{
 		$query4 = "select scifi from scifi";
 		$reply4 = $mysqli->query($query4);
+		echo "<br>";
 		echo "Here are some sci-fi movies you may like:";
+		echo "<br>";
 		while($row = $reply4->fetch_assoc())
 		{
-			echo $row;	
+			foreach($row as $key => $value)
+			{
+ 				echo $value;
+				echo "<br>";
+			}
+			//echo $row;	
 		}
 	}
 
@@ -71,10 +92,17 @@
 	{
 		$query5 = "select romance from romance";
 		$reply5 = $mysqli->query($query5);
+		echo "<br>";
 		echo "Here are some romance movies you may like:";
+		echo "<br>";
 		while($row = $reply5->fetch_assoc())
 		{
-			echo $row;	
+			foreach($row as $key => $value)
+			{
+ 				echo $value;
+				echo "<br>";
+			}
+			//echo $row;	
 		}
 	}
 
@@ -82,10 +110,17 @@
 	{
 		$query6 = "select animation from animation";
 		$reply6 = $mysqli->query($query6);
+		echo "<br>";
 		echo "Here are some animation movies you may like:";
+		echo "<br>";
 		while($row = $reply6->fetch_assoc())
 		{
-			echo $row;	
+			foreach($row as $key => $value)
+			{
+ 				echo $value;
+				echo "<br>";
+			}
+			//echo $row;	
 		}
 	}
 
