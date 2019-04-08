@@ -1,7 +1,7 @@
 <?php
 	session_start();
 
-	$host = '127.0.0.1';
+	$host = '25.80.231.148';
 	$user = 'aalap';
 	$pw = 'password';
 	$db = 'usersDB';
