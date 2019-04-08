@@ -18,12 +18,15 @@
 	{
 		$query1 = "select comedy from comedy";
 		$reply1 = $mysqli->query($query1);
+		echo "<br>";
 		echo "Here are some comedy movies you may like:";
+		echo "<br>";
 		while($row = $reply1->fetch_assoc())
 		{
 			foreach($row as $key => $value)
 			{
  				echo $value;
+				echo "<br>";
 			}
 			//print_r ($row);
 			//$value = $row;
