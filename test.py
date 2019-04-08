@@ -47,7 +47,7 @@ def sendMovies(rabbitMQServer, rabbitQueue, rabbitUser, rabbitPass, rabbitVhost,
         'genre': genre
 
     }
-    credentials = pika.PlainCredentials(RABBIT_HOST,RABBIT_PASS)
+    credentials = pika.PlainCredentials(RABBIT_USER,RABBIT_PASS)
     rabbitMQMessage = json.dumps(movieDict , sort_keys= True, indent = 4, default=str)
     connection = pika.BlockingConnection(pika.ConnectionParameters(rabbitMQServer, rabbitPort, rabbitVhost, credentials))
     channel = connection.channel()
