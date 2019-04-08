@@ -79,7 +79,7 @@ function requestProcessor($request)
 	}
  	switch ($request['type'])
   	{	
- 		case "request":
+ 		case "requestMovies":
 			return getMovies($request['comedy'], $request['rd1'], $request['horror'], $request['rd2'], $request['action'], $request['rd3'], $request['scifi'], $request['rd4'], $request['romance'], $request['rd5'], $request['animation'], $request['rd6'] );
 		
 		default:
