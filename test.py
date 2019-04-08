@@ -119,7 +119,7 @@ for i in rsp_json["results"]:
     mydb.commit()
 
 
-#print(data.decode("utf-8"))
+print(data.decode("utf-8"))
 
 
 
