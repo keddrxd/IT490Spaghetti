@@ -74,7 +74,7 @@ function requestMovies($comedy, $rd1, $horror, $rd2, $action, $rd3, $scifi, $rd4
 	$request6['rd5']= $rd5;
 	$request6['animation']= $animation;
 	$request6['rd6']= $rd6;
-	$response= $client->send_request($request5);
+	$response= $client->send_request($request6);
 	return $response;	
 	
 }
