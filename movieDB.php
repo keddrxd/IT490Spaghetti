@@ -21,7 +21,7 @@
 		echo "Here are some comedy movies you may like:";
 		while($row = $reply1->fetch_assoc())
 		{
-			print_r ($r);
+			print_r ($row);
 		}
 	}
 
