@@ -21,7 +21,7 @@
 		echo "Here are some comedy movies you may like:";
 		while($row = $reply1->fetch_assoc())
 		{
-			foreach($array as $row => $value)
+			foreach($row as $key => $value)
 			{
  				echo $value;
 			}
