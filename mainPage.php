@@ -8,6 +8,8 @@
 <?php
 
 session_start();
+	
+require 'movieDB.php';
 echo "Hello ".$_SESSION['username'];
 //echo "Hello ".$_SESSION['comedy'];
 
