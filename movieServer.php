@@ -68,11 +68,26 @@ function getMovies($comedy, $rd1, $horror, $rd2, $action, $rd3, $scifi, $rd4, $r
 	//$reply1 = $mysqli->query($query1);
 	$mysqli->query($query6) or die($mysqli->error);
 
-	
-	
-	
 }
-
+function requestProcessor($request)
+{
+ 	 echo "received request".PHP_EOL;
+  	var_dump($request);
+  	if(!isset($request['type']))
+  	{
+		return "Error: unsupported message type";	
+	}
+ 	switch ($request['type'])
+  	{	
+ 		case "request":
+			return getMovies($request['comedy'], $request['rd1'], $request['horror'], $request['rd2'], $request['action'], $request['rd3'], $request['scifi'], $request['rd4'], $request['romance'], $request['rd5'], $request['animation'], $request['rd6'] );
+		
+		default:
+			echo "try again";
+	
+	}
+   
+}
 
 
 $server = new rabbitMQServer("testRabbitMQ.ini","testServer");
