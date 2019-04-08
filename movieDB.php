@@ -2,8 +2,8 @@
 	session_start();
 
 	$host = '127.0.0.1';
-	$user = 'admin';
-	$pw = 'adminPwd';
+	$user = 'aalap';
+	$pw = 'password';
 	$db = 'usersDB';
 	$mysqli = new mysqli($host, $user, $pw, $db);
 
