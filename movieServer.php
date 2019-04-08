@@ -17,7 +17,7 @@ if (mysqli_connect_errno())
 }
 
 
-function getMovies($comedy, $rd1, $horror, $rd2, $action, $rd3, $scifi, $rd4, $romance, $rd5, $animation, $rd6)
+function getMovies($comedy, $rd1, $titleComedy, $horror, $rd2, $titleHorror, $action, $rd3, $titleAction, $scifi, $rd4, $titleScifi, $romance, $rd5, $titleRomance, $animation, $rd6, $titleAnimation)
 {
 	$host = '127.0.0.1';
 	$user = 'admin';
@@ -33,38 +33,44 @@ function getMovies($comedy, $rd1, $horror, $rd2, $action, $rd3, $scifi, $rd4, $r
 	$userData = array();
 	$comedy = $mysqli->escape_string($comedy);
 	$rd1 = $mysqli->escape_string($rd1);
+	$titleComedy = $mysqli->escape_string($titleComedy);
 	$horror = $mysqli->escape_string($horror);
 	$rd2 = $mysqli->escape_string($rd2);
+	$titleHorror = $mysqli->escape_string($titleHorror);
 	$action = $mysqli->escape_string($action);
 	$rd3 = $mysqli->escape_string($rd3);
+	$titleAction = $mysqli->escape_string($titleAction);
 	$scifi = $mysqli->escape_string($scifi);
 	$rd4 = $mysqli->escape_string($rd4);
+	$titleScifi = $mysqli->escape_string($titleScifi);
 	$romance = $mysqli->escape_string($romance);
 	$rd5 = $mysqli->escape_string($rd5);
+	$titleRomance = $mysqli->escape_string($titleRomance);
 	$animation = $mysqli->escape_string($animation);
 	$rd6 = $mysqli->escape_string($rd6);
+	$titleAnimation = $mysqli->escape_string($titleAnimation);
 	
-	$query1 = "INSERT INTO comedy ($comedy, $rd1)";
+	$query1 = "INSERT INTO comedy ($titleComedy, $rd1)";
 	//$reply1 = $mysqli->query($query1);
 	$mysqli->query($query1) or die($mysqli->error);
 	
-	$query2 = "INSERT INTO horror ($horror, $rd2)";
+	$query2 = "INSERT INTO horror ($titleHorror, $rd2)";
 	//$reply1 = $mysqli->query($query1);
 	$mysqli->query($query2) or die($mysqli->error);
 	
-	$query3 = "INSERT INTO action ($action, $rd3)";
+	$query3 = "INSERT INTO action ($titleAction, $rd3)";
 	//$reply1 = $mysqli->query($query1);
 	$mysqli->query($query3) or die($mysqli->error);
 	
-	$query4 = "INSERT INTO scifi ($scifi, $rd4)";
+	$query4 = "INSERT INTO scifi ($titleScifi, $rd4)";
 	//$reply1 = $mysqli->query($query1);
 	$mysqli->query($query4) or die($mysqli->error);
 	
-	$query5 = "INSERT INTO romance ($romance, $rd5)";
+	$query5 = "INSERT INTO romance ($titleRomance, $rd5)";
 	//$reply1 = $mysqli->query($query1);
 	$mysqli->query($query5) or die($mysqli->error);
 	
-	$query6 = "INSERT INTO animation ($animation, $rd6)";
+	$query6 = "INSERT INTO animation ($titleAnimation, $rd6)";
 	//$reply1 = $mysqli->query($query1);
 	$mysqli->query($query6) or die($mysqli->error);
 
