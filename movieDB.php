@@ -22,7 +22,7 @@
 		while($row = $reply1->fetch_assoc())
 		{
 			//print_r ($row);
-			$value;
+			$value = $row;
 			echo $value;
 		}
 	}
@@ -49,7 +49,7 @@
 		}
 	}
 
-	if($scifi == "scifi")
+	if($scifi == "sci-fi")
 	{
 		$query4 = "select scifi from scifi";
 		$reply4 = $mysqli->query($query4);
