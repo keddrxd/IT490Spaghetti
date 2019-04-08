@@ -49,7 +49,7 @@ def sendMovies(rabbitMQServer, rabbitQueue, rabbitUser, rabbitPass, rabbitVhost,
 
     }
 
-    rabbitMQMessage = json.dumps(movieDict , sort_keys=true, ident = 4, default=str)
+    rabbitMQMessage = json.dumps(movieDict , sort_keys= True, indent = 4, default=str)
     connection = pika.BlockingConnection(pika.ConnectionParameters(rabbitMQServer, rabbitPort, rabbitVhost, credentials))
     channel = connection.channel()
     channel.basic_publish(exchange=rabbitEX, routing_key=rabbitQueue,body=rabbitMQMessage)
