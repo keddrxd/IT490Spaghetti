@@ -57,23 +57,29 @@ function firstLogin($username, $comedy, $horror, $action, $scifi, $romance, $ani
 
 }
 
-function requestMovies($comedy, $rd1, $horror, $rd2, $action, $rd3, $scifi, $rd4, $romance, $rd5, $animation, $rd6)
+function requestMovies($comedy, $rd1, $titleComedy, $horror, $rd2, $titleHorror, $action, $rd3, $titleAction, $scifi, $rd4, $titleScifi, $romance, $rd5, $titleRomance, $animation, $rd6, $titleAnimation)
 {
 	$client = new rabbitMQClient("testRabbitMQ.ini","testServer");
 	$request6= array();	
 	$request6['type']="requestMovies";
 	$request6['Comedy']= $comedy;
 	$request6['releasedates']= $rd1;
+	$request6['title']= $titleComedy;
 	$request6['Horror']= $horror;
 	$request6['releasedates']= $rd2;
+	$request6['title']= $titleHorror;
 	$request6['Action']= $action;
 	$request6['releasedates']= $rd3;
+	$request6['title']= $titleAction;
 	$request6['Scifi']= $scifi;
 	$request6['releasedates']= $rd4;
+	$request6['title']= $titleScifi;
 	$request6['Romance']= $romance;
 	$request6['releasedates']= $rd5;
+	$request6['title']= $titleRomance;
 	$request6['Animation']= $animation;
 	$request6['releasedates']= $rd6;
+	$request6['title']= $titleAnimation;
 	$response= $client->send_request($request6);
 	return $response;	
 	
