@@ -90,7 +90,7 @@ function requestProcessor($request)
 }
 
 
-$server = new rabbitMQServer("movieServevr.ini","movieServer");
+$server = new rabbitMQServer("movieServer.ini","movieServer");
 echo "testRabbitMQServer BEGIN".PHP_EOL;
 $server->process_requests('requestProcessor');
 echo "testRabbitMQServer END".PHP_EOL;
