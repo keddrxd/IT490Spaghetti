@@ -61,7 +61,7 @@ function login($userN, $pass)
 		}
 	}
 	//$error = "Passwords don't match\n";
-	error_log("Login Error!", 3, "home/git/IT490Spaghetti/error.log");
+	error_log("Login Error!", 3, "/home/andrew/git/IT490Spaghetti/error.log");
 	//echo $error;
 	//error($error);
 	echo "passswords dont match";
