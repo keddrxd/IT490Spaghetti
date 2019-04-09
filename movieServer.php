@@ -99,21 +99,11 @@ function getMovies($genre, $date, $title)
 }
 function requestProcessor($request)
 {
- 	 echo "received request".PHP_EOL;
+ 	echo "received request".PHP_EOL;
   	var_dump($request);
-  	if(!isset($request['type']))
-  	{
-		echo "Error: unsupported message type";	
-	}
- 	switch ($request['type'])
-  	{	
- 		case "requestMovies":
-			return getMovies($request['genre'], $request['releasedates'], $request['title'] );
-		
-		default:
-			echo "try again";
+  	
+ 	getMovies($request['genre'], $request['releasedates'], $request['title'] );
 	
-	}
    
 }
 
