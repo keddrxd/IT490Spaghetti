@@ -34,37 +34,37 @@ function getMovies($genre, $date, $title)
 	
 	if($genre == "Comedy")
 	{
-		$query1 = "INSERT INTO comedy values ($title, $date)";
+		$query1 = "INSERT INTO comedy values ('$title', '$date')";
 		$mysqli->query($query1) or die($mysqli->error);
 	}
 	
 	if($genre == "Horror")
 	{
-		$query1 = "INSERT INTO horror values ($title, $date)";
+		$query1 = "INSERT INTO horror values ('$title', '$date')";
 		$mysqli->query($query1) or die($mysqli->error);
 	}
 	
 	if($genre == "Action")
 	{
-		$query1 = "INSERT INTO action values ($title, $date)";
+		$query1 = "INSERT INTO action values ('$title', '$date')";
 		$mysqli->query($query1) or die($mysqli->error);
 	}
 	
 	if($genre == "Scifi")
 	{
-		$query1 = "INSERT INTO scifi values ($title, $date)";
+		$query1 = "INSERT INTO scifi values ('$title', '$date')";
 		$mysqli->query($query1) or die($mysqli->error);
 	}
 	
 	if($genre == "Romance")
 	{
-		$query1 = "INSERT INTO romance values ($title, $date)";
+		$query1 = "INSERT INTO romance values ('$title', '$date')";
 		$mysqli->query($query1) or die($mysqli->error);
 	}
 	
 	if($genre == "Animation")
 	{
-		$query1 = "INSERT INTO animation values ($title, $date)";
+		$query1 = "INSERT INTO animation values ('$title', '$date')";
 		$mysqli->query($query1) or die($mysqli->error);
 	}
 	
