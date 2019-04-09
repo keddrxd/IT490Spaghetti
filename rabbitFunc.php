@@ -57,7 +57,7 @@ function firstLogin($username, $comedy, $horror, $action, $scifi, $romance, $ani
 
 }
 
-function requestMovies($comedy, $rd1, $titleComedy, $horror, $rd2, $titleHorror, $action, $rd3, $titleAction, $scifi, $rd4, $titleScifi, $romance, $rd5, $titleRomance, $animation, $rd6, $titleAnimation)
+function requestMovies($genre, $date, $title)
 {
 	$client = new rabbitMQClient("testRabbitMQ.ini","testServer");
 	$request6= array();	
