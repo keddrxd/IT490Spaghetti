@@ -103,7 +103,7 @@ function requestProcessor($request)
   	var_dump($request);
   	if(!isset($request['type']))
   	{
-		return "Error: unsupported message type";	
+		echo "Error: unsupported message type";	
 	}
  	switch ($request['type'])
   	{	
