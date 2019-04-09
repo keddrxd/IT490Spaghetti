@@ -15,8 +15,7 @@
 	{
 		if($row['username'] == $user)
 		{
-			foreach($row)
-			{
+			
 				if($row['comedy'] == "comedy")
 				{
 					$query1 = "select comedy from comedy";
@@ -128,7 +127,7 @@
 						}
 						//echo $row;	
 					}
-				}
+				
 			}
 			
 			
