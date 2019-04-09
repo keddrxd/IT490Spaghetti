@@ -107,7 +107,7 @@ function requestProcessor($request)
  	switch ($request['type'])
   	{	
  		case "requestMovies":
-			return getMovies($request['genre'], ($request['releasedates'], ($request['title'] );
+			return getMovies($request['genre'], $request['releasedates'], $request['title'] );
 		
 		default:
 			echo "try again";
