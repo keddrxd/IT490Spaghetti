@@ -49,6 +49,7 @@ function login($userN, $pass)
 		if($row['password'] == $password)
 		{
 			echo "Passwords match!".PHP_EOL;
+			//$query1 = "select * from category where username = '$userName'";
 			$userData['firstName'] = $row['firstName'];
 			$userData['lastName'] = $row['lastName'];
 			$userData['username'] = $row['username'];
