@@ -50,6 +50,15 @@ function login($userN, $pass)
 		if($row['password'] == $password)
 		{
 			echo "Passwords match!".PHP_EOL;
+			$userData['firstName'] = $row['firstName'];
+			$userData['lastName'] = $row['lastName'];
+			$userData['username'] = $row['username'];
+			$userData['password'] = $row['password'];
+			$userData['email'] = $row['email'];
+			$userData['zip'] = $row['zip'];
+			$sessionID = updateSess($row['username']);
+			$userData['sessionKey'] = $sessionID;
+			
 			$query1 = "select * from category where username = '$userName'";
 			$reply1 = $mysqli->query($query1);
 			while($row1 = $reply->fetch_assoc())
@@ -60,16 +69,8 @@ function login($userN, $pass)
 				$userPref['scifi'] = $row1['scifi'];
 				$userPref['romance'] = $row1['romance'];
 				$userPref['animation'] = $row1['animation'];
-			}
+			}	
 			
-			$userData['firstName'] = $row['firstName'];
-			$userData['lastName'] = $row['lastName'];
-			$userData['username'] = $row['username'];
-			$userData['password'] = $row['password'];
-			$userData['email'] = $row['email'];
-			$userData['zip'] = $row['zip'];
-			$sessionID = updateSess($row['username']);
-			$userData['sessionKey'] = $sessionID;
 			return json_encode($userData, $userPref);
 		}
 	}
