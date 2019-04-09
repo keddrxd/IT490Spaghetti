@@ -36,6 +36,7 @@ function login($userN, $pass)
 	$mysqli = new mysqli($host, $user, $pw, $db);
 	
 	$userData = array();
+	$userPref = array();
 	$userName = $mysqli->escape_string($userN);
 	$password = $mysqli->escape_string($pass);
 	$password = hash('sha256', $password);
@@ -49,7 +50,18 @@ function login($userN, $pass)
 		if($row['password'] == $password)
 		{
 			echo "Passwords match!".PHP_EOL;
-			//$query1 = "select * from category where username = '$userName'";
+			$query1 = "select * from category where username = '$userName'";
+			$reply1 = $mysqli->query($query1);
+			while($row1 = $reply->fetch_assoc())
+			{
+				$userPref['comedy'] = $row1['comedy'];
+				$userPref['horror'] = $row1['horror'];
+				$userPref['action'] = $row1['action'];
+				$userPref['scifi'] = $row1['scifi'];
+				$userPref['romance'] = $row1['romance'];
+				$userPref['animation'] = $row1['animation'];
+			}
+			
 			$userData['firstName'] = $row['firstName'];
 			$userData['lastName'] = $row['lastName'];
 			$userData['username'] = $row['username'];
@@ -58,7 +70,7 @@ function login($userN, $pass)
 			$userData['zip'] = $row['zip'];
 			$sessionID = updateSess($row['username']);
 			$userData['sessionKey'] = $sessionID;
-			return json_encode($userData);
+			return json_encode($userData, $userPref);
 		}
 	}
 	//$error = "Passwords don't match\n";
