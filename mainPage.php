@@ -230,7 +230,7 @@ margin-right: 75px;
 					});
 					google.maps.event.addListener(marker, 'click', function(){
 						infowindow.setContent(place.name);
-						infowindow.setContent(place.website);
+						infowindow.setContent(place.url);
 						infowindow.open(map, this);
 					});
 					return marker;
