@@ -17,7 +17,7 @@ if (mysqli_connect_errno())
 }
 
 
-function getMovies($comedy, $rd1, $titleComedy, $horror, $rd2, $titleHorror, $action, $rd3, $titleAction, $scifi, $rd4, $titleScifi, $romance, $rd5, $titleRomance, $animation, $rd6, $titleAnimation)
+function getMovies($genre, $date, $title)
 {
 	$host = '127.0.0.1';
 	$user = 'admin';
@@ -31,48 +31,69 @@ function getMovies($comedy, $rd1, $titleComedy, $horror, $rd2, $titleHorror, $ac
   	}
 	
 	$userData = array();
-	$comedy = $mysqli->escape_string($comedy);
-	$rd1 = $mysqli->escape_string($rd1);
-	$titleComedy = $mysqli->escape_string($titleComedy);
-	$horror = $mysqli->escape_string($horror);
-	$rd2 = $mysqli->escape_string($rd2);
-	$titleHorror = $mysqli->escape_string($titleHorror);
-	$action = $mysqli->escape_string($action);
-	$rd3 = $mysqli->escape_string($rd3);
-	$titleAction = $mysqli->escape_string($titleAction);
-	$scifi = $mysqli->escape_string($scifi);
-	$rd4 = $mysqli->escape_string($rd4);
-	$titleScifi = $mysqli->escape_string($titleScifi);
-	$romance = $mysqli->escape_string($romance);
-	$rd5 = $mysqli->escape_string($rd5);
-	$titleRomance = $mysqli->escape_string($titleRomance);
-	$animation = $mysqli->escape_string($animation);
-	$rd6 = $mysqli->escape_string($rd6);
-	$titleAnimation = $mysqli->escape_string($titleAnimation);
 	
-	$query1 = "INSERT INTO comedy ($titleComedy, $rd1)";
-	//$reply1 = $mysqli->query($query1);
-	$mysqli->query($query1) or die($mysqli->error);
+	if($genre == "Comedy")
+	{
+		$query1 = "INSERT INTO comedy ($title, $date)";
+		$mysqli->query($query1) or die($mysqli->error);
+	}
 	
-	$query2 = "INSERT INTO horror ($titleHorror, $rd2)";
-	//$reply1 = $mysqli->query($query1);
-	$mysqli->query($query2) or die($mysqli->error);
+	if($genre == "Horror")
+	{
+		$query1 = "INSERT INTO horror ($title, $date)";
+		$mysqli->query($query1) or die($mysqli->error);
+	}
 	
-	$query3 = "INSERT INTO action ($titleAction, $rd3)";
-	//$reply1 = $mysqli->query($query1);
-	$mysqli->query($query3) or die($mysqli->error);
+	if($genre == "Action")
+	{
+		$query1 = "INSERT INTO action ($title, $date)";
+		$mysqli->query($query1) or die($mysqli->error);
+	}
 	
-	$query4 = "INSERT INTO scifi ($titleScifi, $rd4)";
-	//$reply1 = $mysqli->query($query1);
-	$mysqli->query($query4) or die($mysqli->error);
+	if($genre == "Scifi")
+	{
+		$query1 = "INSERT INTO scifi ($title, $date)";
+		$mysqli->query($query1) or die($mysqli->error);
+	}
 	
-	$query5 = "INSERT INTO romance ($titleRomance, $rd5)";
-	//$reply1 = $mysqli->query($query1);
-	$mysqli->query($query5) or die($mysqli->error);
+	if($genre == "Romance")
+	{
+		$query1 = "INSERT INTO romance ($title, $date)";
+		$mysqli->query($query1) or die($mysqli->error);
+	}
 	
-	$query6 = "INSERT INTO animation ($titleAnimation, $rd6)";
+	if($genre == "Animation")
+	{
+		$query1 = "INSERT INTO animation ($title, $date)";
+		$mysqli->query($query1) or die($mysqli->error);
+	}
+	
+	
+	
+	
+	//$query1 = "INSERT INTO comedy ($titleComedy, $rd1)";
 	//$reply1 = $mysqli->query($query1);
-	$mysqli->query($query6) or die($mysqli->error);
+	//$mysqli->query($query1) or die($mysqli->error);
+	
+	//$query2 = "INSERT INTO horror ($titleHorror, $rd2)";
+	//$reply1 = $mysqli->query($query1);
+	//$mysqli->query($query2) or die($mysqli->error);
+	
+	//$query3 = "INSERT INTO action ($titleAction, $rd3)";
+	//$reply1 = $mysqli->query($query1);
+	//$mysqli->query($query3) or die($mysqli->error);
+	
+	//$query4 = "INSERT INTO scifi ($titleScifi, $rd4)";
+	//$reply1 = $mysqli->query($query1);
+	//$mysqli->query($query4) or die($mysqli->error);
+	
+	//$query5 = "INSERT INTO romance ($titleRomance, $rd5)";
+	//$reply1 = $mysqli->query($query1);
+	//$mysqli->query($query5) or die($mysqli->error);
+	
+	//$query6 = "INSERT INTO animation ($titleAnimation, $rd6)";
+	//$reply1 = $mysqli->query($query1);
+	//$mysqli->query($query6) or die($mysqli->error);
 
 }
 function requestProcessor($request)
@@ -86,7 +107,7 @@ function requestProcessor($request)
  	switch ($request['type'])
   	{	
  		case "requestMovies":
-			return getMovies($request['comedy'], $request['rd1'], $request['titleComedy'], $request['horror'], $request['rd2'], $request['titleHorror'], $request['action'], $request['rd3'], $request['titleAction'], $request['scifi'], $request['rd4'], $request['titleScifi'], $request['romance'], $request['rd5'], $request['titleRomance'], $request['animation'], $request['rd6'], $request['titleAnimation'] );
+			return getMovies($request['genre'], ($request['releasedates'], ($request['title'] );
 		
 		default:
 			echo "try again";
