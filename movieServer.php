@@ -34,6 +34,7 @@ function getMovies($genre, $date, $title)
 	
 	if($genre == "Comedy")
 	{
+		echo $genre;
 		$query1 = "INSERT INTO comedy values ('$title', '$date')";
 		$mysqli->query($query1) or die($mysqli->error);
 	}
