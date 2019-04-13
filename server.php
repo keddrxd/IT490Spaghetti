@@ -372,6 +372,8 @@ function requestProcessor($request)
 			return auth($request['username'], $request['sessionID']);
 		case "first":
 			return firstLogin($request['username'], $request['comedy'], $request['horror'], $request['action'], $request['scifi'], $request['romance'], $request['animation']);
+		case "recommend":
+			return movieRec($request['username']);
 		
 		default:
 			echo "try again";
