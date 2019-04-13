@@ -86,130 +86,107 @@ function login($userN, $pass)
 	
 }
 
-function movieRec()
+function movieRec($username)
 {
 	$host = '127.0.0.1';
 	$user = 'admin';
 	$pw = 'adminPwd';
 	$db = 'usersDB';
 	$mysqli = new mysqli($host, $user, $pw, $db);
-	$user = $_SESSION['username'];
-	$query = "select * from category where username = '$user'";
+	//$user = $_SESSION['username'];
+	$query = "select * from category where username = '$username'";
 	$reply = $mysqli->query($query);
-	
+	$comedyArray = array( values );
+	$horrorArray = array( values );
+	$actionArray = array( values );
+	$scifiArray = array( values );
+	$romanceArray = array( values );
+	$animationArray = array( values );
+
 	
 	while ($row = $reply->fetch_assoc())
 	{
-		if($row['username'] == $user)
+		if($row['username'] == $username)
 		{
 			
-		if($row['comedy'] == "comedy")
-		{
-			$query1 = "select comedy from comedy";
-			$reply1 = $mysqli->query($query1);
-			echo "<br>";
-			echo "Here are some comedy movies you may like:";
-			echo "<br>";
-			while($row = $reply1->fetch_assoc())
+			if($row['comedy'] == "comedy")
 			{
-				foreach($row as $key => $value)
+				$query1 = "select comedy from comedy";
+				$reply1 = $mysqli->query($query1);
+				while($row = $reply1->fetch_assoc())
 				{
-					echo $value;
-					echo "<br>";
+					foreach($row as $key => $value)
+					{
+						$comedyArray[] = $value;
+					}
 				}
-				//print_r ($row);
-				//$value = $row;
-				//echo $value;
-			}
 			}
 			if($row['horror'] == "horror")
 			{
 				$query2 = "select horror from horror";
 				$reply2 = $mysqli->query($query2);
-				echo "<br>";
-				echo "Here are some horror movies you may like:";
-				echo "<br>";
 				while($row = $reply2->fetch_assoc())
 				{
 					foreach($row as $key => $value)
 					{
-						echo $value;
-						echo "<br>";
+						$horrorArray[] = $value;
 					}
-					//echo $row;	
 				}
 			}
 			if($row['action'] == "action")
 			{
 				$query3 = "select action from action";
 				$reply3 = $mysqli->query($query3);
-				echo "<br>";
-				echo "Here are some action movies you may like:";
-				echo "<br>";
 				while($row = $reply3->fetch_assoc())
 				{
 					foreach($row as $key => $value)
 					{
-						echo $value;
-						echo "<br>";
+						$actionArray[] = $value;
 					}
-					//echo $row;	
 				}
 			}
 			if($row['scifi'] == "scifi")
 			{
 				$query4 = "select scifi from scifi";
 				$reply4 = $mysqli->query($query4);
-				echo "<br>";
-				echo "Here are some sci-fi movies you may like:";
-				echo "<br>";
 				while($row = $reply4->fetch_assoc())
 				{
 					foreach($row as $key => $value)
 					{
-						echo $value;
-						echo "<br>";
+						$scifiArray[] = $value;
 					}
-					//echo $row;	
 				}
 			}
 			if($row['romance'] == "romance")
 			{
 				$query5 = "select romance from romance";
 				$reply5 = $mysqli->query($query5);
-				echo "<br>";
-				echo "Here are some romance movies you may like:";
-				echo "<br>";
 				while($row = $reply5->fetch_assoc())
 				{
 					foreach($row as $key => $value)
 					{
-						echo $value;
-						echo "<br>";
+						$romanceArray[] = $value;
 					}
-					//echo $row;	
 				}	
 			}
 			if($row['animation'] == "animation")
 			{
 				$query6 = "select animation from animation";
 				$reply6 = $mysqli->query($query6);
-				echo "<br>";
-				echo "Here are some animation movies you may like:";
-				echo "<br>";
 				while($row = $reply6->fetch_assoc())
 				{
 					foreach($row as $key => $value)
 					{
-						echo $value;
-						echo "<br>";
+						$animationArray[] = $value;
 					}
-					//echo $row;	
 				}
 
 			}
-}
-}
+		}
+	}
+	
+	return json_encode($comedyArray, $horrorArray, $actionArray, $scifiArray, $romanceArray, $animationArray);
+	
 }
 
 
