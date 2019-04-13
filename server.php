@@ -71,7 +71,7 @@ function login($userN, $pass)
 				$userPref['animation'] = $row1['animation'];
 			}	
 			
-			movieRec($userN);
+			//movieRec($userN);
 			return json_encode($userData, $userPref);
 		}
 	}
