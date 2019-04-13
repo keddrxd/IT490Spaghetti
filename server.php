@@ -71,7 +71,7 @@ function login($userN, $pass)
 				$userPref['animation'] = $row1['animation'];
 			}	
 			
-			movieRec();
+			movieRec($userN);
 			return json_encode($userData, $userPref);
 		}
 	}
@@ -86,15 +86,14 @@ function login($userN, $pass)
 	
 }
 
-function movieRec()
+function movieRec($user)
 {
 	$host = '127.0.0.1';
 	$user = 'admin';
 	$pw = 'adminPwd';
 	$db = 'usersDB';
 	$mysqli = new mysqli($host, $user, $pw, $db);
-	
-	$user = $_SESSION['username'];	
+		
 	$query = "select * from category where username = '$user'";
 	$reply = $mysqli->query($query);
 	
