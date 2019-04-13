@@ -96,12 +96,12 @@ function movieRec($username)
 	//$user = $_SESSION['username'];
 	$query = "select * from category where username = '$username'";
 	$reply = $mysqli->query($query);
-	$comedyArray = array( values );
-	$horrorArray = array( values );
-	$actionArray = array( values );
-	$scifiArray = array( values );
-	$romanceArray = array( values );
-	$animationArray = array( values );
+	$comedyArray = array();
+	$horrorArray = array();
+	$actionArray = array();
+	$scifiArray = array();
+	$romanceArray = array();
+	$animationArray = array();
 
 	
 	while ($row = $reply->fetch_assoc())
