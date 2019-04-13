@@ -210,6 +210,8 @@ function movieRec()
 
 			}
 }
+}
+}
 
 
 
