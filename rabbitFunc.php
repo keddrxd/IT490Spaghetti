@@ -71,6 +71,16 @@ function requestMovies($genre, $date, $title)
 	
 }
 
+function movieRecc($username)
+{
+	$client = new rabbitMQClient("testRabbitMQ.ini","testServer");
+	$request7= array();	
+	$request7['type']="movieRec";
+	$request7['username']= $genre;
+	$response= $client->send_request($request7);
+	return $response;
+}
+
 
 
 
