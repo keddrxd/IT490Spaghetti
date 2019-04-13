@@ -117,7 +117,7 @@ function movieRec($username)
 				{
 					foreach($row as $key => $value)
 					{
-						$comedyArray[] = $value;
+						$comedyArray['test'] = $value;
 					}
 				}
 			}
