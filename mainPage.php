@@ -8,12 +8,12 @@
 <?php
 
 session_start();
-require ('rabbitFunc.php');
+//require ('rabbitFunc.php');
 //require 'movieDB.php';
 echo "Hello ".$_SESSION['username'];
-$user = $_SESSION['username'];
-require ('server.php');
-movieRec($user);
+//$user = $_SESSION['username'];
+//require ('server.php');
+//movieRec($user);
 
 
 //echo "Hello ".$_SESSION['comedy'];
