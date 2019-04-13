@@ -102,7 +102,7 @@ function movieRec($username)
 	$scifiArray = array();
 	$romanceArray = array();
 	$animationArray = array();
-
+	$comedyArray['test'] = "Aalap sucks";
 	
 	while ($row = $reply->fetch_assoc())
 	{
@@ -186,7 +186,7 @@ function movieRec($username)
 	}
 	
 	//return json_encode($comedyArray, $horrorArray, $actionArray, $scifiArray, $romanceArray, $animationArray);
-	return json_encode($comedyArray);
+	return json_encode($comedyArray['test']);
 	
 }
 
