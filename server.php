@@ -86,7 +86,7 @@ function login($userN, $pass)
 	
 }
 
-function movieRec($user)
+function movieRec($username)
 {
 	$host = '127.0.0.1';
 	$user = 'admin';
@@ -94,7 +94,7 @@ function movieRec($user)
 	$db = 'usersDB';
 	$mysqli = new mysqli($host, $user, $pw, $db);
 	//$user = $_SESSION['username'];
-	$username = "adamkkk";
+	//$username = "adamkkk";
 	$query = "select * from category where username = '$username'";
 	$reply = $mysqli->query($query);
 	$comedyArray = array();
