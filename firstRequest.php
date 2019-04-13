@@ -97,7 +97,7 @@ if ($response != false)
 	$_SESSION['scifi'] = $sessionData['scifi'];
 	$_SESSION['romance'] = $sessionData['romance'];
 	$_SESSION['animation'] = $sessionData['animation'];
-	$_SESSION['comedyArray'] = $comedyArray;
+	//$_SESSION['comedyArray'] = $comedyArray;
 
 	header("location: mainPage.php");
 }
