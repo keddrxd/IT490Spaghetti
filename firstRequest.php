@@ -58,7 +58,7 @@ else{
 
 $response = firstLogin($username, $comedy, $horror, $action, $scifi, $romance, $animation);
 
-$host = '127.0.0.1';
+/*$host = '127.0.0.1';
 $user = 'admin';
 $pw = 'adminPwd';
 $db = 'usersDB';
@@ -85,7 +85,7 @@ while ($row = $reply->fetch_assoc())
 		}
 	}
 }
-
+*/
 if ($response != false)
 {
 	$sessionData = json_decode($response, true);
