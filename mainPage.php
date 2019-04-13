@@ -11,6 +11,7 @@ session_start();
 //require ('rabbitFunc.php');
 //require 'movieDB.php';
 echo "Hello ".$_SESSION['username'];
+echo "Here are comedy movies you may like: ".$_SESSION['comedyArray'];
 //$user = $_SESSION['username'];
 //require ('server.php');
 //movieRec($user);
