@@ -9,24 +9,24 @@
 
 session_start();
 	
-require 'movieDB.php';
+//require 'movieDB.php';
 echo "Hello ".$_SESSION['username'];
 //echo "Hello ".$_SESSION['comedy'];
 
-$comedy = $_SESSION['comedy'];
-$horror = $_SESSION['horror'];
-$action = $_SESSION['action'];
-$scifi = $_SESSION['scifi'];
-$romance = $_SESSION['romance'];
-$animation = $_SESSION['animation'];
-echo "<br> Your favorite categories are: <br>";
+//$comedy = $_SESSION['comedy'];
+//$horror = $_SESSION['horror'];
+//$action = $_SESSION['action'];
+//$scifi = $_SESSION['scifi'];
+//$romance = $_SESSION['romance'];
+//$animation = $_SESSION['animation'];
+//echo "<br> Your favorite categories are: <br>";
 //echo "$comedy<br>";
 //echo "$horror<br>";
 //echo "$action<br>";
 //echo "$scifi<br>";
 //echo "$romance<br>";
 //echo "$animation<br>";
-if($comedy !== "")
+/*if($comedy !== "")
 {
 	echo "$comedy<br>";	
 }
@@ -50,6 +50,7 @@ if($animation !== "")
 {
 	echo "$animation<br>";	
 }
+*/
 
 	
 	
