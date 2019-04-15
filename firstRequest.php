@@ -58,6 +58,9 @@ else{
 
 $response = firstLogin($username, $comedy, $horror, $action, $scifi, $romance, $animation);
 $response1 = movieRecc($username);
+$result = $response1;
+
+
 
 /*$host = '127.0.0.1';
 $user = 'admin';
@@ -101,7 +104,14 @@ if ($response != false)
 	//$_SESSION['comedyArray'] = $comedyArray;
 	$sessionData1 = json_decode($response1, true);
 	$_SESSION['comedyArray'] = array();
-	$_SESSION['comedyArray'] = $sessionData1['comedyArray'];
+	$i = 0;
+	foreach ($result as $value)
+	{
+		$_SESSION['comedyArray'][$i] = $value;
+		$i = $i + 1;
+		
+	}
+	//$_SESSION['comedyArray'] = $sessionData1['comedyArray'];
 	
 
 	header("location: mainPage.php");
