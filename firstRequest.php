@@ -57,7 +57,7 @@ else{
 //$animation = $_POST['animation'];
 
 $response = firstLogin($username, $comedy, $horror, $action, $scifi, $romance, $animation);
-$response1 = movieRecc($username);
+$response1 = comRecc($username);
 $result = array();
 $result = $response1;
 $arrayLength = count($result);
