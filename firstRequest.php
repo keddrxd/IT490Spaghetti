@@ -105,7 +105,8 @@ if ($response != false)
 	//$_SESSION['comedyArray'] = $comedyArray;
 	$sessionData1 = json_decode($response1, true);
 	$_SESSION['comedyArray'] = array();
-	for($i = 0 ; $i < count($result) ; $i++)
+	$num = 5;
+	for($i = 0 ; $i <= $num ; $i++)
 	{
 		$_SESSION['comedyArray'][$i] = $sessionData1[$i];
 	}
