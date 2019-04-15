@@ -133,7 +133,7 @@ function aniRecc($username)
 
 function error($errorMSG)
 {
-	$errorClient = new rabbitMQClient("errorServer.ini","errorServer");
+	$errorClient = new rabbitMQClient("testRabbitMQ.ini","testServer");
 	$request13 = array();
 	//$errorDate = date_create();
 	$request13['type'] ="error";
