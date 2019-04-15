@@ -11,7 +11,7 @@ session_start();
 //require ('rabbitFunc.php');
 //require 'movieDB.php';
 echo "Hello ".$_SESSION['username'];
-$num = 5;
+$num = 3;
 	for($i = 0 ; $i < $num ; $i++)
 	{
 		echo "<br>    Here's a fucking movie: ".$_SESSION['comedyArray'][$i];	
