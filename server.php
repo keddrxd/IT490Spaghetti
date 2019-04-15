@@ -17,14 +17,15 @@ if (mysqli_connect_errno())
 }
 function error($errorMSG)
 {
-	$errorClient = new rabbitMQClient("errorServer.ini","errorServer");
-	$request4 = array();
+	error_log($errorMSG, 3, "/home/andrew/git/IT490Spaghetti/error.log");
+	//$errorClient = new rabbitMQClient("errorServer.ini","errorServer");
+	//$request4 = array();
 	//$errorDate = date_create();
-	$request4['type'] ="error";
+	//$request4['type'] ="error";
 	//$request4['date']=$errorDate;
-	$request4['log']=$errorMSG;
+	//$request4['log']=$errorMSG;
 	//file_put_contents('error.log',$request4['log'], FILE_APPEND);
-	$errorClient->send_request($request4);
+	//$errorClient->send_request($request4);
 }
 
 function login($userN, $pass)
@@ -76,7 +77,6 @@ function login($userN, $pass)
 		}
 	}
 	//$error = "Passwords don't match\n";
-	error_log("Login Error!", 3, "/home/andrew/git/IT490Spaghetti/error.log");
 	//echo $error;
 	//error($error);
 	echo "passswords dont match";
@@ -567,6 +567,8 @@ function requestProcessor($request)
 			return romanceRec($request['username']);
 		case "animation":
 			return animationRec($request['username']);
+		case "error":
+			return error($request['msg']);
 		
 		default:
 			echo "try again";
