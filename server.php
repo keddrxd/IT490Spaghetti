@@ -187,8 +187,8 @@ function movieRec($user)
 		}
 	}
 	
-	//return json_encode($comedyArray, $horrorArray, $actionArray, $scifiArray, $romanceArray, $animationArray);
-	return json_encode($comedyArray);
+	return json_encode($comedyArray, $horrorArray, $actionArray, $scifiArray, $romanceArray, $animationArray);
+	//return json_encode($comedyArray);
 	
 }
 
