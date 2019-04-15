@@ -26,7 +26,10 @@ if($comedy !== "")
 	echo "<br><br> Here are some comedy movies you may like:<br>";
 	for($i = 0 ; $i < $num ; $i++)
 	{
-		echo "<br>".$_SESSION['comedyArray'][$i];	
+		if($_SESSION['comedyArray'][$i] !== "")
+		{
+			echo "<br>".$_SESSION['comedyArray'][$i];	
+		}
 	}	
 }
 
@@ -35,7 +38,10 @@ if($horror !== "")
 	echo "<br><br> Here are some horror movies you may like:<br>";
 	for($i = 0 ; $i < $num ; $i++)
 	{
-		echo "<br>".$_SESSION['horrorArray'][$i];	
+		if($_SESSION['horrorArray'][$i] !== "")
+		{
+			echo "<br>".$_SESSION['horrorArray'][$i];
+		}
 	}	
 }
 
