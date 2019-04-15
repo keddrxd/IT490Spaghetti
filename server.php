@@ -86,7 +86,7 @@ function login($userN, $pass)
 	
 }
 
-function comedyRec($user)
+function comedyRec($username)
 {
 	$host = '127.0.0.1';
 	$user = 'admin';
@@ -94,7 +94,7 @@ function comedyRec($user)
 	$db = 'usersDB';
 	$mysqli = new mysqli($host, $user, $pw, $db);
 	//$user = $_SESSION['username'];
-	$username = "adamkkk";
+	//$username = "adamkkk";
 	$query = "select * from category where username = '$username'";
 	$reply = $mysqli->query($query);
 	$comedyArray = array();
@@ -192,7 +192,7 @@ function comedyRec($user)
 	
 }
 
-function horrorRec($user)
+function horrorRec($username)
 {
 	$host = '127.0.0.1';
 	$user = 'admin';
@@ -200,7 +200,7 @@ function horrorRec($user)
 	$db = 'usersDB';
 	$mysqli = new mysqli($host, $user, $pw, $db);
 	
-	$username = "adamkkk";
+	//$username = "adamkkk";
 	$query = "select * from category where username = '$username'";
 	$reply = $mysqli->query($query);
 	
@@ -228,7 +228,7 @@ function horrorRec($user)
 	
 }
 
-function actionRec($user)
+function actionRec($username)
 {
 	$host = '127.0.0.1';
 	$user = 'admin';
@@ -236,7 +236,7 @@ function actionRec($user)
 	$db = 'usersDB';
 	$mysqli = new mysqli($host, $user, $pw, $db);
 	
-	$username = "adamkkk";
+	//$username = "adamkkk";
 	$query = "select * from category where username = '$username'";
 	$reply = $mysqli->query($query);
 	
@@ -264,7 +264,7 @@ function actionRec($user)
 	
 }
 
-function scifiRec($user)
+function scifiRec($username)
 {
 	$host = '127.0.0.1';
 	$user = 'admin';
@@ -272,7 +272,7 @@ function scifiRec($user)
 	$db = 'usersDB';
 	$mysqli = new mysqli($host, $user, $pw, $db);
 	
-	$username = "adamkkk";
+	//$username = "adamkkk";
 	$query = "select * from category where username = '$username'";
 	$reply = $mysqli->query($query);
 	
@@ -300,7 +300,7 @@ function scifiRec($user)
 	
 }
 
-function romanceRec($user)
+function romanceRec($username)
 {
 	$host = '127.0.0.1';
 	$user = 'admin';
@@ -308,7 +308,7 @@ function romanceRec($user)
 	$db = 'usersDB';
 	$mysqli = new mysqli($host, $user, $pw, $db);
 	
-	$username = "adamkkk";
+	//$username = "adamkkk";
 	$query = "select * from category where username = '$username'";
 	$reply = $mysqli->query($query);
 	
@@ -344,7 +344,7 @@ function animationRec($username)
 	$db = 'usersDB';
 	$mysqli = new mysqli($host, $user, $pw, $db);
 	
-	$username = "adamkkk";
+	//$username = "adamkkk";
 	$query = "select * from category where username = '$username'";
 	$reply = $mysqli->query($query);
 	
