@@ -86,7 +86,7 @@ function login($userN, $pass)
 	
 }
 
-function movieRec($user)
+function comedyRec($user)
 {
 	$host = '127.0.0.1';
 	$user = 'admin';
@@ -189,6 +189,186 @@ function movieRec($user)
 	
 	//return json_encode($comedyArray, $horrorArray, $actionArray, $scifiArray, $romanceArray, $animationArray);
 	return json_encode($comedyArray);
+	
+}
+
+function horrorRec($user)
+{
+	$host = '127.0.0.1';
+	$user = 'admin';
+	$pw = 'adminPwd';
+	$db = 'usersDB';
+	$mysqli = new mysqli($host, $user, $pw, $db);
+	
+	$username = "adamkkk";
+	$query = "select * from category where username = '$username'";
+	$reply = $mysqli->query($query);
+	
+	$horrorArray = array();
+	
+	while ($row = $reply->fetch_assoc())
+	{
+		if($row['horror'] == "horror")
+		{
+			$query2 = "select horror from horror";
+			$reply2 = $mysqli->query($query2);
+			while($row = $reply2->fetch_assoc())
+			{
+				foreach($row as $key => $value)
+				{
+					$horrorArray[] = $value;
+				}
+			}
+			
+		}
+			
+	}
+	
+	return json_encode($horrorArray);	
+	
+}
+
+function actionRec($user)
+{
+	$host = '127.0.0.1';
+	$user = 'admin';
+	$pw = 'adminPwd';
+	$db = 'usersDB';
+	$mysqli = new mysqli($host, $user, $pw, $db);
+	
+	$username = "adamkkk";
+	$query = "select * from category where username = '$username'";
+	$reply = $mysqli->query($query);
+	
+	$actionArray = array();
+	
+	while ($row = $reply->fetch_assoc())
+	{
+		if($row['action'] == "action")
+		{
+			$query2 = "select action from action";
+			$reply2 = $mysqli->query($query2);
+			while($row = $reply2->fetch_assoc())
+			{
+				foreach($row as $key => $value)
+				{
+					$actionArray[] = $value;
+				}
+			}
+			
+		}
+			
+	}
+	
+	return json_encode($actionArray);	
+	
+}
+
+function scifiRec($user)
+{
+	$host = '127.0.0.1';
+	$user = 'admin';
+	$pw = 'adminPwd';
+	$db = 'usersDB';
+	$mysqli = new mysqli($host, $user, $pw, $db);
+	
+	$username = "adamkkk";
+	$query = "select * from category where username = '$username'";
+	$reply = $mysqli->query($query);
+	
+	$scifiArray = array();
+	
+	while ($row = $reply->fetch_assoc())
+	{
+		if($row['scifi'] == "scifi")
+		{
+			$query2 = "select scifi from scifi";
+			$reply2 = $mysqli->query($query2);
+			while($row = $reply2->fetch_assoc())
+			{
+				foreach($row as $key => $value)
+				{
+					$scifiArray[] = $value;
+				}
+			}
+			
+		}
+			
+	}
+	
+	return json_encode($scifiArray);	
+	
+}
+
+function romanceRec($user)
+{
+	$host = '127.0.0.1';
+	$user = 'admin';
+	$pw = 'adminPwd';
+	$db = 'usersDB';
+	$mysqli = new mysqli($host, $user, $pw, $db);
+	
+	$username = "adamkkk";
+	$query = "select * from category where username = '$username'";
+	$reply = $mysqli->query($query);
+	
+	$romanceArray = array();
+	
+	while ($row = $reply->fetch_assoc())
+	{
+		if($row['romance'] == "romance")
+		{
+			$query2 = "select romance from romance";
+			$reply2 = $mysqli->query($query2);
+			while($row = $reply2->fetch_assoc())
+			{
+				foreach($row as $key => $value)
+				{
+					$romanceArray[] = $value;
+				}
+			}
+			
+		}
+			
+	}
+	
+	return json_encode($romanceArray);	
+	
+}
+
+function animationRec($username)
+{
+	$host = '127.0.0.1';
+	$user = 'admin';
+	$pw = 'adminPwd';
+	$db = 'usersDB';
+	$mysqli = new mysqli($host, $user, $pw, $db);
+	
+	$username = "adamkkk";
+	$query = "select * from category where username = '$username'";
+	$reply = $mysqli->query($query);
+	
+	$animationArray = array();
+	
+	while ($row = $reply->fetch_assoc())
+	{
+		if($row['animation'] == "animation")
+		{
+			$query2 = "select animation from animation";
+			$reply2 = $mysqli->query($query2);
+			while($row = $reply2->fetch_assoc())
+			{
+				foreach($row as $key => $value)
+				{
+					$animationArray[] = $value;
+				}
+			}
+			
+		}
+			
+	}
+	
+	return json_encode($animationArray);	
 	
 }
 
@@ -375,8 +555,8 @@ function requestProcessor($request)
 			return auth($request['username'], $request['sessionID']);
 		case "first":
 			return firstLogin($request['username'], $request['comedy'], $request['horror'], $request['action'], $request['scifi'], $request['romance'], $request['animation']);
-		case "recommend":
-			return movieRec($request['username']);
+		case "comedy":
+			return comedyRec($request['username']);
 		
 		default:
 			echo "try again";
