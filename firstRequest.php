@@ -100,7 +100,7 @@ if ($response != false)
 	$_SESSION['animation'] = $sessionData['animation'];
 	//$_SESSION['comedyArray'] = $comedyArray;
 	$sessionData1 = json_decode($response1, true);
-	$_SESSION['comedyArray'] = $sessionData1['test'];
+	$_SESSION['comedyArray'] = $sessionData1['comedyArray'];
 	//$_SESSION['comedyArray'] = "bitch";
 
 	header("location: mainPage.php");
