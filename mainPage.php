@@ -243,7 +243,7 @@ margin-right: 75px;
 		</div>
 		<div id = "box">
 			<center>
-			<p> Click below to buy tickets </p> 
+			<p> Click below to buy tickets from Fandango.com </p> 
 		<a href="http://www.fandango.com/Redirect.aspx?wss=link88x31" border="0"><img src="https://images.fandango.com/redesign/areas/registration/img/worry-free-tickets-oj.svg" width="100" height="100" border="0" alt="Find Theater Showtimes" /></a>
 
 		</center>
