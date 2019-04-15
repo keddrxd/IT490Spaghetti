@@ -73,7 +73,7 @@ function login($userN, $pass)
 			}	
 			
 			//movieRec($userN);
-			return json_encode($userData, $userPref);
+			return json_encode($userData);
 		}
 	}
 	//$error = "Passwords don't match\n";
