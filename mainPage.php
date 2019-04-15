@@ -182,7 +182,7 @@ margin-right: 75px;
     background-color: clear;
 }
 #box {
-    background-color: red;
+    background-color: light grey;
     width: 300px;
     border: 5px solid black;	    
     padding: 25px;
