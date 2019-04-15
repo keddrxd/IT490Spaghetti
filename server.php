@@ -86,6 +86,33 @@ function login($userN, $pass)
 	
 }
 
+function userRec($username)
+{
+	$host = '127.0.0.1';
+	$user = 'admin';
+	$pw = 'adminPwd';
+	$db = 'usersDB';
+	$mysqli = new mysqli($host, $user, $pw, $db);
+	$query = "select * from category where username = '$username'";
+	$reply = $mysqli->query($query);
+	$userData = array();
+	while ($row = $reply->fetch_assoc())
+	{
+		if($row['username'] == $username)
+		{
+			$userData['comedy'] = $row['comedy'];
+			$userData['horror'] = $row['horror'];
+			$userData['action'] = $row['action'];
+			$userData['scifi'] = $row['scifi'];
+			$userData['romance'] = $row['romance'];
+			$userData['animation'] = $row['animation'];
+		}
+	}
+	
+	return json_encode($userData);
+	
+}
+
 function comedyRec($username)
 {
 	$host = '127.0.0.1';
@@ -569,6 +596,8 @@ function requestProcessor($request)
 			return animationRec($request['username']);
 		case "error":
 			return error($request['msg']);
+		case "userRec":
+			return userRec($request['username']);
 		
 		default:
 			echo "try again";
