@@ -22,49 +22,55 @@ $num = 3;
 	
 if($comedy !== "")
 {
-	for($i = 0 ; $i < $num ; $i++)
+	echo "<br> Here are some comedy movies you may like:";
+	for($i = 0 ; $i < count($_SESSION['comedyArray']) ; $i++)
 	{
-		echo "<br>    Here's a comedy movie: ".$_SESSION['comedyArray'][$i];	
+		echo "<br>".$_SESSION['comedyArray'][$i];	
 	}	
 }
 
 if($horror !== "")
 {
+	echo "<br> Here are some horror movies you may like:";
 	for($i = 0 ; $i < count($_SESSION['horrorArray']) ; $i++)
 	{
-		echo "<br>    Here's a horror movie: ".$_SESSION['horrorArray'][$i];	
+		echo "<br>".$_SESSION['horrorArray'][$i];	
 	}	
 }
 
 if($action !== "")
 {
-	for($i = 0 ; $i < $num ; $i++)
+	echo "Here are some action movies you may like:";
+	for($i = 0 ; $i < count($_SESSION['actionArray']) ; $i++)
 	{
-		echo "<br>    Here's an action movie: ".$_SESSION['actionArray'][$i];	
+		echo "<br>".$_SESSION['actionArray'][$i];	
 	}	
 }
 	
 if($scifi !== "")
 {
-	for($i = 0 ; $i < $num ; $i++)
+	echo "Here are some sci-fi movies you may like:";
+	for($i = 0 ; $i < count($_SESSION['scifiArray']) ; $i++)
 	{
-		echo "<br>    Here's a scifi movie: ".$_SESSION['scifiArray'][$i];	
+		echo "<br>".$_SESSION['scifiArray'][$i];	
 	}	
 }
 	
 if($romance !== "")
 {
-	for($i = 0 ; $i < $num ; $i++)
+	echo "Here are some romance movies that you may like:";
+	for($i = 0 ; $i < count($_SESSION['romanceArray']) ; $i++)
 	{
-		echo "<br>    Here's a romance movie: ".$_SESSION['romanceArray'][$i];	
+		echo "<br>".$_SESSION['romanceArray'][$i];	
 	}	
 }
 	
 if($animation !== "")
 {
-	for($i = 0 ; $i < $num ; $i++)
+	echo "Here are some animation movies you may like:";
+	for($i = 0 ; $i < count($_SESSION['animationArray']) ; $i++)
 	{
-		echo "<br>    Here's a animation movie: ".$_SESSION['animationArray'][$i];	
+		echo "<br>".$_SESSION['animationArray'][$i];	
 	}	
 }
 	
