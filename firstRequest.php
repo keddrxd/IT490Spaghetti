@@ -58,6 +58,7 @@ else{
 
 $response = firstLogin($username, $comedy, $horror, $action, $scifi, $romance, $animation);
 $response1 = movieRecc($username);
+$result = array();
 $result = $response1;
 
 
@@ -108,7 +109,7 @@ if ($response != false)
 	foreach ($result as $value)
 	{
 		$_SESSION['comedyArray'][$i] = $value;
-		$i = $i + 1;
+		$i++;
 		
 	}
 	//$_SESSION['comedyArray'] = $sessionData1['comedyArray'];
