@@ -181,7 +181,13 @@ margin-right: 75px;
     font-weight:700;
     background-color: clear;
 }
-
+#box {
+    background-color: red;
+    width: 300px;
+    border: 5px solid black;	    
+    padding: 25px;
+    margin: 25px;
+}
 
 #body {
 	margin-left: 75px;
@@ -235,7 +241,13 @@ margin-right: 75px;
 		<div id = "body">
 		<h2><font size="10" face = "courier" color = "black">Hello, User!</font></h2> 
 		</div>
-		
+		<div id = "box">
+			<center>
+			<p> Click below to buy tickets </p> 
+		<a href="http://www.fandango.com/Redirect.aspx?wss=link88x31" border="0"><img src="https://images.fandango.com/redesign/areas/registration/img/worry-free-tickets-oj.svg" width="100" height="100" border="0" alt="Find Theater Showtimes" /></a>
+
+		</center>
+		</div>
 		<div id= "map">
 		<center>
 		<div id="mapSize" style="width:500px;height:500px;"></div>
