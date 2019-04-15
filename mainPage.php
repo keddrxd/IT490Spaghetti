@@ -13,7 +13,7 @@ session_start();
 echo "Hello ".$_SESSION['username'];
 //for($i = 0 ; $i < count($_SESSION['comedyArray']) ; $i++)
 //{
-echo "Here's a fucking movie: ".$_SESSION['comedyArray']['1'];
+echo "Here's a fucking movie: ".$_SESSION['comedyArray']['0'];
 //}
 //echo "Here are comedy movies you may like: ".$_SESSION['comedyArray'];
 //$user = $_SESSION['username'];
