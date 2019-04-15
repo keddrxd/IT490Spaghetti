@@ -138,6 +138,6 @@ function error($errorMSG)
 	//$errorDate = date_create();
 	$request13['type'] ="error";
 	//$request13['date']=$errorDate;
-	$request13['msg']=$message;
+	$request13['msg']=$errorMSG;
 	$errorClient->send_request($request13);
 }
