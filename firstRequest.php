@@ -58,9 +58,9 @@ else{
 
 $response = firstLogin($username, $comedy, $horror, $action, $scifi, $romance, $animation);
 $response1 = movieRecc($username);
-//$result = array();
-//$result = $response1;
-
+$result = array();
+$result = $response1;
+$arrayLength = count($result);
 
 
 /*$host = '127.0.0.1';
@@ -104,7 +104,11 @@ if ($response != false)
 	$_SESSION['animation'] = $sessionData['animation'];
 	//$_SESSION['comedyArray'] = $comedyArray;
 	$sessionData1 = json_decode($response1, true);
-	$_SESSION['comedyArray'] = $sessionData1['0'];
+	$_SESSION['comedyArray'] = array();
+	for($i = 0 ; $i < count($result) ; $i++)
+	{
+		$_SESSION['comedyArray'][$i] = $sessionData1[$i];
+	}
 	
 	/*$i = 0;
 	foreach($result as $key=>$value)
