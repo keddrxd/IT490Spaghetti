@@ -10,12 +10,64 @@
 session_start();
 //require ('rabbitFunc.php');
 //require 'movieDB.php';
+$comedy = $_SESSION['comedy'];
+$horror = $_SESSION['horror'];
+$action = $_SESSION['action'];
+$scifi = $_SESSION['scifi'];
+$romance = $_SESSION['romance'];
+$animation = $_SESSION['animation'];
+	
 echo "Hello ".$_SESSION['username'];
 $num = 3;
+	
+if($comedy !== "")
+{
 	for($i = 0 ; $i < $num ; $i++)
 	{
-		echo "<br>    Here's a fucking movie: ".$_SESSION['comedyArray'][$i];	
-	}
+		echo "<br>    Here's a comedy movie: ".$_SESSION['comedyArray'][$i];	
+	}	
+}
+
+if($horror !== "")
+{
+	for($i = 0 ; $i < $num ; $i++)
+	{
+		echo "<br>    Here's a horror movie: ".$_SESSION['horrorArray'][$i];	
+	}	
+}
+
+if($action !== "")
+{
+	for($i = 0 ; $i < $num ; $i++)
+	{
+		echo "<br>    Here's an action movie: ".$_SESSION['actionArray'][$i];	
+	}	
+}
+	
+if($scifi !== "")
+{
+	for($i = 0 ; $i < $num ; $i++)
+	{
+		echo "<br>    Here's a scifi movie: ".$_SESSION['scifiArray'][$i];	
+	}	
+}
+	
+if($romance !== "")
+{
+	for($i = 0 ; $i < $num ; $i++)
+	{
+		echo "<br>    Here's a romance movie: ".$_SESSION['romanceArray'][$i];	
+	}	
+}
+	
+if($animation !== "")
+{
+	for($i = 0 ; $i < $num ; $i++)
+	{
+		echo "<br>    Here's a animation movie: ".$_SESSION['animationArray'][$i];	
+	}	
+}
+	
 //echo "Here are comedy movies you may like: ".$_SESSION['comedyArray'];
 //$user = $_SESSION['username'];
 //require ('server.php');
@@ -24,12 +76,7 @@ $num = 3;
 
 //echo "Hello ".$_SESSION['comedy'];
 
-//$comedy = $_SESSION['comedy'];
-//$horror = $_SESSION['horror'];
-//$action = $_SESSION['action'];
-//$scifi = $_SESSION['scifi'];
-//$romance = $_SESSION['romance'];
-//$animation = $_SESSION['animation'];
+
 //echo "<br> Your favorite categories are: <br>";
 //echo "$comedy<br>";
 //echo "$horror<br>";
