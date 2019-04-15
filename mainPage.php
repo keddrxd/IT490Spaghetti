@@ -30,7 +30,7 @@ if($comedy !== "")
 
 if($horror !== "")
 {
-	for($i = 0 ; $i < $num ; $i++)
+	for($i = 0 ; $i < count($_SESSION['horrorArray']) ; $i++)
 	{
 		echo "<br>    Here's a horror movie: ".$_SESSION['horrorArray'][$i];	
 	}	
