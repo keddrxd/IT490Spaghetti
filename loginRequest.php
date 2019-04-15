@@ -19,7 +19,7 @@ if( $response != false)
 else
 {
 	$errorMSG = "Login Unsucessful";
-	$response1 = error($errorMSG);
+	//$response1 = error($errorMSG);
 	//echo "$errorMSG";
 	//error($errorMSG);
 	header("location: index.php");
