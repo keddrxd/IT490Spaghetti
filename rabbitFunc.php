@@ -81,6 +81,57 @@ function comRecc($username)
 	return $response;
 }
 
+function horRecc($username)
+{
+	$client = new rabbitMQClient("testRabbitMQ.ini","testServer");
+	$request8= array();	
+	$request8['type']="horror";
+	$request8['username']= $genre;
+	$response= $client->send_request($request8);
+	return $response;
+}
+
+function actRecc($username)
+{
+	$client = new rabbitMQClient("testRabbitMQ.ini","testServer");
+	$request9= array();	
+	$request9['type']="action";
+	$request9['username']= $genre;
+	$response= $client->send_request($request9);
+	return $response;
+}
+
+function sciRecc($username)
+{
+	$client = new rabbitMQClient("testRabbitMQ.ini","testServer");
+	$request10= array();	
+	$request10['type']="scifi";
+	$request10['username']= $genre;
+	$response= $client->send_request($request10);
+	return $response;
+}
+
+function romRecc($username)
+{
+	$client = new rabbitMQClient("testRabbitMQ.ini","testServer");
+	$request11= array();	
+	$request11['type']="romance";
+	$request11['username']= $genre;
+	$response= $client->send_request($request11);
+	return $response;
+}
+
+function aniRecc($username)
+{
+	$client = new rabbitMQClient("testRabbitMQ.ini","testServer");
+	$request12= array();	
+	$request12['type']="animation";
+	$request12['username']= $genre;
+	$response= $client->send_request($request12);
+	return $response;
+}
+
+
 
 
 
