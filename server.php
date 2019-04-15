@@ -103,8 +103,8 @@ function movieRec($username)
 	$scifiArray = array();
 	$romanceArray = array();
 	$animationArray = array();
-	$text = "Aalap sucks";
-	$comedyArray['test'] = $text;
+	//$text = "Aalap sucks";
+	//$comedyArray['test'] = $text;
 	
 	while ($row = $reply->fetch_assoc())
 	{
@@ -119,7 +119,7 @@ function movieRec($username)
 				{
 					foreach($row as $key => $value)
 					{
-						//$comedyArray['test'] = $value;
+						$comedyArray[] = $value;
 					}
 				}
 			}
