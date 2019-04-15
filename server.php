@@ -557,6 +557,16 @@ function requestProcessor($request)
 			return firstLogin($request['username'], $request['comedy'], $request['horror'], $request['action'], $request['scifi'], $request['romance'], $request['animation']);
 		case "comedy":
 			return comedyRec($request['username']);
+		case "horror":
+			return horrorRec($request['username']);
+		case "action":
+			return actionRec($request['username']);
+		case "scifi":
+			return scifiRec($request['username']);
+		case "romance":
+			return romanceRec($request['username']);
+		case "animation":
+			return animationRec($request['username']);
 		
 		default:
 			echo "try again";
