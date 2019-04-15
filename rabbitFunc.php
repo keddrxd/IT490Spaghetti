@@ -141,3 +141,13 @@ function error($errorMSG)
 	$request13['msg']=$errorMSG;
 	$errorClient->send_request($request13);
 }
+
+function userRecc($username)
+{
+	$client = new rabbitMQClient("testRabbitMQ.ini","testServer");
+	$request14= array();	
+	$request14['type']="userRec";
+	$request14['username']= $username;
+	$response= $client->send_request($request14);
+	return $response;
+}
