@@ -105,13 +105,23 @@ if ($response != false)
 	//$_SESSION['comedyArray'] = $comedyArray;
 	$sessionData1 = json_decode($response1, true);
 	$_SESSION['comedyArray'] = array();
+	
 	$i = 0;
-	foreach ($result as $value)
+	foreach($result as $key=>$value)
 	{
+     		//print "$key holds $value\n";
 		$_SESSION['comedyArray'][$i] = $value;
 		$i++;
-		
 	}
+	
+	
+	//$i = 0;
+	//foreach ($result as $value)
+	//{
+		//$_SESSION['comedyArray'][$i] = $value;
+		//$i++;
+		
+	//}
 	//$_SESSION['comedyArray'] = $sessionData1['comedyArray'];
 	
 
