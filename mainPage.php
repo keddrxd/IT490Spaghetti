@@ -162,6 +162,13 @@ if( $_SERVER['REQUEST_METHOD'] == 'POST')
    <div id="map"></div>
 
 </div>
+#box {
+    background-color: red;
+    width: 300px;
+    border: 5px solid black;	    
+    padding: 25px;
+    margin: 25px;
+}
 #title {
     background-color: clear;
     width: 900px;
@@ -234,7 +241,14 @@ margin-right: 75px;
 		<div id = "body">
 		<h2><font size="10" face = "courier" color = "black">Hello, User!</font></h2> 
 		</div>
+		<center>
+		<div id = "box">
+		<h2> Returning User? Login </h2> 
+		<center>Enter Username <input type= "text" name="username"/><br><br>
 		
+		<button name = "login"> Add Friend </button> 
+		</center>
+		</div>
 		<div id= "map">
 		<center>
 		<div id="mapSize" style="width:500px;height:500px;"></div>
