@@ -119,7 +119,7 @@ if ($response != false)
 	
 	$sessionData2 = json_decode($response2, true);
 	$_SESSION['horrorArray'] = array();
-	for($i = 0 ; $i <= $num ; $i++)
+	for($i = 0 ; $i <= count($response2) ; $i++)
 	{
 		$_SESSION['horrorArray'][$i] = $sessionData2[$i];
 	}
