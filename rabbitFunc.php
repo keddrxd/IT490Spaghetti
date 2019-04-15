@@ -71,7 +71,7 @@ function requestMovies($genre, $date, $title)
 	
 }
 
-function movieRecc($username)
+function comRecc($username)
 {
 	$client = new rabbitMQClient("testRabbitMQ.ini","testServer");
 	$request7= array();	
