@@ -235,6 +235,10 @@ margin-right: 75px;
   Add a Friend!<br>
   <input type="text" name="username" placeholder="Username">
   <br>
+<input type="submit" value="Submit">
+</form> 
+
+
 		
 	<form action="index.php" >
 
