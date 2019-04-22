@@ -131,27 +131,6 @@ function aniRecc($username)
 	return $response;
 }
 
-function error($errorMSG)
-{
-	$errorClient = new rabbitMQClient("testRabbitMQ.ini","testServer");
-	$request13 = array();
-	//$errorDate = date_create();
-	$request13['type'] ="error";
-	//$request13['date']=$errorDate;
-	$request13['msg']=$errorMSG;
-	$errorClient->send_request($request13);
-}
-
-function userRecc($username)
-{
-	$client = new rabbitMQClient("testRabbitMQ.ini","testServer");
-	$request14= array();	
-	$request14['type']="userRec";
-	$request14['username']= $username;
-	$response= $client->send_request($request14);
-	return $response;
-}
-
 function comRd($username)
 {
 	$client = new rabbitMQClient("testRabbitMQ.ini","testServer");
@@ -211,4 +190,27 @@ function aniRd($username)
 	$response= $client->send_request($request20);
 	return $response;
 }
+
+function error($errorMSG)
+{
+	$errorClient = new rabbitMQClient("testRabbitMQ.ini","testServer");
+	$request13 = array();
+	//$errorDate = date_create();
+	$request13['type'] ="error";
+	//$request13['date']=$errorDate;
+	$request13['msg']=$errorMSG;
+	$errorClient->send_request($request13);
+}
+
+function userRecc($username)
+{
+	$client = new rabbitMQClient("testRabbitMQ.ini","testServer");
+	$request14= array();	
+	$request14['type']="userRec";
+	$request14['username']= $username;
+	$response= $client->send_request($request14);
+	return $response;
+}
+
+
 
