@@ -80,8 +80,8 @@ if( $response != false)
 }
 else
 {
-	$time = time();
-	$errorMSG = "Login Unsucessful $time <br>";
+	$date = date("Y-m-d");
+	$errorMSG = "Login Unsucessful $date <br>";
 	$response7 = error($errorMSG);
 	echo "$errorMSG";
 	//error($errorMSG);
