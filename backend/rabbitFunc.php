@@ -141,6 +141,16 @@ function comRd($username)
 	return $response;
 }
 
+/*function comRd($username)
+{
+	$client = new rabbitMQClient("testRabbitMQ.ini","testServer");
+	$request15= array();	
+	$request15['type']="comedyRd";
+	$request15['username']= $username;
+	$response= $client->send_request($request15);
+	return $response;
+}*/
+
 function horRd($username)
 {
 	$client = new rabbitMQClient("testRabbitMQ.ini","testServer");
