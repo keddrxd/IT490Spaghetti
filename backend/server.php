@@ -244,6 +244,7 @@ function comedyRec($username)
 	
 }
 
+
 function horrorRec($username)
 {
 	$host = '127.0.0.1';
@@ -421,6 +422,216 @@ function animationRec($username)
 	}
 	
 	return json_encode($animationArray);	
+	
+}
+
+function comedyRel($username)
+{
+	$host = '127.0.0.1';
+	$user = 'admin';
+	$pw = 'adminPwd';
+	$db = 'usersDB';
+	$mysqli = new mysqli($host, $user, $pw, $db);
+	
+	$query = "select * from category where username = '$username'";
+	$reply = $mysqli->query($query);
+	
+	$comedyRelease = array();
+	
+	while ($row = $reply->fetch_assoc())
+	{
+		if($row['comedy'] == "comedy")
+		{
+			$query2 = "select rd from comedy";
+			$reply2 = $mysqli->query($query2);
+			while($row = $reply2->fetch_assoc())
+			{
+				foreach($row as $key => $value)
+				{
+					$comedyRelease[] = $value;
+				}
+			}
+			
+		}
+			
+	}
+	return json_encode($comedyRelease);
+	
+	
+}
+
+function horrorRel($username)
+{
+	$host = '127.0.0.1';
+	$user = 'admin';
+	$pw = 'adminPwd';
+	$db = 'usersDB';
+	$mysqli = new mysqli($host, $user, $pw, $db);
+	
+	$query = "select * from category where username = '$username'";
+	$reply = $mysqli->query($query);
+	
+	$horrorRelease = array();
+	
+	while ($row = $reply->fetch_assoc())
+	{
+		if($row['horror'] == "horror")
+		{
+			$query2 = "select rd from horror";
+			$reply2 = $mysqli->query($query2);
+			while($row = $reply2->fetch_assoc())
+			{
+				foreach($row as $key => $value)
+				{
+					$horrorRelease[] = $value;
+				}
+			}
+			
+		}
+			
+	}
+	
+	return json_encode($horrorRelease);	
+	
+}
+
+function actionRel($username)
+{
+	$host = '127.0.0.1';
+	$user = 'admin';
+	$pw = 'adminPwd';
+	$db = 'usersDB';
+	$mysqli = new mysqli($host, $user, $pw, $db);
+	
+	$query = "select * from category where username = '$username'";
+	$reply = $mysqli->query($query);
+	
+	$actionRelease = array();
+	
+	while ($row = $reply->fetch_assoc())
+	{
+		if($row['action'] == "action")
+		{
+			$query2 = "select rd from action";
+			$reply2 = $mysqli->query($query2);
+			while($row = $reply2->fetch_assoc())
+			{
+				foreach($row as $key => $value)
+				{
+					$actionRelease[] = $value;
+				}
+			}
+			
+		}
+			
+	}
+	return json_encode($actionRelease);
+	
+	
+}
+
+function scifiRel($username)
+{
+	$host = '127.0.0.1';
+	$user = 'admin';
+	$pw = 'adminPwd';
+	$db = 'usersDB';
+	$mysqli = new mysqli($host, $user, $pw, $db);
+	
+	$query = "select * from category where username = '$username'";
+	$reply = $mysqli->query($query);
+	
+	$scifiRelease = array();
+	
+	while ($row = $reply->fetch_assoc())
+	{
+		if($row['scifi'] == "scifi")
+		{
+			$query2 = "select rd from scifi";
+			$reply2 = $mysqli->query($query2);
+			while($row = $reply2->fetch_assoc())
+			{
+				foreach($row as $key => $value)
+				{
+					$scifiRelease[] = $value;
+				}
+			}
+			
+		}
+			
+	}
+	return json_encode($scifiRelease);
+	
+	
+}
+
+function romanceRel($username)
+{
+	$host = '127.0.0.1';
+	$user = 'admin';
+	$pw = 'adminPwd';
+	$db = 'usersDB';
+	$mysqli = new mysqli($host, $user, $pw, $db);
+	
+	$query = "select * from category where username = '$username'";
+	$reply = $mysqli->query($query);
+	
+	$romanceRelease = array();
+	
+	while ($row = $reply->fetch_assoc())
+	{
+		if($row['romance'] == "romance")
+		{
+			$query2 = "select rd from romance";
+			$reply2 = $mysqli->query($query2);
+			while($row = $reply2->fetch_assoc())
+			{
+				foreach($row as $key => $value)
+				{
+					$romanceRelease[] = $value;
+				}
+			}
+			
+		}
+			
+	}
+	return json_encode($romanceRelease);
+	
+	
+}
+
+function animationRel($username)
+{
+	$host = '127.0.0.1';
+	$user = 'admin';
+	$pw = 'adminPwd';
+	$db = 'usersDB';
+	$mysqli = new mysqli($host, $user, $pw, $db);
+	
+	$query = "select * from category where username = '$username'";
+	$reply = $mysqli->query($query);
+	
+	$animationRelease = array();
+	
+	while ($row = $reply->fetch_assoc())
+	{
+		if($row['animation'] == "animation")
+		{
+			$query2 = "select rd from animation";
+			$reply2 = $mysqli->query($query2);
+			while($row = $reply2->fetch_assoc())
+			{
+				foreach($row as $key => $value)
+				{
+					$animationRelease[] = $value;
+				}
+			}
+			
+		}
+			
+	}
+	return json_encode($animationRelease);
+	
 	
 }
 
@@ -619,6 +830,18 @@ function requestProcessor($request)
 			return romanceRec($request['username']);
 		case "animation":
 			return animationRec($request['username']);
+		case "comedyRd":
+			return comedyRel($request['username']);
+		case "horrorRd":
+			return horrorRel($request['username']);
+		case "actionRd":
+			return actionRel($request['username']);
+		case "scifiRd":
+			return scifiRel($request['username']);
+		case "romanceRd":
+			return romanceRel($request['username']);
+		case "animationRd":
+			return animationRel($request['username']);
 		case "error":
 			return error($request['msg']);
 		case "userRec":
