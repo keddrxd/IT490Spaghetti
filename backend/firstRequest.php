@@ -63,6 +63,14 @@ $response3 = actRecc($username);
 $response4 = sciRecc($username);
 $response5 = romRecc($username);
 $response6 = aniRecc($username);
+$response7 = comRd($username);
+$response8 = horRd($username);
+$response9 = actRd($username);
+$response10 = sciRd($username);
+$response11 = romRd($username);
+$response12 = aniRd($username);
+
+
 
 $result = array();
 $result = $response1;
@@ -150,6 +158,48 @@ if ($response != false)
 	for($i = 0 ; $i < $num ; $i++)
 	{
 		$_SESSION['animationArray'][$i] = $sessionData6[$i];
+	}
+	
+	$sessionData7 = json_decode($response7, true);
+	$_SESSION['comRd'] = array();
+	for($i = 0 ; $i < $num ; $i++)
+	{
+		$_SESSION['comRd'][$i] = $sessionData7[$i];
+	}
+	
+	$sessionData8 = json_decode($response8, true);
+	$_SESSION['horRd'] = array();
+	for($i = 0 ; $i < $num ; $i++)
+	{
+		$_SESSION['horRd'][$i] = $sessionData8[$i];
+	}
+	
+	$sessionData9 = json_decode($response9, true);
+	$_SESSION['actRd'] = array();
+	for($i = 0 ; $i < $num ; $i++)
+	{
+		$_SESSION['actRd'][$i] = $sessionData9[$i];
+	}
+	
+	$sessionData10 = json_decode($response10, true);
+	$_SESSION['sciRd'] = array();
+	for($i = 0 ; $i < $num ; $i++)
+	{
+		$_SESSION['sciRd'][$i] = $sessionData10[$i];
+	}
+	
+	$sessionData11 = json_decode($response11, true);
+	$_SESSION['romRd'] = array();
+	for($i = 0 ; $i < $num ; $i++)
+	{
+		$_SESSION['romRd'][$i] = $sessionData11[$i];
+	}
+	
+	$sessionData12 = json_decode($response12, true);
+	$_SESSION['aniRd'] = array();
+	for($i = 0 ; $i < $num ; $i++)
+	{
+		$_SESSION['aniRd'][$i] = $sessionData12[$i];
 	}
 	
 	/*$i = 0;
