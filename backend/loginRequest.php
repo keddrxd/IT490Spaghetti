@@ -81,9 +81,9 @@ if( $response != false)
 else
 {
 	//$date = date("Y-m-d");
-	$today = date("d/m/Y");
-	echo $today;
-	$errorMSG = "Login Unsucessful $today <br>";
+	//$today = date("d/m/Y");
+	//echo $today;
+	$errorMSG = "Login Unsucessful " . date("Y/m/d") . "<br>";
 	$response7 = error($errorMSG);
 	echo "$errorMSG";
 	//error($errorMSG);
