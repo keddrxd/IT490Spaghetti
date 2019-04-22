@@ -81,7 +81,7 @@ if( $response != false)
 else
 {
 	$time = time();
-	$errorMSG = "Login Unsucessful " + $time + "</br>";
+	$errorMSG = "Login Unsucessful $time <br>";
 	$response7 = error($errorMSG);
 	echo "$errorMSG";
 	//error($errorMSG);
