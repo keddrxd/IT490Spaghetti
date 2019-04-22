@@ -151,3 +151,56 @@ function userRecc($username)
 	$response= $client->send_request($request14);
 	return $response;
 }
+
+function comRd($username)
+{
+	$client = new rabbitMQClient("testRabbitMQ.ini","testServer");
+	$request15= array();	
+	$request15['type']="comedyRd";
+	$request15['username']= $username;
+	$response= $client->send_request($request15);
+	return $response;
+}
+
+function horRd($username)
+{
+	$client = new rabbitMQClient("testRabbitMQ.ini","testServer");
+	$request16= array();	
+	$request16['type']="horrorRd";
+	$request16['username']= $username;
+	$response= $client->send_request($request16);
+	return $response;
+}
+
+function actRd($username)
+{
+	$client = new rabbitMQClient("testRabbitMQ.ini","testServer");
+	$request17= array();	
+	$request17['type']="actionRd";
+	$request17['username']= $username;
+	$response= $client->send_request($request17);
+	return $response;
+}
+
+function sciRd($username)
+{
+	$client = new rabbitMQClient("testRabbitMQ.ini","testServer");
+	$request18= array();	
+	$request18['type']="scifiRd;
+	$request18['username']= $username;
+	$response= $client->send_request($request18);
+	return $response;
+}
+
+function romRd($username)
+{
+	$client = new rabbitMQClient("testRabbitMQ.ini","testServer");
+	$request19= array();	
+	$request19['type']="romanceRd;
+	$request19['username']= $username;
+	$response= $client->send_request($request19);
+	return $response;
+}
+
+
+
