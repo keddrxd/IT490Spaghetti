@@ -96,8 +96,17 @@ function friendsList($username)
 	$query = "select * from users where username = '$username'";
 	$reply = $mysqli->query($query);
 	
+	$userData = array();
+	while ($row = $reply->fetch_assoc())
+	{
+		if($row['username'] == $username)
+		{
+			$userData[] = $row['username'];
+		}
+		
+	}
 	
-	
+	return json_encode($userData);
 	
 	
 }
@@ -614,6 +623,8 @@ function requestProcessor($request)
 			return error($request['msg']);
 		case "userRec":
 			return userRec($request['username']);
+		case "friends":
+			return friendsList($request['username']);
 		
 		default:
 			echo "try again";
