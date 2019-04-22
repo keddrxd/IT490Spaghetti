@@ -16,6 +16,12 @@ $action = $_SESSION['action'];
 $scifi = $_SESSION['scifi'];
 $romance = $_SESSION['romance'];
 $animation = $_SESSION['animation'];
+$comedyRd = $_SESSION['comRd'];
+$horrorRd = $_SESSION['horRd'];
+$actionRd = $_SESSION['actRd'];
+$scifiRd = $_SESSION['sciRd'];
+$romanceRd = $_SESSION['romRd'];
+$animationRd = $_SESSION['aniRd'];
 	
 echo "Hello ".$_SESSION['username'];
 echo "<br>";
