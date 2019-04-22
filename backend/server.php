@@ -86,6 +86,22 @@ function login($userN, $pass)
 	
 }
 
+function friendsList($username)
+{
+	$host = '127.0.0.1';
+	$user = 'admin';
+	$pw = 'adminPwd';
+	$db = 'usersDB';
+	$mysqli = new mysqli($host, $user, $pw, $db);
+	$query = "select * from users where username = '$username'";
+	$reply = $mysqli->query($query);
+	
+	
+	
+	
+	
+}
+
 function userRec($username)
 {
 	$host = '127.0.0.1';
