@@ -15,7 +15,7 @@ $response13 = comRd($user);
 $response8 = horRd($user);
 $response9 = actRd($user);
 $response10 = sciRd($user);
-$response11 = romRd($user);
+$response14 = romRd($user);
 $response12 = aniRd($user);
 if( $response != false)
 {
