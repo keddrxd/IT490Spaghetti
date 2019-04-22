@@ -16,12 +16,12 @@ $action = $_SESSION['action'];
 $scifi = $_SESSION['scifi'];
 $romance = $_SESSION['romance'];
 $animation = $_SESSION['animation'];
-$comedyRd = $_SESSION['comRd'];
-$horrorRd = $_SESSION['horRd'];
-$actionRd = $_SESSION['actRd'];
-$scifiRd = $_SESSION['sciRd'];
-$romanceRd = $_SESSION['romRd'];
-$animationRd = $_SESSION['aniRd'];
+$comedyRd = $_SESSION['comedyRd'];
+$horrorRd = $_SESSION['horrorRd'];
+$actionRd = $_SESSION['actionRd'];
+$scifiRd = $_SESSION['scifiRd'];
+$romanceRd = $_SESSION['romanced'];
+$animationRd = $_SESSION['animationRd'];
 	
 echo "Hello ".$_SESSION['username'];
 echo "<br>";
@@ -35,7 +35,7 @@ if($comedy !== "")
 		if($_SESSION['comedyArray'][$i] !== "")
 		{
 			echo "<br>".$_SESSION['comedyArray'][$i];
-			echo "".$_SESSION['comRd'][$i];
+			echo "".$_SESSION['comedyRd'][$i];
 		}
 	}	
 }
@@ -48,7 +48,7 @@ if($horror !== "")
 		if($_SESSION['horrorArray'][$i] !== "")
 		{
 			echo "<br>".$_SESSION['horrorArray'][$i];
-			echo "".$_SESSION['horRd'][$i];
+			echo "".$_SESSION['horrorRd'][$i];
 		}
 	}	
 }
@@ -59,7 +59,7 @@ if($action !== "")
 	for($i = 0 ; $i < $num ; $i++)
 	{
 		echo "<br>".$_SESSION['actionArray'][$i];
-		echo "".$_SESSION['actRd'][$i];
+		echo "".$_SESSION['actionRd'][$i];
 	}	
 }
 	
@@ -69,7 +69,7 @@ if($scifi !== "")
 	for($i = 0 ; $i < $num ; $i++)
 	{
 		echo "<br>".$_SESSION['scifiArray'][$i];
-		echo "".$_SESSION['sciRd'][$i];
+		echo "".$_SESSION['scifiRd'][$i];
 	}	
 }
 	
@@ -79,7 +79,7 @@ if($romance !== "")
 	for($i = 0 ; $i < $num ; $i++)
 	{
 		echo "<br>".$_SESSION['romanceArray'][$i];	
-		echo "".$_SESSION['romRd'][$i];
+		echo "".$_SESSION['romanceRd'][$i];
 	}	
 }
 	
@@ -89,7 +89,7 @@ if($animation !== "")
 	for($i = 0 ; $i < $num ; $i++)
 	{
 		echo "<br>".$_SESSION['animationArray'][$i];	
-		echo "".$_SESSION['aniRd'][$i];
+		echo "".$_SESSION['animationRd'][$i];
 	}	
 }
 	
