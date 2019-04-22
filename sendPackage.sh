@@ -6,13 +6,13 @@ versionNum=$2
 echo "Creating package for "$serverType" version #: "$versionNum
 cd /home/$USER/git/
 
-if [$serverType == "fe"]
-	tar -cf $serverType'_'$versionNum.tar --exclude-vcs IT490Spaghetti --exclude='IT490Spaghetti/backend' --exclude='IT490Spaghetti/DMZ'
-elif [$serverType == "be"]
+if [ $serverType == "fe" ] ; then
+	tar -cf $serverType'_'$versionNum.tar --exclude-vcs --exclude='IT490Spaghetti/backend' --exclude='IT490Spaghetti/DMZ' IT490Spaghetti
+elif [ $serverType == "be" ] ; then
 	tar -cf $serverType'_'$versionNum.tar --exclude-vcs IT490Spaghetti/backend
-elif [$serverType == "dmz"]
+elif [ $serverType == "dmz" ] ; then
 	tar -cf $serverType'_'$versionNum.tar --exclude-vcs IT490Spaghetti/DMZ
-
+fi
 
 echo "Package "$serverType'_'$versionNum" was created"
 
