@@ -11,12 +11,7 @@ $response3 = actRecc($user);
 $response4 = sciRecc($user);
 $response5 = romRecc($user);
 $response6 = aniRecc($user);
-$response13 = comRd($user);
-$response8 = horRd($user);
-$response9 = actRd($user);
-$response10 = sciRd($user);
-$response14 = romRd($user);
-$response12 = aniRd($user);
+
 if( $response != false)
 {
 	$sessionData = json_decode($response, true);
