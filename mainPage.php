@@ -22,7 +22,7 @@ $actionRd = $_SESSION['actionRd'];
 $scifiRd = $_SESSION['scifiRd'];
 $romanceRd = $_SESSION['romanced'];
 $animationRd = $_SESSION['animationRd'];
-	
+echo "hello ".$_SESSION['comedyRd'];
 echo "Hello ".$_SESSION['username'];
 echo "<br>";
 $num = 3;

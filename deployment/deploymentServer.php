@@ -40,7 +40,7 @@ function addVersion($serverType,$versionNumber,$packageName)
 		}
 	$date = time();
 	echo "Inserting new version into the table";
-	$query = "Insert into version values ('date', 'verName', 'serverType','pending')";
+	$query = "Insert into version values ('$date', '$verName', '$serverType','pending')";
 	$mysqli->query($query);	
 }
 
