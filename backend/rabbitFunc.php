@@ -186,7 +186,7 @@ function sciRd($username)
 {
 	$client = new rabbitMQClient("testRabbitMQ.ini","testServer");
 	$request18= array();	
-	$request18['type']="scifiRd;
+	$request18['type']="scifiRd";
 	$request18['username']= $username;
 	$response= $client->send_request($request18);
 	return $response;
@@ -196,11 +196,19 @@ function romRd($username)
 {
 	$client = new rabbitMQClient("testRabbitMQ.ini","testServer");
 	$request19= array();	
-	$request19['type']="romanceRd;
+	$request19['type']="romanceRd";
 	$request19['username']= $username;
 	$response= $client->send_request($request19);
 	return $response;
 }
 
-
+function aniRd($username)
+{
+	$client = new rabbitMQClient("testRabbitMQ.ini","testServer");
+	$request20= array();	
+	$request20['type']="animationRd";
+	$request20['username']= $username;
+	$response= $client->send_request($request20);
+	return $response;
+}
 
