@@ -80,7 +80,10 @@ if( $response != false)
 }
 else
 {
-	$errorMSG = "Login Unsucessful";
+	//$date = date("Y-m-d");
+	//$today = date("d/m/Y");
+	//echo $today;
+	$errorMSG = "Login Unsucessful <br>";
 	$response7 = error($errorMSG);
 	echo "$errorMSG";
 	//error($errorMSG);

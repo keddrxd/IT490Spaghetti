@@ -231,6 +231,15 @@ margin-right: 75px;
 		</center>
 		</div>
 	
+	<form>
+  Add a Friend!<br>
+  <input type="text" name="username" placeholder="Username">
+  <br>
+<input type="submit" value="Submit">
+</form> 
+
+
+		
 	<form action="index.php" >
 
 		<div id = "logout">
