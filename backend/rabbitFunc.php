@@ -152,7 +152,7 @@ function userRecc($username)
 	return $response;
 }
 
-function comRd($username)
+/*function comRd($username)
 {
 	$client = new rabbitMQClient("testRabbitMQ.ini","testServer");
 	$request15= array();	
@@ -211,4 +211,4 @@ function aniRd($username)
 	$response= $client->send_request($request20);
 	return $response;
 }
-
+*/
