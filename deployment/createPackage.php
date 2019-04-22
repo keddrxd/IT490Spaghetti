@@ -31,7 +31,7 @@ function createNewVersion($server)
 		$request['type'] = "newPackage";
 		$request['serverType'] = $server;
 		$request['versionNumber'] = $futureVersion;
-		$request['packageName'] = $machine.'_'.$futureVersion.'.tar';
+		$request['packageName'] = $server.'_'.$futureVersion.'.tar';
 		$client->send_request($request);
 }
 
