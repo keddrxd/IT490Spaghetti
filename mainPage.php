@@ -35,7 +35,7 @@ if($comedy !== "")
 		if($_SESSION['comedyArray'][$i] !== "")
 		{
 			echo "<br>".$_SESSION['comedyArray'][$i];
-			echo "".$_SESSION['comedyRd'][$i];
+			echo " and it will be released on: ".$_SESSION['comedyRd'][$i];
 		}
 	}	
 }
