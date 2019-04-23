@@ -9,7 +9,7 @@ global $argv;
 
 function versionCheck($server)
 {
-		echo "Checking the package version for".$server.PHP_EOL;
+		echo "Checking the package version for ".$server.PHP_EOL;
 		$client = new rabbitMQClient("testRabbitMQ.ini","deploymentServer");
 		$request = array();
 		$request['type'] = "versionCheck";
