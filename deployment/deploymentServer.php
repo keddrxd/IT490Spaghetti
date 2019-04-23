@@ -45,6 +45,23 @@ function addVersion($serverType,$versionNumber,$packageName)
 	$mysqli->query($query);	
 }
 
+function setStatusGood($serverType)
+{
+	$host = 'localhost';
+	$user = 'adam';
+	$pass = 'deployPass';
+	$db = 'versionControl';
+	$mysqli = new mysqli ($host,$user,$pass,$db);
+	if ($mysqli->connect_error)
+	{
+		die('Connect Error');
+	}
+	$query = "update version set status = 'good' where serverType = '$serverType' and status= 'pending' order by verName";
+	$mysqli->query($query);
+	return true;
+
+
+}
 function requestProcessor($request)
 {
 	echo "received request".PHP_EOL;
@@ -59,6 +76,8 @@ function requestProcessor($request)
 				return versionCheck($request['serverType']);
 			case "newPackage":
 				return addVersion($request['serverType'],$request['versionNumber'],$request['packageName']);
+			case "setStatutsGood":
+				return setStatusGood($request['serverType']);
 			
 			
 	}
