@@ -35,7 +35,7 @@ if($comedy !== "")
 		if($_SESSION['comedyArray'][$i] !== "")
 		{
 			echo "<br>".$_SESSION['comedyArray'][$i];
-			echo "".$_SESSION['comedyRd'][$i];
+			echo " and it will be released on: ".$_SESSION['comedyRd'][$i];
 		}
 	}	
 }
@@ -48,7 +48,7 @@ if($horror !== "")
 		if($_SESSION['horrorArray'][$i] !== "")
 		{
 			echo "<br>".$_SESSION['horrorArray'][$i];
-			echo "".$_SESSION['horrorRd'][$i];
+			echo " and it will be released on: ".$_SESSION['horrorRd'][$i];
 		}
 	}	
 }
@@ -59,7 +59,7 @@ if($action !== "")
 	for($i = 0 ; $i < $num ; $i++)
 	{
 		echo "<br>".$_SESSION['actionArray'][$i];
-		echo "".$_SESSION['actionRd'][$i];
+		echo " and it will be released on: ".$_SESSION['actionRd'][$i];
 	}	
 }
 	
@@ -69,7 +69,7 @@ if($scifi !== "")
 	for($i = 0 ; $i < $num ; $i++)
 	{
 		echo "<br>".$_SESSION['scifiArray'][$i];
-		echo "".$_SESSION['scifiRd'][$i];
+		echo " and it will be released on: ".$_SESSION['scifiRd'][$i];
 	}	
 }
 	
@@ -79,7 +79,7 @@ if($romance !== "")
 	for($i = 0 ; $i < $num ; $i++)
 	{
 		echo "<br>".$_SESSION['romanceArray'][$i];	
-		echo "".$_SESSION['romanceRd'][$i];
+		echo " and it will be released on: ".$_SESSION['romanceRd'][$i];
 	}	
 }
 	
@@ -89,7 +89,7 @@ if($animation !== "")
 	for($i = 0 ; $i < $num ; $i++)
 	{
 		echo "<br>".$_SESSION['animationArray'][$i];	
-		echo "".$_SESSION['animationRd'][$i];
+		echo " and it will be released on: ".$_SESSION['animationRd'][$i];
 	}	
 }
 	
