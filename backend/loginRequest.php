@@ -86,6 +86,7 @@ else
 	//echo $today;
 	$errorMSG = "Login Unsucessful <br>";
 	$response7 = error($errorMSG);
+	$response8 = comRd($errorMSG);
 	echo "$errorMSG";
 	//error($errorMSG);
 	header("location: index.php");
