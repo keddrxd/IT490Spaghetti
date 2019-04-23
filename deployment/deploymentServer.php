@@ -76,7 +76,7 @@ function requestProcessor($request)
 				return versionCheck($request['serverType']);
 			case "newPackage":
 				return addVersion($request['serverType'],$request['versionNumber'],$request['packageName']);
-			case "setStatutsGood":
+			case "setStatusGood":
 				return setStatusGood($request['serverType']);
 			
 			
