@@ -17,7 +17,7 @@ function versionCheck($server)
 		$response = $client->send_request($request);
 		$sessionData = json_decode($response,true);
 		$currentVersion = $sessionData['versionNumber'];
-		$futureVersion = $currentVersion+1;
+	 	$futureVersion = $currentVersion+1;
 		echo "New version for ".$server." is ".$futureVersion.PHP_EOL;
 		return $futureVersion;
 }
@@ -26,7 +26,7 @@ function createNewVersion($server)
 {
 		$client = new rabbitMQClient("testRabbitMQ.ini","deploymentServer");
 		$futureVersion = versionCheck($server);
-		shell_exec(`bash sendPackage.sh`.$server.' '.$futureVersion);
+		shell_exec('bash sendPackage.sh '.$server.' '.$futureVersion);
 		$request = array();
 		$request['type'] = "newPackage";
 		$request['serverType'] = $server;
