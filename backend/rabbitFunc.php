@@ -198,7 +198,7 @@ function error($errorMSG)
 	$errorClient = new rabbitMQClient("testRabbitMQ.ini","testServer");
 	$request13 = array();
 	//$errorDate = date_create();
-	$request13['type'] ="comedyRd";
+	$request13['type'] ="error";
 	//$request13['date']=$errorDate;
 	$request13['msg']=$errorMSG;
 	$errorClient->send_request($request13);
