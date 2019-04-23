@@ -1,5 +1,5 @@
 <?php
-/*require ('rabbitFunc.php');
+require ('rabbitFunc.php');
 
 $user = $_POST['username'];
 $pass = $_POST['password'];
