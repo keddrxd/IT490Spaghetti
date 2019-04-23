@@ -193,7 +193,7 @@ function aniRd($username)
 	return $response;
 }
 
-/*function error($errorMSG)
+function error($errorMSG)
 {
 	$errorClient = new rabbitMQClient("testRabbitMQ.ini","testServer");
 	$request13 = array();
@@ -202,7 +202,8 @@ function aniRd($username)
 	//$request13['date']=$errorDate;
 	$request13['msg']=$errorMSG;
 	$errorClient->send_request($request13);
-}*/
+	return $response;
+}
 
 function userRecc($username)
 {
