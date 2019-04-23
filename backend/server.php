@@ -842,8 +842,8 @@ function requestProcessor($request)
 			return romanceRel($request['username']);
 		case "animationRd":
 			return animationRel($request['username']);
-		//case "error":
-			//return error($request['msg']);
+		case "error":
+			return error($request['msg']);
 		case "userRec":
 			return userRec($request['username']);
 		case "friends":
