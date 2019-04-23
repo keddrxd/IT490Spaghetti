@@ -22,7 +22,7 @@ function versionCheck($serverType)
 		$versionNumber = $mysqli->query($query);
 		$versionNumber = $versionNumber->fetch_assoc();
 		echo "Current Version Number is ".$versionNumber['verName'];
-		$packageData['versionNumber'] = versionNumber['verName'];
+		$packageData['versionNumber'] = $versionNumber['verName'];
 		return json_encode($packageData);
 }
 
@@ -40,7 +40,8 @@ function addVersion($serverType,$versionNumber,$packageName)
 		}
 	$date = time();
 	echo "Inserting new version into the table";
-	$query = "Insert into version values ('$date', '$verName', '$serverType','pending')";
+
+	$query = "Insert into version values ('$date', '$versionNumber', '$serverType','pending')";
 	$mysqli->query($query);	
 }
 

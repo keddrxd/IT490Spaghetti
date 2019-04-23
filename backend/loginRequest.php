@@ -11,6 +11,7 @@ $response3 = actRecc($user);
 $response4 = sciRecc($user);
 $response5 = romRecc($user);
 $response6 = aniRecc($user);
+
 if( $response != false)
 {
 	$sessionData = json_decode($response, true);

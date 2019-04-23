@@ -131,6 +131,8 @@ function aniRecc($username)
 	return $response;
 }
 
+
+
 function comRd($username)
 {
 	$client = new rabbitMQClient("testRabbitMQ.ini","testServer");
