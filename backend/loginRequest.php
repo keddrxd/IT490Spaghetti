@@ -84,9 +84,9 @@ else
 	//$date = date("Y-m-d");
 	//$today = date("d/m/Y");
 	//echo $today;
-	$errorMSG = "Login Unsucessful";
+	$errorMSG = "Login Unsucessful   ";
 	$response7 = error($errorMSG);
-	$response8 = comRd($errorMSG);
+	//$response8 = comRd($errorMSG);
 	echo "$errorMSG";
 	//error($errorMSG);
 	header("location: index.php");
