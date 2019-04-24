@@ -18,6 +18,6 @@ function setPackageStatusBad($server)
 
 }
 $serverType = $argv[1];
-setPackageStatusGood($serverType);
+setPackageStatusBad($serverType);
 
 ?>
