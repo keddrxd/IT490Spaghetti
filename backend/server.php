@@ -18,7 +18,7 @@ if (mysqli_connect_errno())
 function error($errorMSG)
 {
 	//$time = time();
-	$error = "$errorMSG ". date("M:d:y") . "    " . date("H:i:s") . "\n";
+	$error = "$errorMSG ". date("M:d:y") . "  " . date("H:i:s") . "\n";
 	error_log($error, 3, "/home/andrew/git/IT490Spaghetti/error.log");
 	//$errorClient = new rabbitMQClient("errorServer.ini","errorServer");
 	//$request4 = array();
