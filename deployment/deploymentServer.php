@@ -62,6 +62,23 @@ function setStatusGood($serverType)
 
 
 }
+
+function setStatusBad($serverType)
+{
+	$host = 'localhost';
+	$user = 'adam';
+	$pass = 'deployPass';
+	$db = 'versionControl';
+	$mysqli = new mysqli ($host,$user,$pass,$db);
+	if ($mysqli->connect_error)
+	{
+		die('Connect Error');
+	}
+	$query = "update version set status = 'bad' where serverType = '$serverType' order by verName desc limit 1";
+	$mysqli->query($query);
+	return false;
+		
+}
 function requestProcessor($request)
 {
 	echo "received request".PHP_EOL;
@@ -78,6 +95,9 @@ function requestProcessor($request)
 				return addVersion($request['serverType'],$request['versionNumber'],$request['packageName']);
 			case "setStatusGood":
 				return setStatusGood($request['serverType']);
+			case "setStatusBad":
+				return setStatusBad($request['serverType']);
+			
 			
 			
 	}
