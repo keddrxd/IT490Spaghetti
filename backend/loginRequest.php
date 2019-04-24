@@ -84,7 +84,7 @@ else
 	//$date = date("Y-m-d");
 	//$today = date("d/m/Y");
 	//echo $today;
-	$errorMSG = "Login Unsucessful <br>";
+	$errorMSG = "Login Unsucessful";
 	$response7 = error($errorMSG);
 	$response8 = comRd($errorMSG);
 	echo "$errorMSG";
