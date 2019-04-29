@@ -88,7 +88,7 @@ function login($userN, $pass)
 	
 }
 
-function friendsList($username)
+/*function friendsList($username)
 {
 	$host = '127.0.0.1';
 	$user = 'admin';
@@ -114,6 +114,7 @@ function friendsList($username)
 	
 	
 }
+*/
 
 function userRec($username)
 {
@@ -850,8 +851,8 @@ function requestProcessor($request)
 			return error($request['msg']);
 		case "userRec":
 			return userRec($request['username']);
-		case "friends":
-			return friendsList($request['username']);
+		//case "friends":
+			//return friendsList($request['username']);
 		
 		default:
 			echo "try again";
