@@ -1,4 +1,5 @@
 <?php
+/*
 require ('rabbitFunc.php');
 
 $username = $_SESSION['username'];
@@ -18,7 +19,7 @@ if($response != false)
 }
 
 
-
+*/
 
 
 
