@@ -831,6 +831,8 @@ function requestProcessor($request)
 			return error($request['msg']);
 		case "userRec":
 			return userRec($request['username']);
+		case "friends":
+			return friendsList($request['username']);
 		
 		default:
 			echo "try again";
