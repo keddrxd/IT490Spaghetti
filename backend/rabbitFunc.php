@@ -191,3 +191,13 @@ function userRecc($username)
 	$response= $client->send_request($request14);
 	return $response;
 }
+
+function friends($username)
+{
+	$client = new rabbitMQClient("testRabbitMQ.ini","testServer");
+	$request21= array();	
+	$request21['type']="friends";
+	$request21['username']= $username;
+	$response= $client->send_request($request21);
+	return $response;
+}
