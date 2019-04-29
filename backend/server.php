@@ -86,30 +86,7 @@ function login($userN, $pass)
 	
 	
 }
-function friendsList($username)
-{
-	$host = '127.0.0.1';
-	$user = 'admin';
-	$pw = 'adminPwd';
-	$db = 'usersDB';
-	$mysqli = new mysqli($host, $user, $pw, $db);
-	$query = "select * from users where username = '$username'";
-	$reply = $mysqli->query($query);
-	
-	$userData = array();
-	while ($row = $reply->fetch_assoc())
-	{
-		if($row['username'] == $username)
-		{
-			$userData[] = $row['username'];
-		}
-		
-	}
-	
-	return json_encode($userData);
-	
-	
-}
+
 function userRec($username)
 {
 	$host = '127.0.0.1';
@@ -828,8 +805,6 @@ function requestProcessor($request)
 			return error($request['msg']);
 		case "userRec":
 			return userRec($request['username']);
-		case "friends":
-			return friendsList($request['username']);
 		
 		default:
 			echo "try again";
