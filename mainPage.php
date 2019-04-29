@@ -154,7 +154,7 @@ if( $_SERVER['REQUEST_METHOD'] == 'POST')
 		require 'firstRequest.php'; #change file name
 		
 	}
-	if(isset($_POST['friend']))
+	/*if(isset($_POST['friend']))
 	{
 		require 'friendsList.php'; #change file name
 		for($i = 0 ; $i < 10 ; $i++)
@@ -164,7 +164,7 @@ if( $_SERVER['REQUEST_METHOD'] == 'POST')
 				echo "<br>".$_SESSION['friendsList'][$i];
 			}
 		}
-	}
+	}*/
 }
 	
 
