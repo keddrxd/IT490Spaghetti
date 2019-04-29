@@ -245,12 +245,18 @@ margin-right: 75px;
 	
 	<form>
   Add a Friend!<br>
-  <input type="text" name="username" placeholder="Username" method="POST">
+  <input type="text" name="uname" placeholder="uname" method="POST">
   <br>
 <input type="submit" value="Submit">
 </form> 
 
-
+<?php  
+$friendName = $_POST['uname']; 
+echo "<table border=1 cellspacing=0 cellpading=0>  
+<tr> <td><font color=blue>Friends List</td> </tr>    
+<tr> <td><font color=blue>$friendName</td> </tr>  
+</table>";  
+?>  
 		
 	<form action="index.php" >
 
