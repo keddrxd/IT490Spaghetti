@@ -6,7 +6,6 @@
 	
 	
 <?php
-
 session_start();
 //require ('rabbitFunc.php');
 //require 'movieDB.php';
@@ -35,11 +34,10 @@ if($comedy !== "")
 		if($_SESSION['comedyArray'][$i] !== "")
 		{
 			echo "<br>".$_SESSION['comedyArray'][$i];
-			echo " and it will be released on: ".$_SESSION['comedyRd'][$i];
+			echo "".$_SESSION['comedyRd'][$i];
 		}
 	}	
 }
-
 if($horror !== "")
 {
 	echo "<br><br> Here are some horror movies you may like:<br>";
@@ -48,18 +46,17 @@ if($horror !== "")
 		if($_SESSION['horrorArray'][$i] !== "")
 		{
 			echo "<br>".$_SESSION['horrorArray'][$i];
-			echo " and it will be released on: ".$_SESSION['horrorRd'][$i];
+			echo "".$_SESSION['horrorRd'][$i];
 		}
 	}	
 }
-
 if($action !== "")
 {
 	echo "<br>Here are some action movies you may like:<br>";
 	for($i = 0 ; $i < $num ; $i++)
 	{
 		echo "<br>".$_SESSION['actionArray'][$i];
-		echo " and it will be released on: ".$_SESSION['actionRd'][$i];
+		echo "".$_SESSION['actionRd'][$i];
 	}	
 }
 	
@@ -69,7 +66,7 @@ if($scifi !== "")
 	for($i = 0 ; $i < $num ; $i++)
 	{
 		echo "<br>".$_SESSION['scifiArray'][$i];
-		echo " and it will be released on: ".$_SESSION['scifiRd'][$i];
+		echo "".$_SESSION['scifiRd'][$i];
 	}	
 }
 	
@@ -79,7 +76,7 @@ if($romance !== "")
 	for($i = 0 ; $i < $num ; $i++)
 	{
 		echo "<br>".$_SESSION['romanceArray'][$i];	
-		echo " and it will be released on: ".$_SESSION['romanceRd'][$i];
+		echo "".$_SESSION['romanceRd'][$i];
 	}	
 }
 	
@@ -89,7 +86,7 @@ if($animation !== "")
 	for($i = 0 ; $i < $num ; $i++)
 	{
 		echo "<br>".$_SESSION['animationArray'][$i];	
-		echo " and it will be released on: ".$_SESSION['animationRd'][$i];
+		echo "".$_SESSION['animationRd'][$i];
 	}	
 }
 	
@@ -97,11 +94,7 @@ if($animation !== "")
 //$user = $_SESSION['username'];
 //require ('server.php');
 //movieRec($user);
-
-
 //echo "Hello ".$_SESSION['comedy'];
-
-
 //echo "<br> Your favorite categories are: <br>";
 //echo "$comedy<br>";
 //echo "$horror<br>";
@@ -134,7 +127,6 @@ if($animation !== "")
 	echo "$animation<br>";	
 }
 */
-
 	
 	
 if( $_SERVER['REQUEST_METHOD'] == 'POST')
@@ -154,38 +146,21 @@ if( $_SERVER['REQUEST_METHOD'] == 'POST')
 		require 'firstRequest.php'; #change file name
 		
 	}
-	/*if(isset($_POST['friend']))
-	{
-		require 'friendsList.php'; #change file name
-		for($i = 0 ; $i < 10 ; $i++)
-		{
-			if($_SESSION['friendsList'][$i] == $_POST['username'])
-			{
-				echo "<br>".$_SESSION['friendsList'][$i];
-			}
-		}
-	}*/
 }
 	
-
 ?>
 
 <body background="spaghetti.jpg">
 
 <head>
 <style>
-
 <div id="container">
    <div id="title"></div>
-
    <div id="logout"> </div>
-
    <div id="body"></div>
    
    <div id="map"></div>
-
 </div>
-
 #title {
     background-color: clear;
     width: 900px;
@@ -193,7 +168,6 @@ if( $_SERVER['REQUEST_METHOD'] == 'POST')
     padding: 25px;
     margin: 25px;
 }
-
 #logout {
 	margin-left: 600px;
     margin-top: -75px;s4e1s
@@ -211,7 +185,6 @@ margin-right: 75px;
     padding: 25px;
     margin: 25px;
 }
-
 #body {
 	margin-left: 75px;
     margin-top: 125px;
@@ -232,7 +205,6 @@ margin-right: 75px;
     margin-top: 100px;
 	margin-right: 75px;
 }
-
 </style>
 </head>
 <center>
@@ -254,28 +226,11 @@ margin-right: 75px;
 		</center>
 		</div>
 	
-<?php  
-	/*
-echo "<table border=1 cellspacing=0 cellpading=0>  
-<tr> <td><font color=blue>Friends List</td> </tr>    
-<tr> <td><font color=blue>$friendName</td> </tr>
-</table>";  
-for($i = 0 ; $i < 10 ; $i++)
-{
-	if($_SESSION['friendsList'][$i] == $_POST['username'])
-	{
-		$friendName = $_SESSION['friendsList'][$i];
-	}
-}
-*/
-?>  
-	
-	<form action = "mainPage.php" method="POST">
+	<form>
   Add a Friend!<br>
-  <input type="text" name="username" placeholder="username" method="POST">
+  <input type="text" name="username" placeholder="Username" method="POST">
   <br>
-<!--<input type="submit" value="Submit">-->
-<button name = "friend" style = "height:50px;width:80px"><font size = 4> Submit </font></button>
+<input type="submit" value="Submit">
 </form> 
 
 
@@ -307,14 +262,12 @@ for($i = 0 ; $i < 10 ; $i++)
 			var request;
 			var service;
 			var markers = [];
-
 			function initMap()
 			{
 				var center = new google.maps.LatLng(40.7423385, -74.1815296);
 				map = new google.maps.Map(document.getElementById('map'),{
 				center:center,
 				zoom:13
-
 				});
 				request = {
 					location:center,
@@ -325,12 +278,10 @@ for($i = 0 ; $i < 10 ; $i++)
 				infowindow = new google.maps.InfoWindow();
 				service = new google.maps.places.PlacesService(map);
 				service.textSearch(request, callback);
-
 				google.maps.event.addListener(map, 'rightclick', function(event)
 				{
 						map.setCenter(event.latLng);
 						clearResults(markers);
-
 						var requests = {
 							location:event.latLng,
 							radius:15000,
@@ -338,10 +289,7 @@ for($i = 0 ; $i < 10 ; $i++)
 						};
 						service.textSearch(requests, callback);
 				})
-
 			}
-
-
 				function callback(results, status)
 				{
 					if (status == google.maps.places.PlacesServiceStatus.OK)
@@ -351,7 +299,6 @@ for($i = 0 ; $i < 10 ; $i++)
 								markers.push(createMarker(results[i]));
 							}
 					}
-
 				}
 				function createMarker(place)
 				{
@@ -360,7 +307,6 @@ for($i = 0 ; $i < 10 ; $i++)
 					({
 						map:map,
 						position:place.geometry.location
-
 					});
 					google.maps.event.addListener(marker, 'click', function(){
 						infowindow.setContent(place.name);
@@ -368,8 +314,6 @@ for($i = 0 ; $i < 10 ; $i++)
 						infowindow.open(map, this);
 					});
 					return marker;
-
-
 				}
 				function clearResults(markers)
 				{
@@ -378,11 +322,8 @@ for($i = 0 ; $i < 10 ; $i++)
 							markers[m].setMap(null)
 					}
 					markers = []
-
 				}
-
 			google.maps.event.addDomListener(window, 'load', initMap);
-
 			</script>
 
 			   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCG-Yqq4X1St3Inbo1WpKkzk6TAbHjkYzI&libraries=places&callback=initMap" async defer></script>
