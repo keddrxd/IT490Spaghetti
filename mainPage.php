@@ -154,6 +154,7 @@ if( $_SERVER['REQUEST_METHOD'] == 'POST')
 			if($_SESSION['friendsList'][$i] == $_POST['username'])
 			{
 				echo "<br>".$_SESSION['friendsList'][$i];
+				$person = $_SESSION['friendsList'][$i];
 			}
 		}
 	}
