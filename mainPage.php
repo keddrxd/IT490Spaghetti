@@ -154,6 +154,17 @@ if( $_SERVER['REQUEST_METHOD'] == 'POST')
 		require 'firstRequest.php'; #change file name
 		
 	}
+	if(isset($_POST['friend']))
+	{
+		require 'friendsList.php'; #change file name
+		for($i = 0 ; $i < 10 ; $i++)
+		{
+			if($_SESSION['friendsList'][$i] == $_POST['username'])
+			{
+				echo "<br>".$_SESSION['friendsList'][$i];
+			}
+		}
+	}
 }
 	
 
@@ -255,7 +266,8 @@ echo "<table border=1 cellspacing=0 cellpading=0>
   Add a Friend!<br>
   <input type="text" name="username" placeholder="username" method="POST">
   <br>
-<input type="submit" value="Submit">
+<!--<input type="submit" value="Submit">-->
+<button name = "friend" style = "height:50px;width:80px"><font size = 4> Submit </font></button>
 </form> 
 
 
