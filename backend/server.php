@@ -29,7 +29,6 @@ function error($errorMSG)
 	//file_put_contents('error.log',$request4['log'], FILE_APPEND);
 	//$errorClient->send_request($request4);
 }
-
 function login($userN, $pass)
 {
 	$host = '127.0.0.1';
@@ -87,26 +86,23 @@ function login($userN, $pass)
 	
 	
 }
-
-/*function friendsList($username)
+function friendsList($username)
 {
 	$host = '127.0.0.1';
 	$user = 'admin';
 	$pw = 'adminPwd';
 	$db = 'usersDB';
 	$mysqli = new mysqli($host, $user, $pw, $db);
-	$query = "select username from users";
+	$query = "select * from users where username = '$username'";
 	$reply = $mysqli->query($query);
-	$userData = array();
-
+	
 	$userData = array();
 	while ($row = $reply->fetch_assoc())
 	{
-		foreach($row as $key => $value)
+		if($row['username'] == $username)
 		{
-			$userData[] = $value;
+			$userData[] = $row['username'];
 		}
-				
 		
 	}
 	
@@ -114,8 +110,6 @@ function login($userN, $pass)
 	
 	
 }
-*/
-
 function userRec($username)
 {
 	$host = '127.0.0.1';
@@ -142,7 +136,6 @@ function userRec($username)
 	return json_encode($userData);
 	
 }
-
 function comedyRec($username)
 {
 	$host = '127.0.0.1';
@@ -239,7 +232,6 @@ function comedyRec($username)
 						$animationArray[] = $value;
 					}
 				}
-
 			}
 		}
 	}
@@ -248,8 +240,6 @@ function comedyRec($username)
 	return json_encode($comedyArray);
 	
 }
-
-
 function horrorRec($username)
 {
 	$host = '127.0.0.1';
@@ -285,7 +275,6 @@ function horrorRec($username)
 	return json_encode($horrorArray);	
 	
 }
-
 function actionRec($username)
 {
 	$host = '127.0.0.1';
@@ -321,7 +310,6 @@ function actionRec($username)
 	return json_encode($actionArray);	
 	
 }
-
 function scifiRec($username)
 {
 	$host = '127.0.0.1';
@@ -357,7 +345,6 @@ function scifiRec($username)
 	return json_encode($scifiArray);	
 	
 }
-
 function romanceRec($username)
 {
 	$host = '127.0.0.1';
@@ -393,7 +380,6 @@ function romanceRec($username)
 	return json_encode($romanceArray);	
 	
 }
-
 function animationRec($username)
 {
 	$host = '127.0.0.1';
@@ -429,7 +415,6 @@ function animationRec($username)
 	return json_encode($animationArray);	
 	
 }
-
 function comedyRel($username)
 {
 	$host = '127.0.0.1';
@@ -464,7 +449,6 @@ function comedyRel($username)
 	
 	
 }
-
 function horrorRel($username)
 {
 	$host = '127.0.0.1';
@@ -499,7 +483,6 @@ function horrorRel($username)
 	return json_encode($horrorRelease);	
 	
 }
-
 function actionRel($username)
 {
 	$host = '127.0.0.1';
@@ -534,7 +517,6 @@ function actionRel($username)
 	
 	
 }
-
 function scifiRel($username)
 {
 	$host = '127.0.0.1';
@@ -569,7 +551,6 @@ function scifiRel($username)
 	
 	
 }
-
 function romanceRel($username)
 {
 	$host = '127.0.0.1';
@@ -604,7 +585,6 @@ function romanceRel($username)
 	
 	
 }
-
 function animationRel($username)
 {
 	$host = '127.0.0.1';
@@ -639,9 +619,6 @@ function animationRel($username)
 	
 	
 }
-
-
-
 function display()
 {
 	$host = '127.0.0.1';
@@ -851,8 +828,8 @@ function requestProcessor($request)
 			return error($request['msg']);
 		case "userRec":
 			return userRec($request['username']);
-		//case "friends":
-			//return friendsList($request['username']);
+		case "friends":
+			return friendsList($request['username']);
 		
 		default:
 			echo "try again";
