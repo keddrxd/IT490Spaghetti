@@ -87,6 +87,32 @@ function login($userN, $pass)
 	
 }
 
+function friendsList($username)
+{
+	$host = '127.0.0.1';
+	$user = 'admin';
+	$pw = 'adminPwd';
+	$db = 'usersDB';
+	$mysqli = new mysqli($host, $user, $pw, $db);
+	$query = "select username from users";
+	$reply = $mysqli->query($query);
+	$userData = array();
+	$userData = array();
+	while ($row = $reply->fetch_assoc())
+	{
+		foreach($row as $key => $value)
+		{
+			$userData[] = $value;
+		}
+				
+		
+	}
+	
+	return json_encode($userData);
+	
+	
+}
+
 function userRec($username)
 {
 	$host = '127.0.0.1';
