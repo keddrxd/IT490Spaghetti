@@ -251,7 +251,7 @@ echo "<table border=1 cellspacing=0 cellpading=0>
 </table>";  
 ?>  
 	
-	<form action = "mainpage.php" method="POST">
+	<form action = "mainPage.php" method="POST">
   Add a Friend!<br>
   <input type="text" name="uname" placeholder="uname" method="POST">
   <br>
