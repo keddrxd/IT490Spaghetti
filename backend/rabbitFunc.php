@@ -26,7 +26,6 @@ function register($username,$email, $pass,$firstN,$lastN, $zip)
 	$response = $client->send_request($request2);
 	return $response;
 }
-
 function validateSession($username,$sessionID)
 {
 	$client = new rabbitMQClient("testRabbitMQ.ini","testServer");
@@ -37,9 +36,6 @@ function validateSession($username,$sessionID)
 	$response= $client->send_request($request3);
 	return $response;
 }
-
-
-
 function firstLogin($username, $comedy, $horror, $action, $scifi, $romance, $animation)
 {
 	$client = new rabbitMQClient("testRabbitMQ.ini","testServer");
@@ -54,9 +50,7 @@ function firstLogin($username, $comedy, $horror, $action, $scifi, $romance, $ani
 	$request5['animation']= $animation;
 	$response= $client->send_request($request5);
 	return $response;
-
 }
-
 function requestMovies($genre, $date, $title)
 {
 	$client = new rabbitMQClient("testRabbitMQ.ini","testServer");
@@ -65,12 +59,10 @@ function requestMovies($genre, $date, $title)
 	$request6['genre']= $genre;
 	$request6['releasedates']= $date;
 	$request6['title']= $title;
-
 	$response= $client->send_request($request6);
 	return $response;	
 	
 }
-
 function comRecc($username)
 {
 	$client = new rabbitMQClient("testRabbitMQ.ini","testServer");
@@ -80,7 +72,6 @@ function comRecc($username)
 	$response= $client->send_request($request7);
 	return $response;
 }
-
 function horRecc($username)
 {
 	$client = new rabbitMQClient("testRabbitMQ.ini","testServer");
@@ -90,7 +81,6 @@ function horRecc($username)
 	$response= $client->send_request($request8);
 	return $response;
 }
-
 function actRecc($username)
 {
 	$client = new rabbitMQClient("testRabbitMQ.ini","testServer");
@@ -100,7 +90,6 @@ function actRecc($username)
 	$response= $client->send_request($request9);
 	return $response;
 }
-
 function sciRecc($username)
 {
 	$client = new rabbitMQClient("testRabbitMQ.ini","testServer");
@@ -110,7 +99,6 @@ function sciRecc($username)
 	$response= $client->send_request($request10);
 	return $response;
 }
-
 function romRecc($username)
 {
 	$client = new rabbitMQClient("testRabbitMQ.ini","testServer");
@@ -120,7 +108,6 @@ function romRecc($username)
 	$response= $client->send_request($request11);
 	return $response;
 }
-
 function aniRecc($username)
 {
 	$client = new rabbitMQClient("testRabbitMQ.ini","testServer");
@@ -130,9 +117,6 @@ function aniRecc($username)
 	$response= $client->send_request($request12);
 	return $response;
 }
-
-
-
 function comRd($username)
 {
 	$client = new rabbitMQClient("testRabbitMQ.ini","testServer");
@@ -142,7 +126,6 @@ function comRd($username)
 	$response= $client->send_request($request15);
 	return $response;
 }
-
 function horRd($username)
 {
 	$client = new rabbitMQClient("testRabbitMQ.ini","testServer");
@@ -152,7 +135,6 @@ function horRd($username)
 	$response= $client->send_request($request16);
 	return $response;
 }
-
 function actRd($username)
 {
 	$client = new rabbitMQClient("testRabbitMQ.ini","testServer");
@@ -162,7 +144,6 @@ function actRd($username)
 	$response= $client->send_request($request17);
 	return $response;
 }
-
 function sciRd($username)
 {
 	$client = new rabbitMQClient("testRabbitMQ.ini","testServer");
@@ -172,7 +153,6 @@ function sciRd($username)
 	$response= $client->send_request($request18);
 	return $response;
 }
-
 function romRd($username)
 {
 	$client = new rabbitMQClient("testRabbitMQ.ini","testServer");
@@ -182,7 +162,6 @@ function romRd($username)
 	$response= $client->send_request($request19);
 	return $response;
 }
-
 function aniRd($username)
 {
 	$client = new rabbitMQClient("testRabbitMQ.ini","testServer");
@@ -192,7 +171,6 @@ function aniRd($username)
 	$response= $client->send_request($request20);
 	return $response;
 }
-
 function error($errorMSG)
 {
 	$errorClient = new rabbitMQClient("testRabbitMQ.ini","testServer");
@@ -204,7 +182,6 @@ function error($errorMSG)
 	$errorClient->send_request($request13);
 	return $response;
 }
-
 function userRecc($username)
 {
 	$client = new rabbitMQClient("testRabbitMQ.ini","testServer");
@@ -214,16 +191,3 @@ function userRecc($username)
 	$response= $client->send_request($request14);
 	return $response;
 }
-
-/*function friends($username)
-{
-	$client = new rabbitMQClient("testRabbitMQ.ini","testServer");
-	$request21= array();	
-	$request21['type']="friends";
-	$request21['username']= $username;
-	$response= $client->send_request($request21);
-	return $response;
-}*/
-
-
-
