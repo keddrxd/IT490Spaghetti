@@ -254,12 +254,18 @@ margin-right: 75px;
 		</center>
 		</div>
 	
-	<?php  
-$friendName = $_POST['username']; 
+<?php  
 echo "<table border=1 cellspacing=0 cellpading=0>  
 <tr> <td><font color=blue>Friends List</td> </tr>    
-<tr> <td><font color=blue>$friendName</td> </tr>  
+<tr> <td><font color=blue>$friendName</td> </tr>
 </table>";  
+for($i = 0 ; $i < 10 ; $i++)
+{
+	if($_SESSION['friendsList'][$i] == $_POST['username'])
+	{
+		$friendName = $_SESSION['friendsList'][$i];
+	}
+}
 ?>  
 	
 	<form action = "mainPage.php" method="POST">
