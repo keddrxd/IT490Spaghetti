@@ -34,7 +34,7 @@ if($comedy !== "")
 		if($_SESSION['comedyArray'][$i] !== "")
 		{
 			echo "<br>".$_SESSION['comedyArray'][$i];
-			echo "".$_SESSION['comedyRd'][$i];
+			echo " and it will be released on: ".$_SESSION['comedyRd'][$i];
 		}
 	}	
 }
@@ -46,7 +46,7 @@ if($horror !== "")
 		if($_SESSION['horrorArray'][$i] !== "")
 		{
 			echo "<br>".$_SESSION['horrorArray'][$i];
-			echo "".$_SESSION['horrorRd'][$i];
+			echo " and it will be released on: ".$_SESSION['horrorRd'][$i];
 		}
 	}	
 }
@@ -56,7 +56,7 @@ if($action !== "")
 	for($i = 0 ; $i < $num ; $i++)
 	{
 		echo "<br>".$_SESSION['actionArray'][$i];
-		echo "".$_SESSION['actionRd'][$i];
+		echo " and it will be released on: ".$_SESSION['actionRd'][$i];
 	}	
 }
 	
@@ -66,7 +66,7 @@ if($scifi !== "")
 	for($i = 0 ; $i < $num ; $i++)
 	{
 		echo "<br>".$_SESSION['scifiArray'][$i];
-		echo "".$_SESSION['scifiRd'][$i];
+		echo " and it will be released on: ".$_SESSION['scifiRd'][$i];
 	}	
 }
 	
@@ -76,7 +76,7 @@ if($romance !== "")
 	for($i = 0 ; $i < $num ; $i++)
 	{
 		echo "<br>".$_SESSION['romanceArray'][$i];	
-		echo "".$_SESSION['romanceRd'][$i];
+		echo " and it will be released on: ".$_SESSION['romanceRd'][$i];
 	}	
 }
 	
@@ -86,7 +86,7 @@ if($animation !== "")
 	for($i = 0 ; $i < $num ; $i++)
 	{
 		echo "<br>".$_SESSION['animationArray'][$i];	
-		echo "".$_SESSION['animationRd'][$i];
+		echo " and it will be released on: ".$_SESSION['animationRd'][$i];
 	}	
 }
 	
@@ -145,6 +145,17 @@ if( $_SERVER['REQUEST_METHOD'] == 'POST')
 	{
 		require 'firstRequest.php'; #change file name
 		
+	}
+	if(isset($_POST['friend']))
+	{
+		require 'friendsList.php'; #change file name
+		for($i = 0 ; $i < 10 ; $i++)
+		{
+			if($_SESSION['friendsList'][$i] == $_POST['username'])
+			{
+				echo "<br>".$_SESSION['friendsList'][$i];
+			}
+		}
 	}
 }
 	
@@ -226,11 +237,26 @@ margin-right: 75px;
 		</center>
 		</div>
 	
-	<form>
+<?php  
+echo "<table border=1 cellspacing=0 cellpading=0>  
+<tr> <td><font color=blue>Friends List</td> </tr>    
+<tr> <td><font color=blue>$friendName</td> </tr>
+</table>";  
+for($i = 0 ; $i < 10 ; $i++)
+{
+	if($_SESSION['friendsList'][$i] == $_POST['username'])
+	{
+		$friendName = $_SESSION['friendsList'][$i];
+	}
+}
+?>  
+	
+	<form action = "mainPage.php" method="POST">
   Add a Friend!<br>
-  <input type="text" name="username" placeholder="Username" method="POST">
+  <input type="text" name="username" placeholder="username" method="POST">
   <br>
-<input type="submit" value="Submit">
+<!--<input type="submit" value="Submit">-->
+<button name = "friend" style = "height:50px;width:80px"><font size = 4> Submit </font></button>
 </form> 
 
 
