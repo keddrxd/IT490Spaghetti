@@ -16,4 +16,4 @@ fi
 
 echo "Package "$serverType'_'$versionNum" was created"
 
-scp $serverType'_'$versionNum.tar adam@25.73.116.140:/home/adam/packages/
+scp $serverType'_'$versionNum.tar adam@192.168.1.20:/home/adam/packages/
