@@ -1,7 +1,9 @@
 <?php
 require ('rabbitFunc.php');
 $username = $_SESSION['username'];
-$response = friends($username);
+$add = $_SESSION['user'];
+
+$response = friends($username, $add);
 if($response != false)
 {
     $sessionData = json_decode($response, true);
