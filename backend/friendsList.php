@@ -1,7 +1,7 @@
 <?php
 require ('rabbitFunc.php');
 $username = $_SESSION['username'];
-$add = $_SESSION['user'];
+$add = $_POST['user'];
 
 $response = friends($username, $add);
 if($response != false)
