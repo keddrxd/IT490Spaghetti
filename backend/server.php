@@ -87,7 +87,8 @@ function login($userN, $pass)
 	
 }
 
-function friendsList($username)
+
+function friendsList($username, $add)
 {
 	$host = '127.0.0.1';
 	$user = 'admin';
@@ -97,18 +98,64 @@ function friendsList($username)
 	$query = "select username from users";
 	$reply = $mysqli->query($query);
 	$userData = array();
-	$userData = array();
+	$userData1 = array();
 	while ($row = $reply->fetch_assoc())
 	{
 		foreach($row as $key => $value)
 		{
-			$userData[] = $value;
+			$userData['username'] = $value;
+			if($userData['username'] == $username)
+			{
+				$query2 = "select $username from friends";
+				$reply2 = $mysqli->query($query2);
+				while ($row2 = $reply2->fetch_assoc())
+				{
+					$userData1['username'] = $row2['username'];
+					$userData1['friend1'] = $row2['friend1'];
+					$userData1['friend2'] = $row2['friend2'];
+					$userData1['friend3'] = $row2['friend3'];
+					$userData1['friend4'] = $row2['friend4'];
+				}
+				if($userData1['friend1'] == "")
+				{
+					$query3 = "INSERT INTO friends values('$username', '$add', '', '', '')";	
+					$reply3 = $mysqli->query($query3);
+				}
+				elseif($userData1['friend2'] == "")
+				{
+					$query3 = "INSERT INTO friends values('$username', '$userData1['friend1']', '$add', '', '')";	
+					$reply3 = $mysqli->query($query3);
+				}
+				elseif($userData1['friend3'] == "")
+				{
+					$query3 = "INSERT INTO friends values('$username', '$userData1['friend1']', '$userData1['friend2']', '$add', '')";	
+					$reply3 = $mysqli->query($query3);
+				}
+				elseif($userData1['friend4'] == "")
+				{
+					$query3 = "INSERT INTO friends values('$username', '$userData1['friend1']', '$userData1['friend2']', '$userData1['friend3']', '$add')";	
+					$reply3 = $mysqli->query($query3);
+				}
+			}
 		}
+		
 				
 		
 	}
+	$userFriends = array();
+	$query4 = "select $username from friends";
+	$reply4 = $mysqli->query($query2);
+	while ($row3 = $reply4->fetch_assoc())
+	{
+		$userFriends['username'] = $row3['username'];
+		$userFriends['friend1'] = $row3['friend1'];
+		$userFriends['friend2'] = $row3['friend2'];
+		$userFriends['friend3'] = $row3['friend3'];
+		$userFriends['friend4'] = $row3['friend4'];
+	}
 	
-	return json_encode($userData);
+	
+	return json_encode($userFriends);
 	
 	
 }
@@ -711,6 +758,8 @@ function firstLogin($username, $comedy, $horror, $action, $scifi, $romance, $ani
 		$userData['scifi'] = $scifi;
 		$userData['romance'] = $romance;
 		$userData['animation'] = $animation;
+		$query2 = "INSERT INTO friends values('$username', '', '', '', '')";
+		$mysqli->query($query2) or die($mysqli->error);
 		return json_encode($userData);
 						
 	}
@@ -832,7 +881,7 @@ function requestProcessor($request)
 		case "userRec":
 			return userRec($request['username']);
 		case "friends":
-			return friendsList($request['username']);
+			return friendsList($request['username'], $request['addFriend']);
 		
 		default:
 			echo "try again";
