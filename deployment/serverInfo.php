@@ -17,14 +17,14 @@ if ($mysqli->connect_error)
 	die('Connection Error.');
 }
 
-if ($tierLevel == "ipAddress"
+if ($tierLevel == "ipAddress")
 {
 	$query = "select * from machineIP where serverName = '$serverType' and tierType = '$tierLevel'";
 	$package = $mysqli->query($query);
 	$package = $package->fetch_assoc();
 	echo $package['ipAddress'];
 }
-if ($tierLevel == "serverName"
+if ($tierLevel == "serverName")
 {
 	$query = "select * from machineIP where serverName = '$serverType' and tierType = '$tierLevel'";
 	$package = $mysqli->query($query);
