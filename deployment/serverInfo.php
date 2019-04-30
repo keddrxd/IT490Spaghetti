@@ -11,7 +11,7 @@ $user = 'adam';
 $pass = 'deployPass';
 $db = 'versionControl';
 
-mysqli = new mysqli($host,$user,$pass,$db);
+$mysqli = new mysqli($host,$user,$pass,$db);
 if ($mysqli->connect_error)
 {
 	die('Connection Error.');
