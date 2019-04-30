@@ -5,7 +5,6 @@ global $argv;
 
 $serverType = $argv[1];
 $packageVersion = $argv[2];
-$tierLevel = $argv[3];
 
 $host = 'localhost';
 $user = 'adam';
