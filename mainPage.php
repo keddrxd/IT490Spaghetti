@@ -245,7 +245,7 @@ echo "<table border=1 cellspacing=0 cellpading=0>
 </table>";  
 for($i = 0 ; $i < 10 ; $i++)
 {
-	if($_SESSION['friendsList'][$i] == $_POST['username'])
+	if($_SESSION['friendsList'][$i] == $_POST['user'])
 	{
 		$friendName = $_SESSION['friendsList'][$i];
 	}
@@ -254,7 +254,7 @@ for($i = 0 ; $i < 10 ; $i++)
 	
 	<form action = "mainPage.php" method="POST">
   Add a Friend!<br>
-  <input type="text" name="username" placeholder="username" method="POST">
+  <input type="text" name="user" placeholder="username" method="POST">
   <br>
 <!--<input type="submit" value="Submit">-->
 <button name = "friend" style = "height:50px;width:80px"><font size = 4> Submit </font></button>
