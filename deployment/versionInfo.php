@@ -17,21 +17,21 @@ if ($mysqli->connect_error)
 	die('Connection Error.');
 }
 
-if ($package == "newest")
+if ($packageVersion == "newest")
 {
 	$query = "select verName from version ='$serverType' and status = 'pending' order by verName";
 	$package = $mysqli->query($query);
 	$package = $package->fetch_assoc();
 	echo $package['package'];
 }
-elseif ($package == "good")
+elseif ($packageVersion == "good")
 {
 	$query = "select verName from version ='$serverType' and status = 'good' order by verName desc limit 1 ";
 	$package = $mysqli->query($query);
 	$package = $package->fetch_assoc();
 	echo $package['package'];
 }
-elseif ($package == "rollback")
+elseif ($packageVersion == "rollback")
 {
 	
 	$query = "select verName from version ='$serverType' and status = 'pending' order by verName";
@@ -41,6 +41,6 @@ elseif ($package == "rollback")
 }
 else
 {
-	echo "$package";
+	echo "$packageVersion";
 }
 ?>
