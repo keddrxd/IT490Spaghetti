@@ -241,14 +241,14 @@ margin-right: 75px;
 <?php  
 echo "<table border=1 cellspacing=0 cellpading=0>  
 <tr> <td><font color=blue>Friends List</td> </tr>    
-<tr> <td><font color=blue>$person</td> </tr>
+<tr> <td><font color=blue>$friends</td> </tr>
 </table>";  
-for($i = 0 ; $i < 10 ; $i++)
+$num = 4;
+$friends = array();
+for($i = 0 ; $i < $num ; $i++)
 {
-	if($_SESSION['friendsList'][$i] == $_POST['user'])
-	{
-		$friendName = $_SESSION['friendsList'][$i];
-	}
+	$friends[] = $_SESSION['friendsList'][$i];
+	
 }
 ?>  
 	
