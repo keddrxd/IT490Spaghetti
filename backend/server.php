@@ -106,7 +106,7 @@ function friendsList($username, $add)
 			$userData['username'] = $value;
 			if($userData['username'] == $username)
 			{
-				$query2 = "select * from friends where username = '$userName'";
+				$query2 = "select * from friends where username = '$username'";
 				$reply2 = $mysqli->query($query2);
 				while ($row2 = $reply2->fetch_assoc())
 				{
