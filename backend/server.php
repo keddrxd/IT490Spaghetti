@@ -148,14 +148,14 @@ function friendsList($username, $add)
 	}
 	$userFriends = array();
 	$query4 = "select $username from friends";
-	$reply4 = $mysqli->query($query2);
-	while ($row3 = $reply4->fetch_assoc())
+	$reply4 = $mysqli->query($query4);
+	while ($row4 = $reply4->fetch_assoc())
 	{
-		$userFriends['username'] = $row3['username'];
-		$userFriends['friend1'] = $row3['friend1'];
-		$userFriends['friend2'] = $row3['friend2'];
-		$userFriends['friend3'] = $row3['friend3'];
-		$userFriends['friend4'] = $row3['friend4'];
+		$userFriends['username'] = $row4['username'];
+		$userFriends['friend1'] = $row4['friend1'];
+		$userFriends['friend2'] = $row4['friend2'];
+		$userFriends['friend3'] = $row4['friend3'];
+		$userFriends['friend4'] = $row4['friend4'];
 	}
 	
 	
