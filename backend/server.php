@@ -147,7 +147,7 @@ function friendsList($username, $add)
 		
 	}
 	$userFriends = array();
-	$query4 = "select $username from friends";
+	$query4 = "select * from friends where username = '$username'";
 	$reply4 = $mysqli->query($query4);
 	while ($row4 = $reply4->fetch_assoc())
 	{
