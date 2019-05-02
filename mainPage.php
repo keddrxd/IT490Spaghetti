@@ -149,15 +149,15 @@ if( $_SERVER['REQUEST_METHOD'] == 'POST')
 	if(isset($_POST['friend']))
 	{
 		require 'friendsList.php'; #change file name
-		echo "<br>".$_SESSION['friendsList'][1];
-		for($i = 0 ; $i < 10 ; $i++)
+		//echo "<br>".$_SESSION['friendsList'][1];
+		/*for($i = 0 ; $i < 10 ; $i++)
 		{
 			if($_SESSION['friendsList'][$i] == $_POST['username'])
 			{
 				echo "<br>".$_SESSION['friendsList'][$i];
 				$person = $_SESSION['friendsList'][$i];
 			}
-		}
+		}*/
 	}
 }
 	
@@ -242,16 +242,22 @@ margin-right: 75px;
 <?php  
 echo "<table border=1 cellspacing=0 cellpading=0>  
 <tr> <td><font color=blue>Friends List</td> </tr>    
-<tr> <td><font color=blue>$friends[1]</td> </tr>
+<tr> <td><font color=blue></td> </tr>
 </table>";  
 //echo $friends;
 $num = 4;
 $friends = array();
 for($i = 0 ; $i < $num ; $i++)
 {
+	echo "<br>".$_SESSION['friendsList'][$i];
+}
+	
+	
+/*for($i = 0 ; $i < $num ; $i++)
+{
 	$friends[] = $_SESSION['friendsList'][$i];
 	
-}
+}*/
 ?>  
 	
 	<form action = "mainPage.php" method="POST">
