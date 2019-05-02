@@ -11,7 +11,7 @@ if($response != false)
     $num = 4;
     for($i = 0 ; $i < $num ; $i++)
     {
-      $_SESSION['friendsList'][$i] = $sessionData[$i];
+            $_SESSION['friendsList'][$i] = $sessionData[$i];
     }
 }
 ?>
