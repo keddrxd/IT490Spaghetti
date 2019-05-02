@@ -89,6 +89,11 @@ if($animation !== "")
 		echo " and it will be released on: ".$_SESSION['animationRd'][$i];
 	}	
 }
+$num = 4;
+for($i = 0 ; $i < $num ; $i++)
+{
+	echo "<br>".$_SESSION['friendsList'][$i];
+}
 	
 //echo "Here are comedy movies you may like: ".$_SESSION['comedyArray'];
 //$user = $_SESSION['username'];
