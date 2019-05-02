@@ -89,11 +89,7 @@ if($animation !== "")
 		echo " and it will be released on: ".$_SESSION['animationRd'][$i];
 	}	
 }
-$num = 4;
-for($i = 0 ; $i < $num ; $i++)
-{
-	echo "<br>".$_SESSION['friendsList'][$i];
-}
+
 	
 //echo "Here are comedy movies you may like: ".$_SESSION['comedyArray'];
 //$user = $_SESSION['username'];
@@ -154,10 +150,11 @@ if( $_SERVER['REQUEST_METHOD'] == 'POST')
 	if(isset($_POST['friend']))
 	{
 		require 'friendsList.php'; #change file name
+		echo "<br>".$_SESSION['friendsList'];
 		$num = 4;
 		for($i = 0 ; $i < $num ; $i++)
 		{
-			echo "<br>".$_SESSION['friendsList'][$i];
+			echo "<br>".$_SESSION['friendsList'];
 		}
 		//echo "<br>".$_SESSION['friendsList'][1];
 		/*for($i = 0 ; $i < 10 ; $i++)
