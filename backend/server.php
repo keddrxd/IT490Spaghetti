@@ -122,22 +122,26 @@ function friendsList($username, $add)
 				$friend4 = $userData1['friend4'];
 				if($userData1['friend1'] == "")
 				{
-					$query3 = "INSERT INTO friends values('$username', '$add', '', '', '')";	
+					$query3 = "UPDATE friends set friend1='$add' where username='$username'";
+					//$query3 = "INSERT INTO friends values('$username', '$add', '', '', '')";	
 					$reply3 = $mysqli->query($query3);
 				}
 				elseif($userData1['friend2'] == "")
 				{
-					$query3 = "INSERT INTO friends values('$username', '$friend1', '$add', '', '')";	
+					$query3 = "UPDATE friends set friend1='$add' where username='$username'";
+					//$query3 = "INSERT INTO friends values('$username', '$friend1', '$add', '', '')";	
 					$reply3 = $mysqli->query($query3);
 				}
 				elseif($userData1['friend3'] == "")
 				{
-					$query3 = "INSERT INTO friends values('$username', '$friend1', '$friend2', '$add', '')";	
+					$query3 = "UPDATE friends set friend1='$add' where username='$username'";
+					//$query3 = "INSERT INTO friends values('$username', '$friend1', '$friend2', '$add', '')";	
 					$reply3 = $mysqli->query($query3);
 				}
 				elseif($userData1['friend4'] == "")
 				{
-					$query3 = "INSERT INTO friends values('$username', '$friend1', '$friend2', '$friend3', '$add')";	
+					$query3 = "UPDATE friends set friend1='$add' where username='$username'";
+					//$query3 = "INSERT INTO friends values('$username', '$friend1', '$friend2', '$friend3', '$add')";	
 					$reply3 = $mysqli->query($query3);
 				}
 			}
