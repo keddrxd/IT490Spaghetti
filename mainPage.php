@@ -244,7 +244,7 @@ echo "<table border=1 cellspacing=0 cellpading=0>
 <tr> <td><font color=blue>Friends List</td> </tr>    
 <tr> <td><font color=blue>$friends[1]</td> </tr>
 </table>";  
-echo $friends;
+//echo $friends;
 $num = 4;
 $friends = array();
 for($i = 0 ; $i < $num ; $i++)
