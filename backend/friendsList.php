@@ -7,7 +7,7 @@ $response = friends($username, $add);
 if($response != false)
 {
     $sessionData = json_decode($response, true);
-    $_SESSION['friendList'] = array();
+    $_SESSION['friendsList'] = array();
     $num = 4;
     for($i = 0 ; $i < $num ; $i++)
     {
