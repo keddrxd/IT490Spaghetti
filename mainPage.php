@@ -149,6 +149,11 @@ if( $_SERVER['REQUEST_METHOD'] == 'POST')
 	if(isset($_POST['friend']))
 	{
 		require 'friendsList.php'; #change file name
+		$num = 4;
+		for($i = 0 ; $i < $num ; $i++)
+		{
+			echo "<br>".$_SESSION['friendsList'][$i];
+		}
 		//echo "<br>".$_SESSION['friendsList'][1];
 		/*for($i = 0 ; $i < 10 ; $i++)
 		{
