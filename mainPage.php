@@ -154,10 +154,10 @@ if( $_SERVER['REQUEST_METHOD'] == 'POST')
 		$friend = array();
 		for($i = 0; $i < $num; $i++)
 		{
-			$friend[] = $_SESSION['friendsList'][$i];
+			$friend[$i] = $_SESSION['friendsList'][$i];
 			
 		}
-		echo $friend[0];
+		echo $friend[1];
 		//echo "<br>".$_SESSION['friendsList'][1];
 		/*for($i = 0 ; $i < 10 ; $i++)
 		{
@@ -251,7 +251,7 @@ margin-right: 75px;
 <?php  
 echo "<table border=1 cellspacing=0 cellpading=0>  
 <tr> <td><font color=blue>Friends List</td> </tr>    
-<tr> <td><font color=blue>$friend[1]</td> </tr>
+<tr> <td><font color=blue></td> </tr>
 </table>";  
 //echo $friends;
 
