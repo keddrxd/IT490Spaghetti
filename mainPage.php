@@ -157,7 +157,10 @@ if( $_SERVER['REQUEST_METHOD'] == 'POST')
 			$friend[$i] = $_SESSION['friendsList'][$i];
 			
 		}
-		echo $friend;
+		for($i = 0; $i < $num; $i++)
+		{
+			echo $friend[$i];	
+		}
 		//echo "<br>".$_SESSION['friendsList'][1];
 		/*for($i = 0 ; $i < 10 ; $i++)
 		{
