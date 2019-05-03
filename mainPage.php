@@ -152,6 +152,11 @@ if( $_SERVER['REQUEST_METHOD'] == 'POST')
 		require 'backend/friendsList.php'; #change file name
 		$num = 4;
 		$friend = array();
+		for($i = 0 ; $i < $num ; $i++)
+		{
+			echo "<br>".$_SESSION['friendsList'][$i];
+			//echo " and it will be released on: ".$_SESSION['scifiRd'][$i];
+		}	
 		for($i = 0; $i < $num; $i++)
 		{
 			$friend[$i] = $_SESSION['friendsList'][$i];
