@@ -144,12 +144,12 @@ if( $_SERVER['REQUEST_METHOD'] == 'POST')
 	}
 	if(isset($_POST['first']))
 	{
-		require 'firstRequest.php'; #change file name
+		require 'backend/firstRequest.php'; #change file name
 		
 	}
 	if(isset($_POST['friend']))
 	{
-		require 'friendsList.php'; #change file name
+		require 'backend/friendsList.php'; #change file name
 		$num = 4;
 		$friend = array();
 		for($i = 0; $i < $num; $i++)

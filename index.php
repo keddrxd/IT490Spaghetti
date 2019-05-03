@@ -9,11 +9,11 @@ if( $_SERVER['REQUEST_METHOD'] == 'POST')
 {
 	if( isset($_POST['login']))
 	{
-		require 'loginRequest.php';
+		require 'backend/loginRequest.php';
 	}
 	if(isset($_POST['register']))
 	{
-		require 'registerRequest.php';
+		require 'backend/registerRequest.php';
 		reg();
 		
 	}
