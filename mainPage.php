@@ -151,9 +151,10 @@ if( $_SERVER['REQUEST_METHOD'] == 'POST')
 	{
 		require 'friendsList.php'; #change file name
 		$num = 4;
+		$friend = array();
 		for($i = 0; $i < $num; $i++)
 		{
-			echo "<br>".$_SESSION['friendsList'][$i];
+			$friend[] = $_SESSION['friendsList'][$i];
 			
 		}
 		//echo "<br>".$_SESSION['friendsList'][1];
@@ -249,7 +250,7 @@ margin-right: 75px;
 <?php  
 echo "<table border=1 cellspacing=0 cellpading=0>  
 <tr> <td><font color=blue>Friends List</td> </tr>    
-<tr> <td><font color=blue>$friends</td> </tr>
+<tr> <td><font color=blue>$friend</td> </tr>
 </table>";  
 //echo $friends;
 
