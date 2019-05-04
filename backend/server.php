@@ -180,11 +180,11 @@ function friendsList($username, $add)
 	$reply4 = $mysqli->query($query4);
 	while ($row4 = $reply4->fetch_assoc())
 	{
-		$userFriends['username'] = $row4['username'];
-		$userFriends['friend1'] = $row4['friend1'];
-		$userFriends['friend2'] = $row4['friend2'];
-		$userFriends['friend3'] = $row4['friend3'];
-		$userFriends['friend4'] = $row4['friend4'];
+		$userFriends[0] = $row4['username'];
+		$userFriends[1] = $row4['friend1'];
+		$userFriends[2] = $row4['friend2'];
+		$userFriends[3] = $row4['friend3'];
+		$userFriends[4] = $row4['friend4'];
 	}
 	
 	
