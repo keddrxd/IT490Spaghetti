@@ -11,6 +11,7 @@ $response3 = actRecc($user);
 $response4 = sciRecc($user);
 $response5 = romRecc($user);
 $response6 = aniRecc($user);
+$response20 = getFriends($user);
 
 if( $response != false)
 {
@@ -70,6 +71,13 @@ if( $response != false)
 	for($i = 0 ; $i < $num ; $i++)
 	{
 		$_SESSION['animationArray'][$i] = $sessionData6[$i];
+	}
+	$num2 = 4;
+	$sessionData20 = json_decode($response20, true);
+	$_SESSION['getFriends'] = array();
+	for($i = 0 ; $i < $num2 ; $i++)
+	{
+		$_SESSION['getFriends'][$i] = $sessionData20[$i];
 	}
 	
 	
