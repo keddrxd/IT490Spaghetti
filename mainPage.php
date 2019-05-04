@@ -89,10 +89,11 @@ if($animation !== "")
 		echo " and it will be released on: ".$_SESSION['animationRd'][$i];
 	}	
 }
-	
-for($i = 0 ; $i < $num ; $i++)
+$num2 = 4;
+for($i = 0 ; $i < $num2 ; $i++)
 {
-	echo "<br>".$_SESSION['friendsList'][$i];
+	echo "Your friends are:";
+	echo "<br>".$_SESSION['getFriends'][$i];
 	//echo " and it will be released on: ".$_SESSION['scifiRd'][$i];
 }
 
