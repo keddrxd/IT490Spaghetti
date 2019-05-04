@@ -90,11 +90,14 @@ if($animation !== "")
 	}	
 }
 $num2 = 4;
-for($i = 0 ; $i < $num2 ; $i++)
+for($i = 1 ; $i < $num2 ; $i++)
 {
-	echo "Your friends are:";
-	echo "<br>".$_SESSION['getFriends'][$i];
-	//echo " and it will be released on: ".$_SESSION['scifiRd'][$i];
+	if($_SESSION['getFriends'][$i] !== "")
+	{
+		echo "Your friends are:";
+		echo "<br>".$_SESSION['getFriends'][$i];
+		//echo " and it will be released on: ".$_SESSION['scifiRd'][$i];
+	}
 }
 
 	
