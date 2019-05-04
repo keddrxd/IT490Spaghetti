@@ -312,6 +312,9 @@ $test = $friends[0];*/
 	<form action="index.php" >
 
 		<div id = "logout">
+		<?php
+			session_destroy();
+		?>
 		<button name = "logout" style = "height:50px;width:80px"><font size = 4> Logout </font></button>
 		</div>
 	</form>
