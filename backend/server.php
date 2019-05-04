@@ -87,6 +87,31 @@ function login($userN, $pass)
 	
 }
 
+function getFriends($username)
+{
+	$host = '127.0.0.1';
+	$user = 'admin';
+	$pw = 'adminPwd';
+	$db = 'usersDB';
+	$mysqli = new mysqli($host, $user, $pw, $db);
+	
+	$userFriends = array();
+	$query = "select * from friends where username = '$username'";
+	$reply = $mysqli->query($query);
+	while ($row = $reply->fetch_assoc())
+	{
+		$userFriends['username'] = $row['username'];
+		$userFriends['friend1'] = $row['friend1'];
+		$userFriends['friend2'] = $row['friend2'];
+		$userFriends['friend3'] = $row['friend3'];
+		$userFriends['friend4'] = $row['friend4'];
+	}
+	
+	
+	return json_encode($userFriends);
+	
+	
+}
 
 function friendsList($username, $add)
 {
@@ -890,6 +915,8 @@ function requestProcessor($request)
 			return userRec($request['username']);
 		case "friends":
 			return friendsList($request['username'], $request['addFriend']);
+		case "getFriends":
+			return getFriends($request['username']);
 		
 		default:
 			echo "try again";
