@@ -160,7 +160,7 @@ if( $_SERVER['REQUEST_METHOD'] == 'POST')
 	if(isset($_POST['friend']))
 	{
 		require 'backend/friendsList.php'; #change file name
-		echo "HELLO THIS IS A TEST";
+		/*echo "HELLO THIS IS A TEST";
 		$num = 4;
 		$friend = array();
 		for($i = 0 ; $i < $num ; $i++)
@@ -178,7 +178,7 @@ if( $_SERVER['REQUEST_METHOD'] == 'POST')
 			echo $friend[$i];	
 		}
 		//echo "<br>".$_SESSION['friendsList'][1];
-		/*for($i = 0 ; $i < 10 ; $i++)
+		for($i = 0 ; $i < 10 ; $i++)
 		{
 			if($_SESSION['friendsList'][$i] == $_POST['username'])
 			{
@@ -271,7 +271,7 @@ margin-right: 75px;
 <?php  
 echo "<table border=1 cellspacing=0 cellpading=0>  
 <tr> <td><font color=blue>Friends List</td> </tr>    
-<tr> <td><font color=blue>$friends[1]</td> </tr>
+<tr> <td><font color=blue>$_SESSION['friendsList'][1]</td> </tr>
 </table>";  
 //echo $friends;
 
