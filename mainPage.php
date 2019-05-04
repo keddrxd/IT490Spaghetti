@@ -271,9 +271,10 @@ margin-right: 75px;
 <?php  
 
 $friend = $_POST['user'];
+$hi = "Hello there";
 echo "<table border=1 cellspacing=0 cellpading=0>  
 <tr> <td><font color=blue>Friends List</td> </tr>    
-<tr> <td><font color=blue>$friend</td> </tr>
+<tr> <td><font color=blue>$hi</td> </tr>
 </table>";  
 //echo $friends;
 
