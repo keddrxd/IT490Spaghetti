@@ -271,19 +271,20 @@ margin-right: 75px;
 <?php  
 echo "<table border=1 cellspacing=0 cellpading=0>  
 <tr> <td><font color=blue>Friends List</td> </tr>    
-<tr> <td><font color=blue>$friend</td> </tr>
+<tr> <td><font color=blue>$friends[0]</td> </tr>
 </table>";  
 //echo $friends;
 
 $num = 4;
 $friends = array();
-$friend = $_SESSION['friendsList'][1];
+$friends[] = $_POST['user'];
+//$friend = $_SESSION['friendsList'][1];
 //$friends[] = $_SESSION['friendsList'];
-for($i = 0 ; $i < $num ; $i++)
+/*for($i = 0 ; $i < $num ; $i++)
 {
 	$friends[$i] = $_SESSION['friendsList'][$i];
 	//echo "<br>".$_SESSION['friendsList'][$i];
-}
+}*/
 	
 	
 /*for($i = 0 ; $i < $num ; $i++)
