@@ -148,26 +148,50 @@ function friendsList($username, $add)
 				if($userData1['friend1'] == "")
 				{
 					$query3 = "UPDATE friends set friend1='$add' where username='$username'";
+					$query4 = "UPDATE friends set friend2='' where username='$username'";
+					$query5 = "UPDATE friends set friend3='' where username='$username'";
+					$query6 = "UPDATE friends set friend4='' where username='$username'";
 					//$query3 = "INSERT INTO friends values('$username', '$add', '', '', '')";	
 					$reply3 = $mysqli->query($query3);
+					$reply4 = $mysqli->query($query4);
+					$reply5 = $mysqli->query($query5);
+					$reply6 = $mysqli->query($query6);
 				}
 				elseif($userData1['friend2'] == "")
 				{
 					$query3 = "UPDATE friends set friend2='$add' where username='$username'";
+					$query4 = "UPDATE friends set friend1='' where username='$username'";
+					$query5 = "UPDATE friends set friend3='' where username='$username'";
+					$query6 = "UPDATE friends set friend4='' where username='$username'";
 					//$query3 = "INSERT INTO friends values('$username', '$friend1', '$add', '', '')";	
 					$reply3 = $mysqli->query($query3);
+					$reply4 = $mysqli->query($query4);
+					$reply5 = $mysqli->query($query5);
+					$reply6 = $mysqli->query($query6);
 				}
 				elseif($userData1['friend3'] == "")
 				{
 					$query3 = "UPDATE friends set friend3='$add' where username='$username'";
+					$query4 = "UPDATE friends set friend1='' where username='$username'";
+					$query5 = "UPDATE friends set friend2='' where username='$username'";
+					$query6 = "UPDATE friends set friend4='' where username='$username'";
 					//$query3 = "INSERT INTO friends values('$username', '$friend1', '$friend2', '$add', '')";	
 					$reply3 = $mysqli->query($query3);
+					$reply4 = $mysqli->query($query4);
+					$reply5 = $mysqli->query($query5);
+					$reply6 = $mysqli->query($query6);
 				}
 				elseif($userData1['friend4'] == "")
 				{
 					$query3 = "UPDATE friends set friend4='$add' where username='$username'";
+					$query4 = "UPDATE friends set friend1='' where username='$username'";
+					$query5 = "UPDATE friends set friend2='' where username='$username'";
+					$query6 = "UPDATE friends set friend3='' where username='$username'";
 					//$query3 = "INSERT INTO friends values('$username', '$friend1', '$friend2', '$friend3', '$add')";	
 					$reply3 = $mysqli->query($query3);
+					$reply4 = $mysqli->query($query4);
+					$reply5 = $mysqli->query($query5);
+					$reply6 = $mysqli->query($query6);
 				}
 			}
 		}
