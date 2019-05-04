@@ -100,11 +100,11 @@ function getFriends($username)
 	$reply = $mysqli->query($query);
 	while ($row = $reply->fetch_assoc())
 	{
-		$userFriends['username'] = $row['username'];
-		$userFriends['friend1'] = $row['friend1'];
-		$userFriends['friend2'] = $row['friend2'];
-		$userFriends['friend3'] = $row['friend3'];
-		$userFriends['friend4'] = $row['friend4'];
+		$userFriends[0] = $row['username'];
+		$userFriends[1] = $row['friend1'];
+		$userFriends[2] = $row['friend2'];
+		$userFriends[3] = $row['friend3'];
+		$userFriends[4] = $row['friend4'];
 	}
 	
 	
