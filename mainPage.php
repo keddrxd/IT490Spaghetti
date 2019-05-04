@@ -177,6 +177,7 @@ if( $_SERVER['REQUEST_METHOD'] == 'POST')
 			}
 		}*/
 	}
+	echo "<br>".$_SESSION['friendsList'][1];
 }
 	
 ?>
