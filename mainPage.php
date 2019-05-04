@@ -177,7 +177,7 @@ if( $_SERVER['REQUEST_METHOD'] == 'POST')
 			}
 		}*/
 	}
-	echo "<br>".$_SESSION['comedyArray'][0];
+	//echo "<br>".$_SESSION['comedyArray'][0];
 }
 	
 ?>
