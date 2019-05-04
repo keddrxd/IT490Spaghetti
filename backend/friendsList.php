@@ -13,5 +13,7 @@ if($response != false)
     {
             $_SESSION['friendsList'][$i] = $sessionData[$i];
     }
+    
+    header("location: mainPage.php");
 }
 ?>
