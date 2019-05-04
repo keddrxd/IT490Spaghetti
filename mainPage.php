@@ -269,13 +269,11 @@ margin-right: 75px;
 		</div>
 	
 <?php  
-$num = 4;
-$friends = array();
-$friends[0] = $_POST['user'];
-$test = $friends[0];
+
+$friend = $_POST['user'];
 echo "<table border=1 cellspacing=0 cellpading=0>  
 <tr> <td><font color=blue>Friends List</td> </tr>    
-<tr> <td><font color=blue>$test</td> </tr>
+<tr> <td><font color=blue>$friend</td> </tr>
 </table>";  
 //echo $friends;
 
