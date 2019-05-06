@@ -833,7 +833,7 @@ function register($firstName, $lastName, $userName, $pass, $email, $zip)
 	if($reply->num_rows == 0)
 	{
 		$query = "INSERT INTO users values('$firstN', '$lastN', '$userN', '$password', '$email', '$zip')";
-		$mysqli->query($query);
+		$mysqli->query($query) or die("Email already exists");
 		//$query1 = "INSERT INTO category values('$userN', '0', '0', '0', '0', '0', '0')";
 		//$mysqli->query($query1) or die($mysqli->error);
 		echo "Account has been created".PHP_EOL;
