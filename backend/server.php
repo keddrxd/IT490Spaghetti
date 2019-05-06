@@ -629,7 +629,7 @@ function scifiRel($username)
 	
 	while ($row = $reply->fetch_assoc())
 	{
-		if($row['scifi'] == "scifi")
+		if($row['scifi'] == "sci-fi")
 		{
 			$query2 = "select rd from scifi";
 			$reply2 = $mysqli->query($query2);
