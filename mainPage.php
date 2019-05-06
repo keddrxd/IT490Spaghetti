@@ -71,7 +71,7 @@ if($action !== "")
 if($scifi !== "")
 {
 	echo "<br>Here are some sci-fi movies you may like:<br>";
-	for($i = 0 ; $i <= count($_SESSION['scifiArray']) ; $i++)
+	for($i = 0 ; $i < count($_SESSION['scifiArray']) ; $i++)
 	{
 		echo "<br>".$_SESSION['scifiArray'][$i];
 		if($_SESSION['scifiRd'][$i] !== "")
