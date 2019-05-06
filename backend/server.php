@@ -9,6 +9,8 @@ global $database;
 if (mysqli_connect_errno())
 {
 	echo "failed to connect to MySQL: "."\n". mysqli_connect_error();
+	$errorMSG = "Failed to connect to MySQL   ";
+	error($errorMSG);
 	exit();
 }else	
 {
