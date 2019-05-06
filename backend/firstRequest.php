@@ -120,42 +120,42 @@ if ($response != false)
 	$sessionData1 = json_decode($response1, true);
 	$_SESSION['comedyArray'] = array();
 	$num = 3;
-	for($i = 0 ; $i < $num ; $i++)
+	for($i = 0 ; $i < count($sessionData1) ; $i++)
 	{
 		$_SESSION['comedyArray'][$i] = $sessionData1[$i];
 	}
 	
 	$sessionData2 = json_decode($response2, true);
 	$_SESSION['horrorArray'] = array();
-	for($i = 0 ; $i < $num ; $i++)
+	for($i = 0 ; $i < count($sessionData2) ; $i++)
 	{
 		$_SESSION['horrorArray'][$i] = $sessionData2[$i];
 	}
 	
 	$sessionData3 = json_decode($response3, true);
 	$_SESSION['actionArray'] = array();
-	for($i = 0 ; $i < $num ; $i++)
+	for($i = 0 ; $i < count($sessionData3) ; $i++)
 	{
 		$_SESSION['actionArray'][$i] = $sessionData3[$i];
 	}
 	
 	$sessionData4 = json_decode($response4, true);
 	$_SESSION['scifiArray'] = array();
-	for($i = 0 ; $i < $num ; $i++)
+	for($i = 0 ; $i < count($sessionData4) ; $i++)
 	{
 		$_SESSION['scifiArray'][$i] = $sessionData4[$i];
 	}
 	
 	$sessionData5 = json_decode($response5, true);
 	$_SESSION['romanceArray'] = array();
-	for($i = 0 ; $i < $num ; $i++)
+	for($i = 0 ; $i < count($sessionData5) ; $i++)
 	{
 		$_SESSION['romanceArray'][$i] = $sessionData5[$i];
 	}
 	
 	$sessionData6 = json_decode($response6, true);
 	$_SESSION['animationArray'] = array();
-	for($i = 0 ; $i < $num ; $i++)
+	for($i = 0 ; $i < count($sessionData6) ; $i++)
 	{
 		$_SESSION['animationArray'][$i] = $sessionData6[$i];
 	}
