@@ -21,7 +21,6 @@ $actionRd = $_SESSION['actionRd'];
 $scifiRd = $_SESSION['scifiRd'];
 $romanceRd = $_SESSION['romanced'];
 $animationRd = $_SESSION['animationRd'];
-echo "hello ".$_SESSION['comedyRd'];
 echo "Hello ".$_SESSION['username'];
 echo "<br>";
 $num = 3;
@@ -34,7 +33,10 @@ if($comedy !== "")
 		if($_SESSION['comedyArray'][$i] !== "")
 		{
 			echo "<br>".$_SESSION['comedyArray'][$i];
-			echo " and it will be released on: ".$_SESSION['comedyRd'][$i];
+			if($_SESSION['comedyRd'][$i] !=="")
+			{
+				echo " and it will be released on: ".$_SESSION['comedyRd'][$i];
+			}
 		}
 	}	
 }
@@ -46,7 +48,10 @@ if($horror !== "")
 		if($_SESSION['horrorArray'][$i] !== "")
 		{
 			echo "<br>".$_SESSION['horrorArray'][$i];
-			echo " and it will be released on: ".$_SESSION['horrorRd'][$i];
+			if($_SESSION['horrorRd'][$i] !== "")
+			{
+				echo " and it will be released on: ".$_SESSION['horrorRd'][$i];
+			}
 		}
 	}	
 }
@@ -56,7 +61,10 @@ if($action !== "")
 	for($i = 0 ; $i < $num ; $i++)
 	{
 		echo "<br>".$_SESSION['actionArray'][$i];
-		echo " and it will be released on: ".$_SESSION['actionRd'][$i];
+		if($_SESSION['actionRd'][$i] !== "")
+		{
+			echo " and it will be released on: ".$_SESSION['actionRd'][$i];
+		}
 	}	
 }
 	
@@ -66,7 +74,10 @@ if($scifi !== "")
 	for($i = 0 ; $i < $num ; $i++)
 	{
 		echo "<br>".$_SESSION['scifiArray'][$i];
-		echo " and it will be released on: ".$_SESSION['scifiRd'][$i];
+		if($_SESSION['scifiRd'][$i] !== "")
+		{
+			echo " and it will be released on: ".$_SESSION['scifiRd'][$i];
+		}
 	}	
 }
 	
@@ -76,7 +87,10 @@ if($romance !== "")
 	for($i = 0 ; $i < $num ; $i++)
 	{
 		echo "<br>".$_SESSION['romanceArray'][$i];	
-		echo " and it will be released on: ".$_SESSION['romanceRd'][$i];
+		if($_SESSION['romanceRd'][$i] !== "")
+		{
+			echo " and it will be released on: ".$_SESSION['romanceRd'][$i];
+		}
 	}	
 }
 	
@@ -86,11 +100,14 @@ if($animation !== "")
 	for($i = 0 ; $i < $num ; $i++)
 	{
 		echo "<br>".$_SESSION['animationArray'][$i];	
-		echo " and it will be released on: ".$_SESSION['animationRd'][$i];
+		if($_SESSION['animationRd'][$i] !== "")
+		{
+			echo " and it will be released on: ".$_SESSION['animationRd'][$i];
+		}
 	}	
 }
 $num2 = 4;
-echo "Your friends are:";
+echo "<br>Your friends are:";
 for($i = 1 ; $i < $num2 ; $i++)
 {
 	if($_SESSION['getFriends'][$i] !== "")
