@@ -833,21 +833,28 @@ function register($firstName, $lastName, $userName, $pass, $email, $zip)
 	if($reply->num_rows == 0)
 	{
 		$query = "INSERT INTO users values('$firstN', '$lastN', '$userN', '$password', '$email', '$zip')";
-		$mysqli->query($query) or echo "Email already exists";
-		//$query1 = "INSERT INTO category values('$userN', '0', '0', '0', '0', '0', '0')";
-		//$mysqli->query($query1) or die($mysqli->error);
-		echo "Account has been created".PHP_EOL;
-		echo "Passwords match".PHP_EOL;
-		$userData['firstName'] = $firstN;
-		$userData['lastName'] = $lastN;
-		$userData['username'] = $userN;
-		$userData['password'] = $password;
-		$userData['email'] = $email;
-		$userData['zip'] = $zip;
-		$sessID = createSess($userN);
-		$userData['sessionID'] = $sessID;
-		
-		return json_encode($userData);
+		if($mysqli->query($query) == true)
+		{ 
+			//$query1 = "INSERT INTO category values('$userN', '0', '0', '0', '0', '0', '0')";
+			//$mysqli->query($query1) or die($mysqli->error);
+			echo "Account has been created".PHP_EOL;
+			echo "Passwords match".PHP_EOL;
+			$userData['firstName'] = $firstN;
+			$userData['lastName'] = $lastN;
+			$userData['username'] = $userN;
+			$userData['password'] = $password;
+			$userData['email'] = $email;
+			$userData['zip'] = $zip;
+			$sessID = createSess($userN);
+			$userData['sessionID'] = $sessID;
+
+			return json_encode($userData);
+		}
+		else
+		{
+			echo "Duplicate email entry";
+			return false;	
+		}
 		
 	}
 	
