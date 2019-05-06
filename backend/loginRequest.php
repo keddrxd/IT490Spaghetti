@@ -11,6 +11,12 @@ $response3 = actRecc($user);
 $response4 = sciRecc($user);
 $response5 = romRecc($user);
 $response6 = aniRecc($user);
+$response7 = comRd($username);
+$response8 = horRd($username);
+$response9 = actRd($username);
+$response10 = sciRd($username);
+$response13 = romRd($username);
+$response12 = aniRd($username);
 $response20 = getFriends($user);
 
 if( $response != false)
@@ -80,7 +86,47 @@ if( $response != false)
 		$_SESSION['getFriends'][$i] = $sessionData20[$i];
 	}
 	
+	$sessionData7 = json_decode($response7, true);
+	$_SESSION['comedyRd'] = array();
+	for($i = 0 ; $i < count($sessionData7) ; $i++)
+	{
+		$_SESSION['comedyRd'][$i] = $sessionData7[$i];
+	}
 	
+	$sessionData8 = json_decode($response8, true);
+	$_SESSION['horrorRd'] = array();
+	for($i = 0 ; $i < count($sessionData8) ; $i++)
+	{
+		$_SESSION['horrorRd'][$i] = $sessionData8[$i];
+	}
+	
+	$sessionData9 = json_decode($response9, true);
+	$_SESSION['actionRd'] = array();
+	for($i = 0 ; $i < count($sessionData9) ; $i++)
+	{
+		$_SESSION['actionRd'][$i] = $sessionData9[$i];
+	}
+	
+	$sessionData10 = json_decode($response10, true);
+	$_SESSION['scifiRd'] = array();
+	for($i = 0 ; $i < count($sessionData10) ; $i++)
+	{
+		$_SESSION['scifiRd'][$i] = $sessionData10[$i];
+	}
+	
+	$sessionData13 = json_decode($response13, true);
+	$_SESSION['romanceRd'] = array();
+	for($i = 0 ; $i < count($sessionData13) ; $i++)
+	{
+		$_SESSION['romanceRd'][$i] = $sessionData13[$i];
+	}
+	
+	$sessionData12 = json_decode($response12, true);
+	$_SESSION['animationRd'] = array();
+	for($i = 0 ; $i < count($sessionData12) ; $i++)
+	{
+		$_SESSION['animationRd'][$i] = $sessionData12[$i];
+	}
 	
 	
 	
