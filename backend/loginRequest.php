@@ -54,7 +54,7 @@ if( $response != false)
 	
 	$sessionData4 = json_decode($response4, true);
 	$_SESSION['scifiArray'] = array();
-	for($i = 0 ; $i < $num ; $i++)
+	for($i = 0 ; $i < count($sessionData4); $i++)
 	{
 		$_SESSION['scifiArray'][$i] = $sessionData4[$i];
 	}
