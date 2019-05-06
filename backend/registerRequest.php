@@ -22,7 +22,7 @@ if ($response != false)
 }
 else
 {
-	$errorMSG = "Email already exists   ";
+	$errorMSG = "Email already exists ";
 	$response100 = error($errorMSG);
 	echo "$errorMSG";
 	error($errorMSG);
