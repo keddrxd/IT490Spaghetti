@@ -24,10 +24,10 @@ $animationRd = $_SESSION['animationRd'];
 echo "Hello ".$_SESSION['username'];
 echo "<br>";
 $num = 3;
-	
+echo "Here are some movies you may like:<br><br>";	
 if($comedy !== "")
 {
-	echo "<br><br> Here are some comedy movies you may like:<br>";
+	//echo "<br><br> Here are some comedy movies you may like:<br>";
 	for($i = 0 ; $i < count($_SESSION['comedyArray']) ; $i++)
 	{
 		if($_SESSION['comedyArray'][$i] !== "")
@@ -42,7 +42,7 @@ if($comedy !== "")
 }
 if($horror !== "")
 {
-	echo "<br><br> Here are some horror movies you may like:<br>";
+	//echo "<br><br> Here are some horror movies you may like:<br>";
 	for($i = 0 ; $i < count($_SESSION['horrorArray']) ; $i++)
 	{
 		if($_SESSION['horrorArray'][$i] !== "")
@@ -57,7 +57,7 @@ if($horror !== "")
 }
 if($action !== "")
 {
-	echo "<br>Here are some action movies you may like:<br>";
+	//echo "<br>Here are some action movies you may like:<br>";
 	for($i = 0 ; $i < count($_SESSION['actionArray']) ; $i++)
 	{
 		echo "<br>".$_SESSION['actionArray'][$i];
@@ -70,7 +70,7 @@ if($action !== "")
 	
 if($scifi !== "")
 {
-	echo "<br>Here are some sci-fi movies you may like:<br>";
+	//echo "<br>Here are some sci-fi movies you may like:<br>";
 	for($i = 0 ; $i < count($_SESSION['scifiArray']) ; $i++)
 	{
 		echo "<br>".$_SESSION['scifiArray'][$i];
@@ -83,7 +83,7 @@ if($scifi !== "")
 	
 if($romance !== "")
 {
-	echo "<br>Here are some romance movies that you may like:<br>";
+	//echo "<br>Here are some romance movies that you may like:<br>";
 	for($i = 0 ; $i < count($_SESSION['romanceArray']) ; $i++)
 	{
 		echo "<br>".$_SESSION['romanceArray'][$i];	
@@ -96,7 +96,7 @@ if($romance !== "")
 	
 if($animation !== "")
 {
-	echo "<br>Here are some animation movies you may like:<br>";
+	//echo "<br>Here are some animation movies you may like:<br>";
 	for($i = 0 ; $i < count($_SESSION['animationArray']) ; $i++)
 	{
 		echo "<br>".$_SESSION['animationArray'][$i];	
