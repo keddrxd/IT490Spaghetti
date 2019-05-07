@@ -263,7 +263,7 @@ margin-right: 75px;
 			}	
 		}
 		$num2 = 4;
-		echo "<br><br><div style ='font:21px Courier;color:#ff0000'> Your friends are: </div><br>";
+		echo "<br><br><div style ='font:21px Courier;color:#000000'> Your friends are: </div>";
 		#echo '<style = "font-color: #ff0000"> Your friends are: </style>';
 		#echo "<br><br><br><br>Your friends are:";
 		for($i = 1 ; $i < $num2 ; $i++)
@@ -281,7 +281,7 @@ margin-right: 75px;
 		
 		?>
 		
-		  Add a Friend!<br>
+		  <br>Add a Friend!<br>
 		  <input type="text" name="user" placeholder="username" method="POST">
 		  <br>
 		<!--<input type="submit" value="Submit">-->
