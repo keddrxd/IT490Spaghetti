@@ -153,34 +153,7 @@ margin-right: 75px;
 		</center>
 		</div>
 	
-<?php  
-$friend = $_POST['user'];
-$hi = "Hello there";
-$test = "test";
-echo "<table border=1 cellspacing=0 cellpading=0>  
-<tr> <td><font color=blue>Friends List</td> </tr>    
-<tr> <td><font color=blue>$friend</td> </tr>
-</table>";  
-//echo $friends;
-/*$num = 4;
-$friends = array();
-$friends[0] = $_POST['user'];
-$test = $friends[0];*/
-//$friend = $_SESSION['friendsList'][1];
-//$friends[] = $_SESSION['friendsList'];
-/*for($i = 0 ; $i < $num ; $i++)
-{
-	$friends[$i] = $_SESSION['friendsList'][$i];
-	//echo "<br>".$_SESSION['friendsList'][$i];
-}*/
-	
-	
-/*for($i = 0 ; $i < $num ; $i++)
-{
-	$friends[] = $_SESSION['friendsList'][$i];
-	
-}*/
-?>  
+
 	
 	<form action = "mainPage.php" method="POST">
   Add a Friend!<br>
@@ -313,6 +286,15 @@ $test = $friends[0];*/
 			}
 		}	
 		?>
+		<?php  
+			$friend = $_POST['user'];
+			$hi = "Hello there";
+			$test = "test";
+			echo "<table border=1 cellspacing=0 cellpading=0>  
+			<tr> <td><font color=blue>Friends List</td> </tr>    
+			<tr> <td><font color=blue>$friend</td> </tr>
+			</table>";  
+		?>  
 		</div>
 		<div id = "box">
 			<center>
