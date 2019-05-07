@@ -6,7 +6,6 @@
 	
 	
 <?php
-
 session_start();
 //require ('rabbitFunc.php');
 //require 'movieDB.php';
@@ -181,10 +180,10 @@ margin-right: 75px;
 		$scifiRd = $_SESSION['scifiRd'];
 		$romanceRd = $_SESSION['romanced'];
 		$animationRd = $_SESSION['animationRd'];
-		echo "<div style ='font:13px Courier;color:#000000'>Hello </div>".$_SESSION['username'];
+		echo "Hello ".$_SESSION['username'];
 		echo "<br>";
 		$num = 3;
-		echo "<div style ='font:13px Courier;color:#000000'>Here are some movies you may like:<br><br></div>";	
+		echo "Here are some movies you may like:<br><br>";	
 		if($comedy !== "")
 		{
 			//echo "<br><br> Here are some comedy movies you may like:<br>";
@@ -195,7 +194,7 @@ margin-right: 75px;
 					echo "<br>".$_SESSION['comedyArray'][$i];
 					if($_SESSION['comedyRd'][$i] !=="")
 					{
-						echo "<div style ='font:13px Courier;color:#000000'> and it will be released on: </div>".$_SESSION['comedyRd'][$i];
+						echo " and it will be released on: ".$_SESSION['comedyRd'][$i];
 					}
 				}
 			}	
@@ -210,7 +209,7 @@ margin-right: 75px;
 					echo "<br>".$_SESSION['horrorArray'][$i];
 					if($_SESSION['horrorRd'][$i] !== "")
 					{
-						echo "<div style ='font:13px Courier;color:#000000'> and it will be released on: </div>".$_SESSION['horrorRd'][$i];
+						echo " and it will be released on: ".$_SESSION['horrorRd'][$i];
 					}
 				}
 			}	
@@ -223,11 +222,10 @@ margin-right: 75px;
 				echo "<br>".$_SESSION['actionArray'][$i];
 				if($_SESSION['actionRd'][$i] !== "")
 				{
-					echo "<div style ='font:13px Courier;color:#000000'> and it will be released on: </div>".$_SESSION['actionRd'][$i];
+					echo " and it will be released on: ".$_SESSION['actionRd'][$i];
 				}
 			}	
 		}
-
 		if($scifi !== "")
 		{
 			//echo "<br>Here are some sci-fi movies you may like:<br>";
@@ -236,11 +234,10 @@ margin-right: 75px;
 				echo "<br>".$_SESSION['scifiArray'][$i];
 				if($_SESSION['scifiRd'][$i] !== "")
 				{
-					echo "<div style ='font:13px Courier;color:#000000'> and it will be released on: </div>".$_SESSION['scifiRd'][$i];
+					echo " and it will be released on: ".$_SESSION['scifiRd'][$i];
 				}
 			}	
 		}
-
 		if($romance !== "")
 		{
 			//echo "<br>Here are some romance movies that you may like:<br>";
@@ -249,11 +246,10 @@ margin-right: 75px;
 				echo "<br>".$_SESSION['romanceArray'][$i];	
 				if($_SESSION['romanceRd'][$i] !== "")
 				{
-					echo "<div style ='font:13px Courier;color:#000000'> and it will be released on: </div>".$_SESSION['romanceRd'][$i];
+					echo " and it will be released on: ".$_SESSION['romanceRd'][$i];
 				}
 			}	
 		}
-
 		if($animation !== "")
 		{
 			//echo "<br>Here are some animation movies you may like:<br>";
@@ -262,12 +258,12 @@ margin-right: 75px;
 				echo "<br>".$_SESSION['animationArray'][$i];	
 				if($_SESSION['animationRd'][$i] !== "")
 				{
-					echo "<div style ='font:13px Courier;color:#000000'> and it will be released on: </div>".$_SESSION['animationRd'][$i];
+					echo " and it will be released on: ".$_SESSION['animationRd'][$i];
 				}
 			}	
 		}
 		$num2 = 4;
-		echo "<br><br><div style ='font:13px Courier;color:#000000'> Your friends are: </div><br>";
+		echo "<br><br><div style ='font:21px Courier;color:#ff0000'> Your friends are: </div><br>";
 		#echo '<style = "font-color: #ff0000"> Your friends are: </style>';
 		#echo "<br><br><br><br>Your friends are:";
 		for($i = 1 ; $i < $num2 ; $i++)
