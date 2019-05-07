@@ -163,7 +163,7 @@ margin-right: 75px;
 	</form>
 		
 		<div id = "body">
-		<h2><font size="10" face = "courier" color = "black">Hello, User!</font></h2> 
+		<!--<h2><font size="10" face = "courier" color = "black">Hello, User!</font></h2> -->
 		<?php
 		session_start();
 		//require ('rabbitFunc.php');
@@ -181,7 +181,7 @@ margin-right: 75px;
 		$scifiRd = $_SESSION['scifiRd'];
 		$romanceRd = $_SESSION['romanced'];
 		$animationRd = $_SESSION['animationRd'];
-		echo "<div style ='font:30px Courier;color:#000000'>Hello $user</div>";
+		echo "<b><div style ='font:40px Courier;color:#000000'>Hello $user</div></b>";
 		echo "<br>";
 		$num = 3;
 		echo "Here are some movies you may like:<br><br>";	
