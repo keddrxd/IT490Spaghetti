@@ -281,7 +281,7 @@ margin-right: 75px;
 		
 		?>
 		
-		  <br>Add a Friend!<br>
+		  <br><br><br>Add a Friend!<br>
 		  <input type="text" name="user" placeholder="username" method="POST">
 		  <br>
 		<!--<input type="submit" value="Submit">-->
