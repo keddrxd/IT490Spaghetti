@@ -267,9 +267,9 @@ margin-right: 75px;
 			}	
 		}
 		$num2 = 4;
-		#echo "<div style ='font:11px/21px Arial,tahoma,sans-serif;color:#ff0000'> Your friends are: </div>";
+		echo "<br><br><div style ='font:21px Courier;color:#ff0000'> Your friends are: </div><br>";
 		#echo '<style = "font-color: #ff0000"> Your friends are: </style>';
-		echo "<br><br><br><br>Your friends are:";
+		#echo "<br><br><br><br>Your friends are:";
 		for($i = 1 ; $i < $num2 ; $i++)
 		{
 			if($_SESSION['getFriends'][$i] !== "")
