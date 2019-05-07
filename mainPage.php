@@ -156,14 +156,6 @@ margin-right: 75px;
 
 	
 	<form action = "mainPage.php" method="POST">
-  Add a Friend!<br>
-  <input type="text" name="user" placeholder="username" method="POST">
-  <br>
-<!--<input type="submit" value="Submit">-->
-<button name = "friend" style = "height:50px;width:80px"><font size = 4> Submit </font></button>
-</form> 
-
-
 		
 	<form action="index.php" >
 
@@ -294,7 +286,13 @@ margin-right: 75px;
 			<tr> <td><font color=blue>Friends List</td> </tr>    
 			<tr> <td><font color=blue>$friend</td> </tr>
 			</table>";  
-		?>  
+		?> 
+		  Add a Friend!<br>
+		  <input type="text" name="user" placeholder="username" method="POST">
+		  <br>
+		<!--<input type="submit" value="Submit">-->
+		<button name = "friend" style = "height:50px;width:80px"><font size = 4> Submit </font></button>
+		</form> 
 		</div>
 		<div id = "box">
 			<center>
