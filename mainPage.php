@@ -7,6 +7,23 @@
 	
 <?php
 
+session_start();
+//require ('rabbitFunc.php');
+//require 'movieDB.php';
+$comedy = $_SESSION['comedy'];
+$horror = $_SESSION['horror'];
+$action = $_SESSION['action'];
+$scifi = $_SESSION['scifi'];
+$romance = $_SESSION['romance'];
+$animation = $_SESSION['animation'];
+$comedyRd = $_SESSION['comedyRd'];
+$horrorRd = $_SESSION['horrorRd'];
+$actionRd = $_SESSION['actionRd'];
+$scifiRd = $_SESSION['scifiRd'];
+$romanceRd = $_SESSION['romanced'];
+$animationRd = $_SESSION['animationRd'];
+	
+	
 if( $_SERVER['REQUEST_METHOD'] == 'POST')
 {
 	if( isset($_POST['logout']))
