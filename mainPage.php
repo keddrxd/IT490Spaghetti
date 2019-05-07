@@ -268,16 +268,18 @@ margin-right: 75px;
 			}	
 		}
 		$num2 = 4;
-		echo "<br>Your friends are:";
+		echo "<div style ='font:11px/21px Arial,tahoma,sans-serif;color:#ff0000'> Your friends are: </div>";
+		echo '<style = "font-color: #ff0000"> Your friends are: </style>';
+		echo "<br><br><br><br>Your friends are:";
 		for($i = 1 ; $i < $num2 ; $i++)
 		{
 			if($_SESSION['getFriends'][$i] !== "")
 			{
-				//echo "<br>".$_SESSION['getFriends'][$i];
-				echo "<table border=1 cellspacing=0 cellpading=0>  
+				echo "<br>".$_SESSION['getFriends'][$i];
+				/*echo "<table border=1 cellspacing=0 cellpading=0>  
 				<tr> <td><font color=blue>Friends List</td> </tr>    
 				<tr> <td><font color=blue>Hello</td> </tr>
-				</table>"; 
+				</table>"; */
 				//echo " and it will be released on: ".$_SESSION['scifiRd'][$i];
 			}
 		}
