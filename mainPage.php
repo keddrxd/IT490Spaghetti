@@ -273,20 +273,17 @@ margin-right: 75px;
 		{
 			if($_SESSION['getFriends'][$i] !== "")
 			{
-				echo "<br>".$_SESSION['getFriends'][$i];
+				//echo "<br>".$_SESSION['getFriends'][$i];
+				echo "<table border=1 cellspacing=0 cellpading=0>  
+				<tr> <td><font color=blue>Friends List</td> </tr>    
+				<tr> <td><font color=blue>$_SESSION['getFriends'][$i]</td> </tr>
+				</table>"; 
 				//echo " and it will be released on: ".$_SESSION['scifiRd'][$i];
 			}
-		}	
+		}
+		
 		?>
-		<?php  
-			$friend = $_POST['user'];
-			$hi = "Hello there";
-			$test = "test";
-			echo "<table border=1 cellspacing=0 cellpading=0>  
-			<tr> <td><font color=blue>Friends List</td> </tr>    
-			<tr> <td><font color=blue>$friend</td> </tr>
-			</table>";  
-		?> 
+		
 		  Add a Friend!<br>
 		  <input type="text" name="user" placeholder="username" method="POST">
 		  <br>
