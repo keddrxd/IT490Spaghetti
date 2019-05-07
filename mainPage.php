@@ -276,7 +276,7 @@ margin-right: 75px;
 				//echo "<br>".$_SESSION['getFriends'][$i];
 				echo "<table border=1 cellspacing=0 cellpading=0>  
 				<tr> <td><font color=blue>Friends List</td> </tr>    
-				<tr> <td><font color=blue>$_SESSION['getFriends'][$i]</td> </tr>
+				<tr> <td><font color=blue>Hello</td> </tr>
 				</table>"; 
 				//echo " and it will be released on: ".$_SESSION['scifiRd'][$i];
 			}
