@@ -268,8 +268,8 @@ margin-right: 75px;
 			}	
 		}
 		$num2 = 4;
-		echo "<div style ='font:11px/21px Arial,tahoma,sans-serif;color:#ff0000'> Your friends are: </div>";
-		echo '<style = "font-color: #ff0000"> Your friends are: </style>';
+		#echo "<div style ='font:11px/21px Arial,tahoma,sans-serif;color:#ff0000'> Your friends are: </div>";
+		#echo '<style = "font-color: #ff0000"> Your friends are: </style>';
 		echo "<br><br><br><br>Your friends are:";
 		for($i = 1 ; $i < $num2 ; $i++)
 		{
