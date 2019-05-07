@@ -4,8 +4,29 @@
 </head>
 
 	
-	
 <?php
+	if( $_SERVER['REQUEST_METHOD'] == 'POST')
+	{
+		if( isset($_POST['logout']))
+		{
+			session_destroy();
+			//echo "login successful";
+			//require 'loginRequest.php'; #change file name
+		}
+		if(isset($_POST['register']))
+		{
+			//require 'registerRequest.php'; #change file name
+			//reg()
+		}
+		if(isset($_POST['first']))
+		{
+			require 'backend/firstRequest.php'; #change file name
+
+		}
+	}
+	
+?>
+<!--?php
 session_start();
 //require ('rabbitFunc.php');
 //require 'movieDB.php';
@@ -208,7 +229,7 @@ if( $_SERVER['REQUEST_METHOD'] == 'POST')
 	//echo "<br>".$_SESSION['friendsList'][1];
 }
 	
-?>
+?>-->
 
 <body background="spaghetti.jpg">
 
@@ -490,7 +511,7 @@ $test = $friends[0];*/
 	*/
 
 
-	if( $_SERVER['REQUEST_METHOD'] == 'POST')
+	/*if( $_SERVER['REQUEST_METHOD'] == 'POST')
 	{
 		if( isset($_POST['logout']))
 		{
@@ -536,8 +557,8 @@ $test = $friends[0];*/
 					echo "<br>".$_SESSION['friendsList'][$i];
 					$person = $_SESSION['friendsList'][$i];
 				}
-			}*/
-		}
+			}
+		}*/
 		//echo "<br>".$_SESSION['friendsList'][1];
 	}
 
