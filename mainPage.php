@@ -4,29 +4,8 @@
 </head>
 
 	
-<?php
-	if( $_SERVER['REQUEST_METHOD'] == 'POST')
-	{
-		if( isset($_POST['logout']))
-		{
-			session_destroy();
-			//echo "login successful";
-			//require 'loginRequest.php'; #change file name
-		}
-		if(isset($_POST['register']))
-		{
-			//require 'registerRequest.php'; #change file name
-			//reg()
-		}
-		if(isset($_POST['first']))
-		{
-			require 'backend/firstRequest.php'; #change file name
-
-		}
-	}
 	
-?>
-<!--?php
+<?php
 session_start();
 //require ('rabbitFunc.php');
 //require 'movieDB.php';
@@ -137,7 +116,6 @@ for($i = 1 ; $i < $num2 ; $i++)
 		//echo " and it will be released on: ".$_SESSION['scifiRd'][$i];
 	}
 }
-
 	
 //echo "Here are comedy movies you may like: ".$_SESSION['comedyArray'];
 //$user = $_SESSION['username'];
@@ -229,7 +207,7 @@ if( $_SERVER['REQUEST_METHOD'] == 'POST')
 	//echo "<br>".$_SESSION['friendsList'][1];
 }
 	
-?>-->
+?>
 
 <body background="spaghetti.jpg">
 
@@ -308,7 +286,6 @@ margin-right: 75px;
 		</div>
 	
 <?php  
-
 $friend = $_POST['user'];
 $hi = "Hello there";
 $test = "test";
@@ -317,7 +294,6 @@ echo "<table border=1 cellspacing=0 cellpading=0>
 <tr> <td><font color=blue>$friend</td> </tr>
 </table>";  
 //echo $friends;
-
 /*$num = 4;
 $friends = array();
 $friends[0] = $_POST['user'];
@@ -357,212 +333,6 @@ $test = $friends[0];*/
 		
 		<div id = "body">
 		<h2><font size="10" face = "courier" color = "black">Hello, User!</font></h2> 
-<?php
-	session_start();
-	//require ('rabbitFunc.php');
-	//require 'movieDB.php';
-	$user = $_SESSION['username'];
-	echo "<h2><font size="10" face = "courier" color = "black">Hello, $user</font></h2>";
-	$comedy = $_SESSION['comedy'];
-	$horror = $_SESSION['horror'];
-	$action = $_SESSION['action'];
-	$scifi = $_SESSION['scifi'];
-	$romance = $_SESSION['romance'];
-	$animation = $_SESSION['animation'];
-	$comedyRd = $_SESSION['comedyRd'];
-	$horrorRd = $_SESSION['horrorRd'];
-	$actionRd = $_SESSION['actionRd'];
-	$scifiRd = $_SESSION['scifiRd'];
-	$romanceRd = $_SESSION['romanced'];
-	$animationRd = $_SESSION['animationRd'];
-	echo "Hello ".$_SESSION['username'];
-	echo "<br>";
-	$num = 3;
-	echo "Here are some movies you may like:<br><br>";	
-	if($comedy !== "")
-	{
-		//echo "<br><br> Here are some comedy movies you may like:<br>";
-		for($i = 0 ; $i < count($_SESSION['comedyArray']) ; $i++)
-		{
-			if($_SESSION['comedyArray'][$i] !== "")
-			{
-				echo "<br>".$_SESSION['comedyArray'][$i];
-				if($_SESSION['comedyRd'][$i] !=="")
-				{
-					echo " and it will be released on: ".$_SESSION['comedyRd'][$i];
-				}
-			}
-		}	
-	}
-	if($horror !== "")
-	{
-		//echo "<br><br> Here are some horror movies you may like:<br>";
-		for($i = 0 ; $i < count($_SESSION['horrorArray']) ; $i++)
-		{
-			if($_SESSION['horrorArray'][$i] !== "")
-			{
-				echo "<br>".$_SESSION['horrorArray'][$i];
-				if($_SESSION['horrorRd'][$i] !== "")
-				{
-					echo " and it will be released on: ".$_SESSION['horrorRd'][$i];
-				}
-			}
-		}	
-	}
-	if($action !== "")
-	{
-		//echo "<br>Here are some action movies you may like:<br>";
-		for($i = 0 ; $i < count($_SESSION['actionArray']) ; $i++)
-		{
-			echo "<br>".$_SESSION['actionArray'][$i];
-			if($_SESSION['actionRd'][$i] !== "")
-			{
-				echo " and it will be released on: ".$_SESSION['actionRd'][$i];
-			}
-		}	
-	}
-
-	if($scifi !== "")
-	{
-		//echo "<br>Here are some sci-fi movies you may like:<br>";
-		for($i = 0 ; $i < count($_SESSION['scifiArray']) ; $i++)
-		{
-			echo "<br>".$_SESSION['scifiArray'][$i];
-			if($_SESSION['scifiRd'][$i] !== "")
-			{
-				echo " and it will be released on: ".$_SESSION['scifiRd'][$i];
-			}
-		}	
-	}
-
-	if($romance !== "")
-	{
-		//echo "<br>Here are some romance movies that you may like:<br>";
-		for($i = 0 ; $i < count($_SESSION['romanceArray']) ; $i++)
-		{
-			echo "<br>".$_SESSION['romanceArray'][$i];	
-			if($_SESSION['romanceRd'][$i] !== "")
-			{
-				echo " and it will be released on: ".$_SESSION['romanceRd'][$i];
-			}
-		}	
-	}
-
-	if($animation !== "")
-	{
-		//echo "<br>Here are some animation movies you may like:<br>";
-		for($i = 0 ; $i < count($_SESSION['animationArray']) ; $i++)
-		{
-			echo "<br>".$_SESSION['animationArray'][$i];	
-			if($_SESSION['animationRd'][$i] !== "")
-			{
-				echo " and it will be released on: ".$_SESSION['animationRd'][$i];
-			}
-		}	
-	}
-	$num2 = 4;
-	echo "<br>Your friends are:";
-	for($i = 1 ; $i < $num2 ; $i++)
-	{
-		if($_SESSION['getFriends'][$i] !== "")
-		{
-			echo "<br>".$_SESSION['getFriends'][$i];
-			//echo " and it will be released on: ".$_SESSION['scifiRd'][$i];
-		}
-	}
-
-
-	//echo "Here are comedy movies you may like: ".$_SESSION['comedyArray'];
-	//$user = $_SESSION['username'];
-	//require ('server.php');
-	//movieRec($user);
-	//echo "Hello ".$_SESSION['comedy'];
-	//echo "<br> Your favorite categories are: <br>";
-	//echo "$comedy<br>";
-	//echo "$horror<br>";
-	//echo "$action<br>";
-	//echo "$scifi<br>";
-	//echo "$romance<br>";
-	//echo "$animation<br>";
-	/*if($comedy !== "")
-	{
-		echo "$comedy<br>";	
-	}
-	if($horror !== "")
-	{
-		echo "$horror<br>";	
-	}
-	if($action !== "")
-	{
-		echo "$action<br>";	
-	}	
-	if($scifi !== "")
-	{
-		echo "$scifi<br>";	
-	}		
-	if($romance !== "")
-	{
-		echo "$romance<br>";	
-	}
-	if($animation !== "")
-	{
-		echo "$animation<br>";	
-	}
-	*/
-
-
-	/*if( $_SERVER['REQUEST_METHOD'] == 'POST')
-	{
-		if( isset($_POST['logout']))
-		{
-				session_destroy();
-			//echo "login successful";
-			//require 'loginRequest.php'; #change file name
-		}
-		if(isset($_POST['register']))
-		{
-			//require 'registerRequest.php'; #change file name
-			//reg()
-		}
-		if(isset($_POST['first']))
-		{
-			require 'backend/firstRequest.php'; #change file name
-
-		}
-		if(isset($_POST['friend']))
-		{
-			require 'backend/friendsList.php'; #change file name
-			/*echo "HELLO THIS IS A TEST";
-			$num = 4;
-			$friend = array();
-			for($i = 0 ; $i < $num ; $i++)
-			{
-				echo "<br>".$_SESSION['friendsList'][$i];
-				//echo " and it will be released on: ".$_SESSION['scifiRd'][$i];
-			}	
-			for($i = 0; $i < $num; $i++)
-			{
-				$friend[$i] = $_SESSION['friendsList'][$i];
-
-			}
-			for($i = 0; $i < $num; $i++)
-			{
-				echo $friend[$i];	
-			}
-			//echo "<br>".$_SESSION['friendsList'][1];
-			for($i = 0 ; $i < 10 ; $i++)
-			{
-				if($_SESSION['friendsList'][$i] == $_POST['username'])
-				{
-					echo "<br>".$_SESSION['friendsList'][$i];
-					$person = $_SESSION['friendsList'][$i];
-				}
-			}
-		}*/
-		//echo "<br>".$_SESSION['friendsList'][1];
-	}
-
-?>
 		</div>
 		<div id = "box">
 			<center>
