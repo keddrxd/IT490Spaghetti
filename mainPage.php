@@ -155,7 +155,6 @@ margin-right: 75px;
 	
 
 	
-	<form action = "mainPage.php" method="POST">
 		
 	<form action="index.php" >
 
