@@ -340,6 +340,8 @@ $test = $friends[0];*/
 	session_start();
 	//require ('rabbitFunc.php');
 	//require 'movieDB.php';
+	$user = $_SESSION['username'];
+	echo "<h2><font size="10" face = "courier" color = "black">Hello, $user</font></h2>";
 	$comedy = $_SESSION['comedy'];
 	$horror = $_SESSION['horror'];
 	$action = $_SESSION['action'];
