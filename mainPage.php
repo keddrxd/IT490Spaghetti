@@ -180,7 +180,7 @@ margin-right: 75px;
 		$scifiRd = $_SESSION['scifiRd'];
 		$romanceRd = $_SESSION['romanced'];
 		$animationRd = $_SESSION['animationRd'];
-		echo "Hello ".$_SESSION['username'];
+		echo "<div style ='font:30px Courier;color:#000000'>Hello ".$_SESSION['username'];
 		echo "<br>";
 		$num = 3;
 		echo "Here are some movies you may like:<br><br>";	
