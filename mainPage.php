@@ -184,7 +184,7 @@ margin-right: 75px;
 		echo "<b><div style ='font:40px Courier;color:#000000'>Hello $user</div></b>";
 		echo "<br>";
 		$num = 3;
-		echo "Based on your previous choices, here are some upcoming movies we recommend you see:<br><br>";	
+		echo "Based on your choices, here are some upcoming movies we recommend you see:<br><br>";	
 		if($comedy !== "")
 		{
 			//echo "<br><br> Here are some comedy movies you may like:<br>";
