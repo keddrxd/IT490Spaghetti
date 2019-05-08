@@ -297,6 +297,7 @@ margin-right: 75px;
 		</center>
 		</div>
 		<div id= "map">
+			<p> Navigate the map to find movie theaters around you </p>
 		<center>
 		<div id="mapSize" style="width:500px;height:500px;"></div>
 
