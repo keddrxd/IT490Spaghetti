@@ -274,29 +274,6 @@
 		<!--<button name = "friend" style = "height:50px;width:80px"><font size = 4> Submit </font></button>-->
 	  </form>
 	  </div>
-   
-	
-    <!-- /.row -->
-
-    <!-- Portfolio Section -->
-  
-<center>
-    <div class="row">
-      <center>
-    
-        
-        </div>
-		</center>
-      </div>
-</center>
-     
-      
-      
-      
-        </div>
-      </div>
-    </div>
-    <!-- /.row -->
 
     <!-- Features Section -->
     <div class="row">
@@ -306,8 +283,9 @@
 		 
 			 
 	      <div class="col-lg-4 col-sm-6 portfolio-item">
-	 <center> 
+	 
         <div class="card h-100">
+		<center> 
 	      <img class="card-img-top" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Fandango_2014.svg/1200px-Fandango_2014.svg.png" alt=""></a>
           <div class="card-body">
             <h4 class="card-title">
