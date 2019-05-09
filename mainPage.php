@@ -156,8 +156,8 @@
 		$scifiRd = $_SESSION['scifiRd'];
 		$romanceRd = $_SESSION['romanced'];
 		$animationRd = $_SESSION['animationRd'];
-		echo "<b><div style ='font:40px Courier;color:#000000'>Hey $user</div></b>";
-	  	echo "<b><div style ='font:40px Courier;color:#000000'>! Here's your movie profile!</div></b>";
+		echo "<b><div style ='font:40px Courier;color:#000000'>Hey $user!</div></b>";
+	  	echo "<b><div style ='font:40px Courier;color:#000000'>Here's your movie profile!</div></b>";
 		echo "<br>";
 		$num = 3;
 		echo "Based on your choices, here are some upcoming movies we recommend you see:<br><br>";	
