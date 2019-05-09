@@ -261,7 +261,8 @@
 		  <input type="text" name="user" placeholder="username" method="POST">
 		  <br>
 		<!--<input type="submit" value="Submit">-->
-		<button name = "friend" style = "height:50px;width:80px"><font size = 4> Submit </font></button>
+		<button name = "friend">Submit</button>
+		<!--<button name = "friend" style = "height:50px;width:80px"><font size = 4> Submit </font></button>-->
     
     </div>
     <!-- /.row -->
