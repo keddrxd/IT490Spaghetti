@@ -266,6 +266,7 @@
 	 <br><br><br>Add a Friend!<br>
 		  <input type="text" name="user" placeholder="username" method="POST">
 		  <br>
+		  <br>
 		<!--<input type="submit" value="Submit">-->
 		<button name = "friend">Submit</button>
 		  <br>
