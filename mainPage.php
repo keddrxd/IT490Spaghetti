@@ -136,7 +136,129 @@
   <div class="container">
 
     <h1 class="my-4">Here is your Movie Profile</h1>
-	
+    <?php
+		session_start();
+		//require ('rabbitFunc.php');
+		//require 'movieDB.php';
+		$user = $_SESSION['username'];
+		$comedy = $_SESSION['comedy'];
+		$horror = $_SESSION['horror'];
+		$action = $_SESSION['action'];
+		$scifi = $_SESSION['scifi'];
+		$romance = $_SESSION['romance'];
+		$animation = $_SESSION['animation'];
+		$comedyRd = $_SESSION['comedyRd'];
+		$horrorRd = $_SESSION['horrorRd'];
+		$actionRd = $_SESSION['actionRd'];
+		$scifiRd = $_SESSION['scifiRd'];
+		$romanceRd = $_SESSION['romanced'];
+		$animationRd = $_SESSION['animationRd'];
+		echo "<b><div style ='font:40px Courier;color:#000000'>Hello $user</div></b>";
+		echo "<br>";
+		$num = 3;
+		echo "Based on your choices, here are some upcoming movies we recommend you see:<br><br>";	
+		if($comedy !== "")
+		{
+			//echo "<br><br> Here are some comedy movies you may like:<br>";
+			for($i = 0 ; $i < count($_SESSION['comedyArray']) ; $i++)
+			{
+				if($_SESSION['comedyArray'][$i] !== "")
+				{
+					echo "<br>".$_SESSION['comedyArray'][$i];
+					if($_SESSION['comedyRd'][$i] !=="")
+					{
+						echo " and it will be released on: ".$_SESSION['comedyRd'][$i];
+					}
+				}
+			}	
+		}
+		if($horror !== "")
+		{
+			//echo "<br><br> Here are some horror movies you may like:<br>";
+			for($i = 0 ; $i < count($_SESSION['horrorArray']) ; $i++)
+			{
+				if($_SESSION['horrorArray'][$i] !== "")
+				{
+					echo "<br>".$_SESSION['horrorArray'][$i];
+					if($_SESSION['horrorRd'][$i] !== "")
+					{
+						echo " and it will be released on: ".$_SESSION['horrorRd'][$i];
+					}
+				}
+			}	
+		}
+		if($action !== "")
+		{
+			//echo "<br>Here are some action movies you may like:<br>";
+			for($i = 0 ; $i < count($_SESSION['actionArray']) ; $i++)
+			{
+				echo "<br>".$_SESSION['actionArray'][$i];
+				if($_SESSION['actionRd'][$i] !== "")
+				{
+					echo " and it will be released on: ".$_SESSION['actionRd'][$i];
+				}
+			}	
+		}
+		if($scifi !== "")
+		{
+			//echo "<br>Here are some sci-fi movies you may like:<br>";
+			for($i = 0 ; $i < count($_SESSION['scifiArray']) ; $i++)
+			{
+				echo "<br>".$_SESSION['scifiArray'][$i];
+				if($_SESSION['scifiRd'][$i] !== "")
+				{
+					echo " and it will be released on: ".$_SESSION['scifiRd'][$i];
+				}
+			}	
+		}
+		if($romance !== "")
+		{
+			//echo "<br>Here are some romance movies that you may like:<br>";
+			for($i = 0 ; $i < count($_SESSION['romanceArray']) ; $i++)
+			{
+				echo "<br>".$_SESSION['romanceArray'][$i];	
+				if($_SESSION['romanceRd'][$i] !== "")
+				{
+					echo " and it will be released on: ".$_SESSION['romanceRd'][$i];
+				}
+			}	
+		}
+		if($animation !== "")
+		{
+			//echo "<br>Here are some animation movies you may like:<br>";
+			for($i = 0 ; $i < count($_SESSION['animationArray']) ; $i++)
+			{
+				echo "<br>".$_SESSION['animationArray'][$i];	
+				if($_SESSION['animationRd'][$i] !== "")
+				{
+					echo " and it will be released on: ".$_SESSION['animationRd'][$i];
+				}
+			}	
+		}
+		$num2 = 4;
+		echo "<br><br><div style ='font:21px Courier;color:#000000'> Your friends are: </div>";
+		#echo '<style = "font-color: #ff0000"> Your friends are: </style>';
+		#echo "<br><br><br><br>Your friends are:";
+		for($i = 1 ; $i < $num2 ; $i++)
+		{
+			if($_SESSION['getFriends'][$i] !== "")
+			{
+				echo "<br>".$_SESSION['getFriends'][$i];
+				/*echo "<table border=1 cellspacing=0 cellpading=0>  
+				<tr> <td><font color=blue>Friends List</td> </tr>    
+				<tr> <td><font color=blue>Hello</td> </tr>
+				</table>"; */
+				//echo " and it will be released on: ".$_SESSION['scifiRd'][$i];
+			}
+		}
+		
+	?>
+	  
+	 <br><br><br>Add a Friend!<br>
+		  <input type="text" name="user" placeholder="username" method="POST">
+		  <br>
+		<!--<input type="submit" value="Submit">-->
+		<button name = "friend" style = "height:50px;width:80px"><font size = 4> Submit </font></button>
     
     </div>
     <!-- /.row -->
