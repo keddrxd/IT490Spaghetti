@@ -39,7 +39,7 @@ if( $_SERVER['REQUEST_METHOD'] == 'POST')
 </head>
 
 <body>
-<form action = "moviePage.php" method = "POST">
+
  <!-- Navigation -->
   <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark fixed-top">
     <div class="container">
@@ -161,8 +161,9 @@ if( $_SERVER['REQUEST_METHOD'] == 'POST')
         
       </div>
       <div class="col-md-4">
-	  
+	  	<form action = "backend/firstRequest.php" method = "POST">
 		<button name = "first" style = "height:50px;width:80px"><font size = 4> Submit </font></button>
+	      </form>
 		
         <!--<a class="btn btn-lg btn-secondary btn-block" name = "first" href="#">Submit</a>-->
 		
