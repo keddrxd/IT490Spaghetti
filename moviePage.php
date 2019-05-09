@@ -148,6 +148,7 @@ if( $_SERVER['REQUEST_METHOD'] == 'POST')
           </div>
         </div>
       </div>
+	  <button name = "first">Submit</button>
     </div>
     <!-- /.row -->
 
@@ -170,7 +171,7 @@ if( $_SERVER['REQUEST_METHOD'] == 'POST')
 		
       </div>
     </div>
-	<button name = "first">Submit</button>
+	
   </div>
   
 
