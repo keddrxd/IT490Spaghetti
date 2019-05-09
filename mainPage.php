@@ -299,7 +299,7 @@
 	    
 </div>
       <div class="col-lg-6">
-        <div id="map" style="width:600px;height:450px;"></div>
+        <div id="map" style="width:500px;height:350px;"></div>
 		<script>
 var map;
 var infowindow;
