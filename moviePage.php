@@ -162,7 +162,7 @@ if( $_SERVER['REQUEST_METHOD'] == 'POST')
       </div>
       <div class="col-md-4">
 	  	
-		<button name = "first">Submit</button>
+		
 	<!--<button name = "first" style = "height:50px;width:80px"><font size = 4> Submit </font></button>-->
 	     
 		
@@ -172,6 +172,7 @@ if( $_SERVER['REQUEST_METHOD'] == 'POST')
     </div>
 
   </div>
+  <button name = "first">Submit</button>
 
   <!-- /.container -->
 
