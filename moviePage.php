@@ -182,7 +182,7 @@ if( $_SERVER['REQUEST_METHOD'] == 'POST')
   <footer class="py-5 bg-dark">
     <div class="container">
       <p class="m-0 text-center text-white">Copyright &copy; 2019 Rotten Spaghetti</p>
-	    <p> Shoutout to themoviedb.org for the rights to their API </p>
+	    <p class="m-0 text-center text-white"> Shoutout to themoviedb.org for the rights to their API </p>
     </div>
     <!-- /.container -->
   </footer>
