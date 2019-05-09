@@ -404,6 +404,7 @@ google.maps.event.addDomListener(window, 'load', initMap);
   <footer class="py-5 bg-dark">
     <div class="container">
       <p class="m-0 text-center text-white">Copyright &copy; Rotten Spaghetti 2019</p>
+	    <p> Shoutout to themoviedb.org and Google for the rights to their API </p>
     </div>
     <!-- /.container -->
   </footer>
