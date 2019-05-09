@@ -256,14 +256,14 @@
 		}
 		
 	?>
-	  
+	  <form action = "mainPage.php" method = "POST">
 	 <br><br><br>Add a Friend!<br>
 		  <input type="text" name="user" placeholder="username" method="POST">
 		  <br>
 		<!--<input type="submit" value="Submit">-->
 		<button name = "friend">Submit</button>
 		<!--<button name = "friend" style = "height:50px;width:80px"><font size = 4> Submit </font></button>-->
-    
+	  </form>
     </div>
     <!-- /.row -->
 
