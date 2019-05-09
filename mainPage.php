@@ -304,7 +304,7 @@
         <h2> <center> Find Your Theater </center></h2>
         <p><center> To use the map you can drag the map to whatever city/town you live in and once you right click the map it will refresh and show you movie theaters in that area. Each red marker indicates a movie theater in that area. The radius is 15 miles. </center> </p> 
 		  <div class="col-lg-4 col-sm-6 portfolio-item">
-	  
+	  <center>
         <div class="card h-100">
 	      <img class="card-img-top" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Fandango_2014.svg/1200px-Fandango_2014.svg.png" alt=""></a>
           <div class="card-body">
@@ -314,6 +314,7 @@
             <p class="card-text">Buy your movie tickets from Fandango.com</p>
           </div>
       </div>
+			  </center>
 	    </div>
 </div>
       <div class="col-lg-6">
