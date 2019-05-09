@@ -97,13 +97,13 @@ if( $_SERVER['REQUEST_METHOD'] == 'POST')
     <div class="row">
       <div class="col-lg-4 col-sm-6 portfolio-item">
         <div class="card h-100">
-          <a href="#"><img class="card-img-top" src="https://m.media-amazon.com/images/M/MV5BZDQwMjNiMTQtY2UwYy00NjhiLTk0ZWEtZWM5ZWMzNGFjNTVkXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_.jpg" alt=""></a>
+          <img class="card-img-top" src="https://m.media-amazon.com/images/M/MV5BZDQwMjNiMTQtY2UwYy00NjhiLTk0ZWEtZWM5ZWMzNGFjNTVkXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_.jpg" alt=""></a>
           <br><center><input type="checkbox" name="comedy" value="comedy"></center><br>
         </div>
       </div>
       <div class="col-lg-4 col-sm-6 portfolio-item">
         <div class="card h-100">
-          <a href="#"><img class="card-img-top" src="https://m.media-amazon.com/images/M/MV5BNDYxNjQyMjAtNTdiOS00NGYwLWFmNTAtNThmYjU5ZGI2YTI1XkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_SY1000_CR0,0,675,1000_AL_.jpg" alt=""></a>
+         <img class="card-img-top" src="https://m.media-amazon.com/images/M/MV5BNDYxNjQyMjAtNTdiOS00NGYwLWFmNTAtNThmYjU5ZGI2YTI1XkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_SY1000_CR0,0,675,1000_AL_.jpg" alt=""></a>
           <br><center><input type="checkbox" name="action" value="action"></center><br>
 		 <div class="card-body">
             
@@ -112,7 +112,7 @@ if( $_SERVER['REQUEST_METHOD'] == 'POST')
       </div>
       <div class="col-lg-4 col-sm-6 portfolio-item">
         <div class="card h-100">
-          <a href="#"><img class="card-img-top" src="https://m.media-amazon.com/images/M/MV5BZjMxYzBiNjUtZDliNC00MDAyLTg3N2QtOWNjNmNhZGQzNDg5XkEyXkFqcGdeQXVyNjE2MjQwNjc@._V1_.jpg" alt=""></a>
+         <img class="card-img-top" src="https://m.media-amazon.com/images/M/MV5BZjMxYzBiNjUtZDliNC00MDAyLTg3N2QtOWNjNmNhZGQzNDg5XkEyXkFqcGdeQXVyNjE2MjQwNjc@._V1_.jpg" alt=""></a>
           <br><center><input type="checkbox" name="animation" value="animation"></center><br>
 		  <div class="card-body">
             
@@ -130,7 +130,7 @@ if( $_SERVER['REQUEST_METHOD'] == 'POST')
       </div>
       <div class="col-lg-4 col-sm-6 portfolio-item">
         <div class="card h-100">
-          <a href="#"><img class="card-img-top" src="https://m.media-amazon.com/images/M/MV5BMDdmZGU3NDQtY2E5My00ZTliLWIzOTUtMTY4ZGI1YjdiNjk3XkEyXkFqcGdeQXVyNTA4NzY1MzY@._V1_SY1000_CR0,0,671,1000_AL_.jpg" alt=""></a>
+         <img class="card-img-top" src="https://m.media-amazon.com/images/M/MV5BMDdmZGU3NDQtY2E5My00ZTliLWIzOTUtMTY4ZGI1YjdiNjk3XkEyXkFqcGdeQXVyNTA4NzY1MzY@._V1_SY1000_CR0,0,671,1000_AL_.jpg" alt=""></a>
           <br><center><input type="checkbox" name="romance" value="romance"></center><br>
 		  <div class="card-body">
             <h4 class="card-title">
@@ -140,7 +140,7 @@ if( $_SERVER['REQUEST_METHOD'] == 'POST')
       </div>
       <div class="col-lg-4 col-sm-6 portfolio-item">
         <div class="card h-100">
-          <a href="#"><img class="card-img-top" src="https://m.media-amazon.com/images/M/MV5BMTYyOTAxMDA0OF5BMl5BanBnXkFtZTcwNzgwNTc1NA@@._V1_SY1000_CR0,0,675,1000_AL_.jpg" alt=""></a>
+         <img class="card-img-top" src="https://m.media-amazon.com/images/M/MV5BMTYyOTAxMDA0OF5BMl5BanBnXkFtZTcwNzgwNTc1NA@@._V1_SY1000_CR0,0,675,1000_AL_.jpg" alt=""></a>
           <br><center><input type="checkbox" name="horror" value="horror"></center><br>
 		  <div class="card-body">
             <h4 class="card-title">
