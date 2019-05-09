@@ -145,7 +145,7 @@ if( $_SERVER['REQUEST_METHOD'] == 'POST')
               </div>
 
               <!--<button name = "register">Register</button>-->
-		<button class="btn btn-lg btn-primary btn-block text-uppercase" name = "register" type="submit">Sign in</button>
+		<button class="btn btn-lg btn-primary btn-block text-uppercase" name = "register" type="submit">Register</button>
               
               <hr class="my-4">
              
