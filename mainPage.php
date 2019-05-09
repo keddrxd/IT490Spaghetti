@@ -89,6 +89,21 @@
 ?>
 <body>
 
+<div id="container">
+   <div id="friends"> </div>
+   
+</div>
+
+#friends {
+	margin-left: 600px;
+    margin-top: -75px;s4e1s
+	margin-right: 75px;	
+    width: 84px;
+    height: 40px;   
+    font-size:14px;
+    font-weight:700;
+    background-color: clear;
+
   <!-- Navigation -->
   <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark fixed-top">
     <div class="container">
@@ -260,6 +275,8 @@
 		}
 		
 	?>
+	</div>
+	<div id = "friends">
 	  <form action = "mainPage.php" method = "POST">
 	 <br><br><br>Add a Friend!<br>
 		  <input type="text" name="user" placeholder="username" method="POST">
@@ -271,6 +288,7 @@
 		<!--<button name = "friend" style = "height:50px;width:80px"><font size = 4> Submit </font></button>-->
 	  </form>
     </div>
+	
     <!-- /.row -->
 
     <!-- Portfolio Section -->
@@ -316,14 +334,12 @@ var infowindow;
 var request;
 var service;
 var markers = [];
-
 function initMap()
 {
 	var center = new google.maps.LatLng(40.7423385, -74.1815296);
 	map = new google.maps.Map(document.getElementById('map'),{
 	center:center,
 	zoom:13
-
 	});
 	request = {
 		location:center,
@@ -334,12 +350,10 @@ function initMap()
 	infowindow = new google.maps.InfoWindow();
 	service = new google.maps.places.PlacesService(map);
 	service.textSearch(request, callback);
-
 	google.maps.event.addListener(map, 'rightclick', function(event)
 	{
 			map.setCenter(event.latLng);
 			clearResults(markers);
-
 			var requests = {
 				location:event.latLng,
 				radius:25000,
@@ -347,10 +361,7 @@ function initMap()
 			};
 			service.textSearch(requests, callback);
 	})
-
 }
-
-
 	function callback(results, status)
 	{
 		if (status == google.maps.places.PlacesServiceStatus.OK)
@@ -360,7 +371,6 @@ function initMap()
 					markers.push(createMarker(results[i]));
 				}
 		}
-
 	}
 	function createMarker(place)
 	{
@@ -369,15 +379,12 @@ function initMap()
 		({
 			map:map,
 			position:place.geometry.location
-
 		});
 		google.maps.event.addListener(marker, 'click', function(){
 			infowindow.setContent(place.name);
 			infowindow.open(map, this);
 		});
 		return marker;
-
-
 	}
 	function clearResults(markers)
 	{
@@ -386,11 +393,8 @@ function initMap()
 				markers[m].setMap(null)
 		}
 		markers = []
-
 	}
-
 google.maps.event.addDomListener(window, 'load', initMap);
-
 </script>
 
    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCG-Yqq4X1St3Inbo1WpKkzk6TAbHjkYzI&libraries=places&callback=initMap" async defer></script>
@@ -407,7 +411,7 @@ google.maps.event.addDomListener(window, 'load', initMap);
   <footer class="py-5 bg-dark">
     <div class="container">
       <p class="m-0 text-center text-white">Copyright &copy; Rotten Spaghetti 2019</p>
-	    <p> <center> Shoutout to themoviedb.org and Google for the rights to their API </center></p>
+	    <p> Shoutout to themoviedb.org and Google for the rights to their API </p>
     </div>
     <!-- /.container -->
   </footer>
