@@ -101,7 +101,10 @@
         <ul class="navbar-nav ml-auto">
           <li class="nav-item dropdown">
 		  <form action="index.php" >
-		  <button name = "logout" style = "height:50px;width:80px"><font size = 4> Logout </font></button>
+		  <!--<button name = "logout" style = "height:50px;width:80px"><font size = 4> Logout </font></button>-->
+		<a class="nav-link " name = "logout" href="#" id="navbarDropdownBlog" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Log Out
+            </a>
 		  </form>
             <!--<a class="nav-link " href="#" id="navbarDropdownBlog" data-toggle="dropdown" name = "logout" aria-haspopup="true" aria-expanded="false">
               Log Out
