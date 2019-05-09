@@ -138,7 +138,7 @@
   <!-- Page Content -->
   <div class="container">
 
-    <h1 class="my-4">Here is your Movie Profile</h1>
+    <!--<h1 class="my-4">Here is your Movie Profile</h1>-->
     <?php
 		session_start();
 		//require ('rabbitFunc.php');
@@ -156,7 +156,8 @@
 		$scifiRd = $_SESSION['scifiRd'];
 		$romanceRd = $_SESSION['romanced'];
 		$animationRd = $_SESSION['animationRd'];
-		echo "<b><div style ='font:40px Courier;color:#000000'>Hello $user</div></b>";
+		echo "<b><div style ='font:40px Courier;color:#000000'>Hey $user</div></b>";
+	  	echo "! Here's your movie profile!";
 		echo "<br>";
 		$num = 3;
 		echo "Based on your choices, here are some upcoming movies we recommend you see:<br><br>";	
