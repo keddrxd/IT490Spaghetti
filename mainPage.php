@@ -296,7 +296,7 @@
       </div>
 			  </center>
 	    </div>
-	    </div>
+	    
 </div>
       <div class="col-lg-6">
         <div id="map" style="width:600px;height:450px;"></div>
