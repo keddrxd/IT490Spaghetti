@@ -298,7 +298,7 @@
 	    </div>
 	    
 </div>
-      <div class="col-lg-6">
+
         <div id="map" style="width:500px;height:350px;"></div>
 		<script>
 var map;
@@ -371,7 +371,7 @@ google.maps.event.addDomListener(window, 'load', initMap);
 
    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCG-Yqq4X1St3Inbo1WpKkzk6TAbHjkYzI&libraries=places&callback=initMap" async defer></script>
       </div>
-    </div>
+    
     <!-- /.row -->
 
     <hr>
