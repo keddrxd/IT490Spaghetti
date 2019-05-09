@@ -95,14 +95,15 @@
 </div>
 
 #friends {
-	margin-left: 5000px;
+    margin-left: 5000px;
     margin-top: -75px;s4e1s
-	margin-right: 75px;	
+    margin-right: 75px;	
     width: 84px;
     height: 40px;   
     font-size:14px;
     font-weight:700;
     background-color: clear;
+}
 
   <!-- Navigation -->
   <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark fixed-top">
