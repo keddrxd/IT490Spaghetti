@@ -80,7 +80,6 @@ if( $_SERVER['REQUEST_METHOD'] == 'POST')
 
           <div class="card-body">
             <h5 class="card-title text-center">Returning User? Sign in</h5>
-            <form class="form-signin">
               <div class="form-label-group">
 				<form action = "index.php" method = "POST">
 
@@ -102,7 +101,6 @@ if( $_SERVER['REQUEST_METHOD'] == 'POST')
               <hr class="my-4">
              
             </form>
-			</form>
           </div>
         </div>
       </div>
@@ -118,7 +116,6 @@ if( $_SERVER['REQUEST_METHOD'] == 'POST')
           </div>
           <div class="card-body">
             <h5 class="card-title text-center">New User? Sign up</h5>
-            <form class="form-signin">
               <div class="form-label-group">
 			  	<form action = "index.php" method = "POST">
 
@@ -151,7 +148,7 @@ if( $_SERVER['REQUEST_METHOD'] == 'POST')
               <hr class="my-4">
              
             </form>
-			</form>
+			
           </div>
         </div>
       </div>
@@ -173,4 +170,3 @@ if( $_SERVER['REQUEST_METHOD'] == 'POST')
 </body>
 
 </html>
-
