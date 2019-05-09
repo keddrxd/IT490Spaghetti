@@ -95,7 +95,7 @@
 </div>
 
 #friends {
-	margin-left: 600px;
+	margin-left: 5000px;
     margin-top: -75px;s4e1s
 	margin-right: 75px;	
     width: 84px;
