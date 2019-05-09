@@ -160,7 +160,7 @@ if( $_SERVER['REQUEST_METHOD'] == 'POST')
   <!-- Footer -->
   <footer class="py-5 bg-dark">
     <div class="container">
-      <p class="m-0 text-center text-white">Copyright &copy; Rotten Spaghetti</p>
+      <p class="m-0 text-center text-white">Copyright &copy; 2019 Rotten Spaghetti</p>
     </div>
     <!-- /.container -->
   </footer>
