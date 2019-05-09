@@ -162,7 +162,8 @@ if( $_SERVER['REQUEST_METHOD'] == 'POST')
       </div>
       <div class="col-md-4">
 	  	
-	<button name = "first" style = "height:50px;width:80px"><font size = 4> Submit </font></button>
+		<button name = "first">Submit</button>
+	<!--<button name = "first" style = "height:50px;width:80px"><font size = 4> Submit </font></button>-->
 	     
 		
         <!--<a class="btn btn-lg btn-secondary btn-block" name = "first" href="#">Submit</a>-->
