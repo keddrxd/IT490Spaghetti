@@ -148,7 +148,7 @@ if( $_SERVER['REQUEST_METHOD'] == 'POST')
           </div>
         </div>
       </div>
-	<center><button class="btn btn-lg btn-secondary btn-block" name = "first" href="#">Submit</button></center>
+	<button <center> class="btn btn-lg btn-secondary btn-block" name = "first" href="#">Submit</center></button>
 	      <!--<a class="btn btn-lg btn-secondary btn-block" name = "first" href="#">Submit</a>-->
     </div>
     <!-- /.row -->
