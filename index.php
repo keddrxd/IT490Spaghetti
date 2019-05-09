@@ -96,7 +96,8 @@ if( $_SERVER['REQUEST_METHOD'] == 'POST')
               
               
 
-              <button name = "login">Sign in</button>
+              <!--<button name = "login">Sign in</button>-->
+		<button class="btn btn-lg btn-primary btn-block text-uppercase" name = "login" type="submit">Sign in</button>
              
               <hr class="my-4">
              
