@@ -26,7 +26,7 @@ function createNewVersion($server)
 {
 		$client = new rabbitMQClient("testRabbitMQ.ini","deploymentServer");
 		$futureVersion = versionCheck($server);
-		shell_exec('bash sendPackage.sh '.$server.' '.$futureVersion);
+		shell_exec('bash sendToDeploy.sh '.$server.' '.$futureVersion);
 		$request = array();
 		$request['type'] = "newPackage";
 		$request['serverType'] = $server;
