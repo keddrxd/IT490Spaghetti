@@ -39,7 +39,6 @@ if( $_SERVER['REQUEST_METHOD'] == 'POST')
 </head>
 
 <body>
-
  <!-- Navigation -->
   <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark fixed-top">
     <div class="container">
@@ -90,6 +89,7 @@ if( $_SERVER['REQUEST_METHOD'] == 'POST')
   <div class="container">
 
     <h1 class="my-4">Please tell us what you may like:</h1>
+	<form action = "moviePage.php" method = "POST">
 
     
     <!-- Portfolio Section -->
@@ -188,7 +188,7 @@ if( $_SERVER['REQUEST_METHOD'] == 'POST')
   <!-- Bootstrap core JavaScript -->
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
+</form>
 </body>
 
 </html>
