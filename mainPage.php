@@ -89,21 +89,6 @@
 ?>
 <body>
 
-<div id="container">
-   <div id="friends"> </div>
-   
-</div>
-
-#friends {
-    margin-left: 5000px;
-    margin-top: -75px;s4e1s
-    margin-right: 75px;	
-    width: 84px;
-    height: 40px;   
-    font-size:14px;
-    font-weight:700;
-    background-color: clear;
-}
 
   <!-- Navigation -->
   <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark fixed-top">
@@ -276,8 +261,7 @@
 		}
 		
 	?>
-	</div>
-	<div id = "friends">
+	
 	  <form action = "mainPage.php" method = "POST">
 	 <br><br><br>Add a Friend!<br>
 		  <input type="text" name="user" placeholder="username" method="POST">
@@ -288,7 +272,8 @@
 		  <br>
 		<!--<button name = "friend" style = "height:50px;width:80px"><font size = 4> Submit </font></button>-->
 	  </form>
-    </div>
+	  </div>
+   
 	
     <!-- /.row -->
 
