@@ -268,7 +268,7 @@
 		  <br>
 		  <br>
 		<!--<input type="submit" value="Submit">-->
-		<button name = "friend">Submit</button>
+		<button class="btn btn-lg btn-secondary btn-block" name = "friend" href="#">Submit</button>
 		  <br>
 		  <br>
 		<!--<button name = "friend" style = "height:50px;width:80px"><font size = 4> Submit </font></button>-->
