@@ -263,6 +263,8 @@
 		  <br>
 		<!--<input type="submit" value="Submit">-->
 		<button name = "friend">Submit</button>
+		  <br>
+		  <br>
 		<!--<button name = "friend" style = "height:50px;width:80px"><font size = 4> Submit </font></button>-->
 	  </form>
     </div>
@@ -270,7 +272,7 @@
 
     <!-- Portfolio Section -->
   
-
+<center>
     <div class="row">
       <center>
       <div class="col-lg-4 col-sm-6 portfolio-item">
@@ -286,6 +288,7 @@
         </div>
 		</center>
       </div>
+</center>
      
       
       
