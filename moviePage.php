@@ -39,6 +39,7 @@ if( $_SERVER['REQUEST_METHOD'] == 'POST')
 </head>
 
 <body>
+<form action = "moviePage.php" method = "POST">
  <!-- Navigation -->
   <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark fixed-top">
     <div class="container">
