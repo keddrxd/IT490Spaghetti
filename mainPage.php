@@ -56,6 +56,8 @@
 		if(isset($_POST['friend']))
 		{
 			require 'backend/friendsList.php'; #change file name
+			$justAdded = $_POST['friend'];
+			echo $justAdded;
 			/*echo "HELLO THIS IS A TEST";
 			$num = 4;
 			$friend = array();
@@ -274,10 +276,6 @@
 		  <br>
 		<!--<button name = "friend" style = "height:50px;width:80px"><font size = 4> Submit </font></button>-->
 	  </form>
-	  <?php
-	  	$justAdded = $_GET["user"];
-	  	echo $justAdded;	  
-	  ?>
 	  </div>
 
     <!-- Features Section -->
