@@ -55,7 +55,9 @@
 		}
 		if(isset($_POST['friend']))
 		{
-			require 'backend/friendsList.php'; #change file name
+			$test = $_POST['user'];
+			echo $test;
+			require 'backend/friendsList.php'; #change file name			
 			//$justAdded = $_POST['friend'];
 			//echo $justAdded;
 			/*echo "HELLO THIS IS A TEST";
