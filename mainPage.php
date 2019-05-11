@@ -56,8 +56,8 @@
 		if(isset($_POST['friend']))
 		{
 			require 'backend/friendsList.php'; #change file name
-			$justAdded = $_POST['friend'];
-			echo $justAdded;
+			//$justAdded = $_POST['friend'];
+			//echo $justAdded;
 			/*echo "HELLO THIS IS A TEST";
 			$num = 4;
 			$friend = array();
@@ -276,6 +276,13 @@
 		  <br>
 		<!--<button name = "friend" style = "height:50px;width:80px"><font size = 4> Submit </font></button>-->
 	  </form>
+	  <?php  
+		$friendName = $_POST['user']; 
+		echo "<table border=1 cellspacing=0 cellpading=0>  
+		<tr> <td><font color=blue>Friends List</td> </tr>    
+		<tr> <td><font color=blue>$friendName</td> </tr>  
+		</table>";  
+	?>  
 	  </div>
 
     <!-- Features Section -->
