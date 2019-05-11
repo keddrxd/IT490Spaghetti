@@ -55,8 +55,8 @@
 		}
 		if(isset($_POST['friend']))
 		{
-			$test = $_POST['user'];
-			echo $test;
+			//$test = $_POST['user'];
+			//echo $test;
 			require 'backend/friendsList.php'; #change file name			
 			//$justAdded = $_POST['friend'];
 			//echo $justAdded;
@@ -256,6 +256,18 @@
 			if($_SESSION['getFriends'][$i] !== "")
 			{
 				echo "<br>".$_SESSION['getFriends'][$i];
+				/*echo "<table border=1 cellspacing=0 cellpading=0>  
+				<tr> <td><font color=blue>Friends List</td> </tr>    
+				<tr> <td><font color=blue>Hello</td> </tr>
+				</table>"; */
+				//echo " and it will be released on: ".$_SESSION['scifiRd'][$i];
+			}
+		}
+	 	 for($i = 1 ; $i < $num2 ; $i++)
+		{
+			if($_SESSION['friendsList'][$i] !== "")
+			{
+				echo "<br>".$_SESSION['friendsList'][$i];
 				/*echo "<table border=1 cellspacing=0 cellpading=0>  
 				<tr> <td><font color=blue>Friends List</td> </tr>    
 				<tr> <td><font color=blue>Hello</td> </tr>
