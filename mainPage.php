@@ -42,7 +42,9 @@
 			session_destroy();
 			session_destroy();
 			session_destroy();
-			session_destroy();			
+			session_destroy();	
+			unset($_SESSION["getFriends"]);
+			unset($_SESSION["friendsList"]);
 			//echo "login successful";
 			//require 'loginRequest.php'; #change file name
 		}
