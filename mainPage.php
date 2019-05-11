@@ -22,7 +22,7 @@
 	$to = "keddrxd@gmail.com";
 	$subject = "bbq sauce on mah titties";
 	$message = "Aalap can suck a dick";
-	mail($to,$subject,$message);
+	mail("keddrxd@gmail.com","bbq sauce on my titties","Aalap sucks dick");
 	//require ('rabbitFunc.php');
 	//require 'movieDB.php';
 	$comedy = $_SESSION['comedy'];
