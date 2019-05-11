@@ -57,6 +57,8 @@
 		{
 			//$test = $_POST['user'];
 			//echo $test;
+			unset($_SESSION["getFriends"]);
+			unset($_SESSION["friendsList"]);
 			require 'backend/friendsList.php'; #change file name			
 			//$justAdded = $_POST['friend'];
 			//echo $justAdded;
