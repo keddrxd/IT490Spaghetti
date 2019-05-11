@@ -259,8 +259,8 @@
 				//echo " and it will be released on: ".$_SESSION['scifiRd'][$i];
 			}
 		}
-	  	$justAdded = $_POST['user'];
-	  	echo $justAdded;
+	  	//$justAdded = $_POST['user'];
+	  	//echo $justAdded;
 		
 	?>
 	
