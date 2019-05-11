@@ -262,7 +262,7 @@
 		{
 			if($_SESSION['friendsList'][$i] !== "")
 			{
-				if($_SESSION['friendsList'][$i] !== "")
+				if($_SESSION['friendsList'][$i] !== " ")
 				{
 					echo "<br>".$_SESSION['friendsList'][$i];
 				}
@@ -275,7 +275,7 @@
 		}
 		for($i = 1 ; $i < $num2 ; $i++)
 		{
-			if($_SESSION['getFriends'][$i] !== "")
+			if($_SESSION['getFriends'][$i] !== " ")
 			{
 				echo "<br>".$_SESSION['getFriends'][$i];
 				/*echo "<table border=1 cellspacing=0 cellpading=0>  
