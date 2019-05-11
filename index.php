@@ -60,7 +60,7 @@ if( $_SERVER['REQUEST_METHOD'] == 'POST')
         <div class="carousel-item active" style="background-image: url(spaghetti.jpg)">
           <div class="carousel-caption d-none d-md-block">
 		  <h3 style = "color: blue"> <font size = "200">Rotten Spaghetti </font></h3>
-		  <p style = "color: blue"><font size = "50>The best movie recommender out there! </font></p>
+		  <p style = "color: blue"><font size = "50">The best movie recommender out there! </font></p>
           </div>
         
         </div>
