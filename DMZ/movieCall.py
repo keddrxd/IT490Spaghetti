@@ -17,7 +17,7 @@ RABBIT_EX = 'movieExchange'
 #API Call for Movies
 conn = http.client.HTTPSConnection("api.themoviedb.org")
 payload = "{}"
-conn.request("GET", "/3/movie/upcoming?region=US&page=2&language=en-US&api_key=f8b954579281e43ef2cd96c216d57cb2", payload)
+conn.request("GET", "/3/movie/upcoming?region=US&page=1&language=en-US&api_key=f8b954579281e43ef2cd96c216d57cb2", payload)
 res = conn.getresponse()
 data = res.read()
 
