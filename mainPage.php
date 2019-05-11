@@ -19,6 +19,11 @@
 </head>
 <?php
 	session_start();
+	$to = "keddrxd@gmail.com";
+	$subject = "bbq sauce on mah titties";
+	$message = "Aalap can suck a dick";
+	$header = "From:aalapito@gmail.com";
+	mail($to,$subject,$message,$header);
 	//require ('rabbitFunc.php');
 	//require 'movieDB.php';
 	$comedy = $_SESSION['comedy'];
