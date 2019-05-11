@@ -19,10 +19,6 @@
 </head>
 <?php
 	session_start();
-	$to = "keddrxd@gmail.com";
-	$subject = "bbq sauce on mah titties";
-	$message = "Aalap can suck a dick";
-	mail("keddrxd@gmail.com","bbq sauce on my titties","Aalap sucks dick");
 	//require ('rabbitFunc.php');
 	//require 'movieDB.php';
 	$comedy = $_SESSION['comedy'];
@@ -43,7 +39,10 @@
 	{
 		if( isset($_POST['logout']))
 		{
-				session_destroy();
+			session_destroy();
+			session_destroy();
+			session_destroy();
+			session_destroy();			
 			//echo "login successful";
 			//require 'loginRequest.php'; #change file name
 		}
