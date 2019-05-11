@@ -57,6 +57,7 @@
 		{
 			require 'backend/friendsList.php'; #change file name
 			session_start();
+			header("location: mainPage.php");
 			//$justAdded = $_POST['friend'];
 			//echo $justAdded;
 			/*echo "HELLO THIS IS A TEST";
