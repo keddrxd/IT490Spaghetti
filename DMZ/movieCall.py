@@ -3,7 +3,7 @@ import json
 import pika
 
 #RabbitMQ Connection
-RABBIT_HOST = '25.80.204.225'
+RABBIT_HOST = '192.168.1.10'
 RABBIT_PORT = '5672'
 RABBIT_Q = '*'
 RABBIT_USER = 'test'
