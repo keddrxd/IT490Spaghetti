@@ -59,8 +59,8 @@ if( $_SERVER['REQUEST_METHOD'] == 'POST')
         <!-- Slide One - Set the background image for this slide in the line below -->
         <div class="carousel-item active" style="background-image: url(spaghetti.jpg)">
           <div class="carousel-caption d-none d-md-block">
-		  <h3 style = "color: navy" <font size = "200">Rotten Spaghetti </font></h3>
-		  <p style = "color: lime">The best movie recommender out there!</p>
+		  <h3 style = "color: navy", "font-size: 200">Welcome to Rotten Spaghetti</h3>
+		  <p style = "color: white">The best movie recommender out there!</p>
           </div>
         
         </div>
