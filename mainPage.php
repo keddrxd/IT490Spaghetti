@@ -259,7 +259,7 @@
 				//echo " and it will be released on: ".$_SESSION['scifiRd'][$i];
 			}
 		}
-	  	$justAdded = $_POST['friend'];
+	  	$justAdded = $_GET["user"];
 	  	echo $justAdded;
 		
 	?>
