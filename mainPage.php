@@ -259,8 +259,7 @@
 				//echo " and it will be released on: ".$_SESSION['scifiRd'][$i];
 			}
 		}
-	  	$justAdded = $_GET["user"];
-	  	echo $justAdded;
+	  	
 		
 	?>
 	
@@ -275,6 +274,10 @@
 		  <br>
 		<!--<button name = "friend" style = "height:50px;width:80px"><font size = 4> Submit </font></button>-->
 	  </form>
+	  <?php
+	  	$justAdded = $_GET["user"];
+	  	echo $justAdded;	  
+	  ?>
 	  </div>
 
     <!-- Features Section -->
