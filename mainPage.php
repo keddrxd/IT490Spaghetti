@@ -291,7 +291,7 @@
 	?>
 	
 	  <form action = "mainPage.php" method = "POST">
-	 <br><br><br>Add a Friend!<br>
+	 <br>Add a Friend!<br>
 		  <input type="text" name="user" placeholder="username" method="POST">
 		  <br>
 		  <br>
