@@ -260,9 +260,12 @@
 		#echo "<br><br><br><br>Your friends are:";
 	   	for($i = 1 ; $i < $num2 ; $i++)
 		{
-			if($_SESSION['friendsList'][$i] !== " ")
+			if($_SESSION['friendsList'][$i] !== "")
 			{
-				echo "<br>".$_SESSION['friendsList'][$i];
+				if($_SESSION['friendsList'][$i] !== " ")
+				{
+					echo "<br>".$_SESSION['friendsList'][$i];
+				}
 				/*echo "<table border=1 cellspacing=0 cellpading=0>  
 				<tr> <td><font color=blue>Friends List</td> </tr>    
 				<tr> <td><font color=blue>Hello</td> </tr>
@@ -409,7 +412,7 @@ google.maps.event.addDomListener(window, 'load', initMap);
   <footer class="py-5 bg-dark">
     <div class="container">
       <p class="m-0 text-center text-white">Copyright &copy; 2019 Rotten Spaghetti</p>
-	    <p class = "m-0 text-center text-white"> Shoutout to themoviedb.org and Google for the rights to their API </p>
+	    <p class = "m-0 text-center text-white"> Shoutout to themoviedb, Fandango and Google for the rights to their API </p>
     </div>
     <!-- /.container -->
   </footer>
