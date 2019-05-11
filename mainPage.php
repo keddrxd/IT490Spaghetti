@@ -56,7 +56,6 @@
 		if(isset($_POST['friend']))
 		{
 			require 'backend/friendsList.php'; #change file name
-			session_destroy();
 			session_start();
 			//$justAdded = $_POST['friend'];
 			//echo $justAdded;
